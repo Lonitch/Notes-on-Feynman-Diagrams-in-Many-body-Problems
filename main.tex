@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,float,graphicx,mathtools,tikz,hyperref}
+\usepackage[at]{easylist}
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\RaggedRightParindent = 24 pt
+\setlength{\parskip}{1.5em}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{algorithm2e}
+\usepackage{graphicx}
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\usepackage{tocloft}
+\renewcommand\cftsecafterpnum{\vskip6pt}
+
+\usepackage{mdframed}
+\usetikzlibrary{patterns,hobby}
+\usepackage{tcolorbox}
+\newtcolorbox{mybox}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Box}
+\newtcolorbox{imp}{colback=orange!5!white,colframe=orange!75!white}
+\newcommand{\redp}[1]{\textcolor{red}{#1}}
+\newcommand{\bluep}[1]{\textcolor{blue}{#1}}
+    
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+
+
+\begin{document}
+\title{Notes on Feynman Diagrams in Many-body Problems}
+\author{Sizhe Liu\\Department of Mechanical Science and Engineering \\University of Illinois at Urbana-Champaign\\ } 
+\date{Version 1.0}
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
+\newpage
+\tableofcontents
+\newpage
+\vspace*{100pt}
+\textit{We must know, especially when it is effortless to know.}
+\newpage
+
+\input{IntroToDiagrams}
+
+
+\end{document}
