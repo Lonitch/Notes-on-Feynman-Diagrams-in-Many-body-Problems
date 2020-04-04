@@ -1,2 +1,136 @@
-\section{Quantum Quasi Particles and the Quantum
-Pinball Propagator}
+\section{Quantum Quasi Particles and the Quantum Pinball Propagator}
+In the quantum case, the total probability amplitude is the sum of the probability amplitudes for each process taken separately
+$$G(2,1)=G(\text { process } 1)+G(\text { process } 11)+\cdots$$
+so that the corresponding probability is given by
+$$P(2,1)_{\text {quantum }}=G^{*} G=\underbrace{|G(\mathrm{I})|^{2}}_{P(\mathrm{I})}+\underbrace{|G(\mathrm{I})|^{2}}_{P(\mathrm{II})}+\underbrace{G(\mathrm{I})^{*} G(\mathrm{II})+G(\mathrm{II})^{*} G(\mathrm{I})}_{\text {interference terms }}+\cdots$$
+Because of the characteristic interference terms', the quantum probability is not just the sum of the probabilities for the individual processes, in contrast to the classical case.
+
+Let us begin by defining the quantum propagator in general, then show
+what it looks like in the case of free particles and quasi particles. The quantum analogue of the classical propagator is (assuming that the Hamiltonian is time-independent, so that the propagator depends only on time differences):
+\begin{imp}
+\begin{equation}i G\left(\mathrm{r}_{2}, \mathrm{r}_{1}, t_{2}-t_{1}\right)_{t_{2}>t_{1}}=i G^{+}\left(\mathrm{x}_{2}, \mathrm{r}_{1}, t_{2}-t_{1}\right)\end{equation}
+probability amplitude that if at time $t_{1}$ we add a particle at point $r_{1}$ to the interacting system in its ground state, then at time $t_{2}$ the system will be in its ground state with an added particle at $\mathbf{r}_{2}$
+\end{imp}
+The $i$ factor is purely for decoration (a matter of convention) and the $+$ superscript denotes $t_{2}>t_{1} .$ The probability corresponding to the amplitude is
+$$P\left(\mathbf{r}_{2}, \mathbf{r}_{1}, t_{2}-t_{1}\right)=G^{+}\left(r_{2}, \mathbf{r}_{1}, t_{2}-t_{1}\right)^{*} G^{+}\left(\mathbf{r}_{2}, \mathbf{r}_{1}, t_{2}-t_{1}\right)$$
+Note that it is not necessarily the 'same' particle which is observed at 12, since
+this has no meaning in the systems of identical particles with which we shall generally deal. The quantity $G^{+}$ is called a \bluep{'retarded' propagator (or Green's function)}. By definition, it is equal to zero for $t_{2} \leqslant t_{1} .$ There is also an \bluep{'advanced' propagator, $G^{-},$ which is finite for $t_{2} \leqslant t_{1} $}.
+
+It is actually more convenient to work with an equivalent definition of $G$ in terms of arbitrary single-particle eigenstates, $\phi_{k}(r),$ instead of position eigenstates. Then we have \redp{$i G^{+}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)_{t_{2}>t_{1}}=$probability amplitude that if at time $t_{1}$ we add a particle in $\phi_{k_{1}}(r)$ to the interacting system in its ground state, then at time $t_{2}$ the system will be in its ground state with an added particle in $\phi_{k_{2}}(r)$}.
+For $t_{2} \leqslant t_{1}, G^{+}$ is defined so that:
+\begin{equation}i G^{+}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)_{t_{2}\leq t_{1}}=0\end{equation}
+\textbf{A convenient choice for $\phi_{k}(r)$ is the eigenstates of the unperturbed single particle Hamiltonian, which we will call $H_{0}$ :}
+$$H_{0}=\frac{p^{2}}{2 m}+U(\mathrm{r})=-\frac{1}{2 m} \nabla_{r}^{2}+U(\mathrm{r}) \quad(\hbar=1)$$
+If $U(\mathrm{r})=0,$ then this is just the free particle case:
+$$H_{0} \phi_{k}(\mathbf{r})=\epsilon_{k} \phi_{k}(\mathbf{r})$$
+and
+\begin{equation}H_{0}=-\frac{\nabla_{r}^{2}}{2 m}, \quad \phi_{k}(r)=\frac{1}{\sqrt{\Omega}} e^{i k \cdot r}, \quad \epsilon_{k}=\frac{k^{2}}{2 m}
+\label{nrqm-free-particle}
+\end{equation}
+where $\Omega$ is normalization volume and spin is neglected for simplicity. Note that if $k_1=k_2$, the particle propagates in time only.
+
+Let us first get the free propagator $G_{0}^{+}$ (no perturbing interaction). Suppose at time $t_{1}$ the wave function of the free particle is $\phi_{k,}(\mathrm{r}) .$ Then we have:
+$$\psi\left(\mathbf{r}, t_{1}\right)=\phi_{\mathbf{k}_{2}}(\mathbf{r})$$
+At later time $t_{2},$ by the time-dependent Schrödinger equation, we find that the wave function has become
+\begin{equation}\psi\left(\mathbf{r}, t_{2}\right)=\phi_{k_{1}}(\mathbf{r}) e^{-i \varepsilon_{k1}\left(t_{2}-t_{1}\right)}
+\end{equation}
+where $\epsilon_{k_{1}}$ is the single particle energy of undisturbed Shrodinger equation. The probability amplitude for the particle being in state $\phi_{k_{2}}$ at time $t_{2}$ is /hen just the component of $\psi\left(\mathbf{r}, t_{2}\right)$ along $\phi_{k_{2}}$ or:
+\begin{equation}\int d^{3} \mathbf{r} \psi\left(\mathbf{r}, t_{2}\right) \phi_{k_{2}}^{*}(\mathbf{r})=e^{-i \exp \left(l_{2}-t_{1}\right)} \int \underbrace{d^{3} \mathbf{r} \phi_{k_{1}}(\mathbf{r}) \phi_{k_{2}}^{*}(\mathbf{r})}_{\delta_{k_{2} k_{1}}}\end{equation}
+whence, by definition
+\begin{equation}G_{0}^{+}\left(k, t_{2}-t_{1}\right)=\left\{\begin{array}{ll}
+-i \theta_{12-t_{1}} e^{-i \epsilon_{k_1}\left(t_{2}-t_{1}\right)}, & \text { for } t_{2} \neq t_{1} \\
+0, & \text { for } t_{2}=t_{1}
+\end{array}\right.
+\label{G0-+}
+\end{equation}
+where
+$$\theta_{t_{2}-t_{1}}\left\{\begin{array}{ll}
+=1, & \text { if } t_{2}>t_{1} \\
+=0, & \text { if } t_{2}<t_{1}
+\end{array}\right.$$
+\bluep{Note that for fermions, all levles up to $\epsilon_F$(=Fermi energy) are fileed, so we can only propagate a particle with $\epsilon_{k_1}>\epsilon_F$}. The Fourier transform of (\ref{G0-+}) is
+\begin{equation}\begin{aligned}
+G_{0}^{+}(k, \omega) &=-i \int_{-\infty}^{+\infty} d\left(t_{2}-t_{1}\right) \theta_{t_{2}-t_{1}} e^{i \omega\left(t_{2}-t_{1}\right)} e^{-i \epsilon_{k}\left(t_{2}-t_{1}\right)} \\
+&=\left.(-1) \frac{e^{i\left(\omega-\epsilon_{k}\right)\left(t_{2}-t_{1}\right)}}{\omega-\epsilon_{k}}\right|_{0} ^{\infty}=\frac{1}{\omega-\epsilon_{k}}-\frac{e^{i\left(\omega-\epsilon_{k}\right)\infty}}{\omega-\epsilon_{k}}
+\end{aligned}
+\label{G0-k-omega}
+\end{equation}
+\redp{Because of the exponential oscillating at $\infty,$ this function is not well defined. In order to get around this difficulty, we have to slightly modify the expression for the free propagator. This is done by multiplying the propagator by the factor $\exp \left(-\delta\left(t_{2}-t_{1}\right)\right),$ where $\delta$ is a positive infinitesimal such that $\delta \times \infty=\infty$}. Then (\ref{G0-+}) becomes:
+\begin{equation}G_{0}^{+}\left(k, t_{2}-t_{1}\right)=-i \theta_{t_{2}-t_{1}}e^{i(\epsilon_k-i\delta)(t_2-t_1)}
+\label{G0-with-delta}
+\end{equation}
+For any finite $\left(t_{2}-t_{1}\right),$ we have $\delta \times\left(t_{2}-t_{1}\right)=0,$ so this is just $(3.10) .$ But for infinite $\left(t_{2}-t_{1}\right), \delta \times\left(t_{2}-t_{1}\right)=\infty$ so $G_{0}^{+}=0 .$ When \ref{G0-with-delta} is placed in \ref{G0-k-omega} we find
+\begin{imp}
+\begin{equation}G_{o}^{+}(k, \omega)=\frac{1}{\omega-\epsilon_{k}+i \delta}
+\label{G0-k-omega-delta}
+\end{equation}
+\end{imp}
+\bluep{From \ref{G0-k-omega-delta} we see the pole is at $\omega=\epsilon_k$, the eigenvalue for the eigenstate $\phi_k$. It turns out this observation is quite general, even for interacting propagator, $G^0(k,l;\omega)$:}
+\begin{imp}
+The poles of $G^+(k,l,\omega),$ the fourier transform of the single-particle propagator, corresponds to the excited energy of (N+1)-particle system \textbf{minus the ground state energy of N-particle system}.
+\end{imp}
+Also from \ref{G0-k-omega-delta}, we have the particle lifetime $\tau$ as $\delta^{-1}=\infty$, which makes sense because we only consider one free particle here. This observation can also be extended to interacting system where the propagator has the form of 
+\begin{equation}
+    G^+=\frac{1}{\omega-\epsilon_k^{\prime}+i\tau_k^{-1}}
+\end{equation}
+where \redp{$\tau_k$ is the quasi-particle lifetime at the state of $\epsilon_k$}.
+
+In a Fermi system, because of the Pauli's principle, each state can only be occupied by one fermion. If a state is partially occupied by a fermion, the possibility of adding another fermion at the same state will be less than 1. Hence we have to multiply the propagator by a factor $Z_k\leq 1$:
+\begin{equation}G_{\text {\stackanchor{quasi}{particle} }}^{+}\left(k,t_{2}-t_{1}\right)=-i Z_{k} e^{-i \epsilon_{k}^{\prime}\left(t_{2}-t_{1}\right)} e^{-\left(t_{2}-t_{1}\right) / \tau_{k}}\end{equation}
+\begin{equation}G_{\text {\stackanchor{quasi}{particle}}}^{+}(k, \omega)=\frac{Z_{k}}{\omega-\epsilon_{k}^{\prime}+i \tau_{k}^{-1}}\end{equation}
+The poles in the equation above are 
+\begin{equation}
+    \omega = \epsilon_k^{\prime}-i\tau_k^{-1}
+\end{equation}
+We can still interpret these poles as the excited energy levels even though they are imaginary numbers. For free particles, we have eigenstates as:
+$$
+\psi_k(x)=\phi_k(x)e^{-i\epsilon_k t}
+$$
+When the weak interaction is turned on, the particle decays out of state "$k$", we have
+$$
+\psi_k(x)\approx\phi_k(x)e^{-i\epsilon_k^{\prime} t}e^{-t/\tau_k}=\phi_k(x)e^{-i(\epsilon_k^{\prime}-i\tau^{-1})t}
+$$
+
+\subsection{Quantum Pinball Game}
+Like the classical pinball game, we now consider the quantum version of the game where \redp{the "scattering centers" are now "scattering fields/potentials"}. Let's assume that a perturbative potential that interacts with free particle has a form of:
+\begin{equation}V(\mathbf{p})=V_{M}+V_{L}=M p^{2}+L p^{4}=-M \nabla_{r}^{2}+L \nabla_{r}^{4}\end{equation}
+where $M \geqslant L$. By solving the Schrodinger equation we have the Hamiltonian as
+$$
+H = (\frac{1}{2m}+M+Lp^2)p^2
+$$
+with 
+$$
+\epsilon_k^{\prime}= (\frac{1}{2m}+M+Lk^2)k^2
+$$
+and $\phi_k(x)=\frac{1}{\sqrt{\Omega}}e^{-i\mathbf{k}\cdot\mathbf{r}}$.\bluep{Now let us solve for the eigenvalues in a propagator way.}
+
+The simplest way the particle can propagate through the system is without interaction, which has a propability amplitude as $G^+(k,t_2-t_1)$. Another way is to enter in $\phi_{k_{1}}$ at time $t_{1},$ be scattered into state $\phi_{k_{2}}$ at time $t_{M}$ by the potential $V_{M},$ then continue freely in $\phi_{k_{2}}$ until time $t_{2} .$ The probability amplitude in this case is just the product of the probability amplitude for each independent process:
+$$
+G^+_0(k_1,t_M-t_1)V_MG^+_0(k_1,t_2-t_M)
+$$
+$V_M$ can be obtained from time-dependent perturbation theory as follows: Let $c_{l}$ be the probability amplitude that at time $t_{0}$ a system is in state $\phi_{l} .$ Then at later time, $t,$ the time rate of change of any particular $c_{l},$ say $c_{p},$ under the influence of perturbation $V$, is given by:
+\begin{equation}\dot{c}_{p}(t)=-i \sum_{l} V_{p l} c_{l} e^{i\left(\epsilon_{p}-c_{l}\right)\left(t-t_{o}\right)}\end{equation}
+where $V_{pl}$ is just the element of S matrix. Hence the probability amplitude per unit time that the system undergoes a transition from $\phi_{k_1}$ to $\phi_p=\phi_{k_2}$, at time $t_M$ is:
+\begin{equation}\begin{aligned}
+\dot{c}_{k_{2}}\left(t=t_{M}\right) &=-i V_{M_{k_2 k_1}}=-i \int d^{3} \mathbf{r} \phi_{k_{2}}^{*}(r) V_{M} \phi_{k_{1}}(r)=\\
+&=+i M \int d^{3} \mathbf{r} \phi_{k_{2}}^{*} \nabla^{2} \phi_{k_{1}}=-i M k_{1}^{2} \delta_{k_{2} k_{1}}
+\end{aligned}\end{equation}
+Thus the probability amplitude for this first-order scattering is 
+\begin{equation}
+    \left[\text{\stackanchor{probability}{amplitude}}\right]_{t_1\rightarrow t_M\rightarrow t_2}=i \int_{-\infty}^{+\infty} d t_{M} G_{0}^{+}\left(\mathbf{k}_{1}, t_{M}-t_{1}\right) V_{M_{k_2k_1}} G_{0}^{+}\left(\mathbf{k}_{2}, t_{2}-t_{M}\right)
+\end{equation}
+Similarly for $V_L$, we have
+$$-i V_{L_{k_1k_2}}=-i L k_{1}^{4} \delta_{k_{2} k_{1}}$$
+which also conserves momentum. There are also second- and higher-order processes in which the particle collides with $V_{M}$ and $V_{L}$ any number of times. This gives us the series expansion for the propagator (set $\mathbf{k}_{1}=\mathbf{k}_{2}=\mathbf{k}$ because of conservation of momentum here), after cancelling the $i$ 's:
+$$\begin{aligned}
+G^{+}\left(\mathbf{k}, t_{2}-t_{1}\right)=G_{0}^{+} &\left(\mathbf{k}, t_{2}-t_{1}\right)+\int_{-\infty}^{+\infty} d t_{M} G_{0}^{+}\left(\mathbf{k}, t_{M}-t_{1}\right) V_{M} G_{0}^{+}\left(\mathbf{k}, t_{2}-t_{M}\right) \\
+&+\int_{-\infty}^{+\infty} d t_{L} G_{0}^{+}\left(\mathbf{k}, t_{L}-t_{1}\right) V_{L} G_{0}^{+}\left(\mathbf{k}, t_{2}-t_{L}\right)+\\
+&+\int d t_{M} d t_{M}^{\prime} \cdots+\int d t_{M} d t_{L} \cdots+\cdots
+\end{aligned}$$
+Taking the Fourier transform, we have
+\begin{equation}\begin{aligned}
+G^{+}(\mathbf{k}, \omega)=G_{0}^{+} &(\mathbf{k}, \omega)+\left[G_{0}^{+}(\mathbf{k}, \omega)\right]^{2} V_{M_{k k}}+\left[G_{0}^{+}(\mathbf{k}, \omega)\right]^{2} V_{L_{kk}}+\\
+&+\left[G_{0}^{+}\right]^{3} V_{M_{kk}}^{2}+2\left[G_{0}^{+}\right]^{3} V_{M_{kk}} V_{L_{kk}}+\left[G_{0}^{+}\right]^{3} V_{L_{kk}}^{2}+\\
+&+\left[G_{0}^{+}\right]^{4} V_{M_{kk}}^{3}+\cdots
+\end{aligned}\end{equation}
+We now pull the trick of \redp{partial summation} here. We assume that the scattering with $V_M$ is much more important than the scattering with $V_L$, then the Feynman diagram series can be approximated by:
