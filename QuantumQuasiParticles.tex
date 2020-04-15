@@ -506,7 +506,7 @@ $$\begin{array}{l}
 \quad\approx\left(\frac{N}{\Omega}\right)^{2} \sum_{l} G_{0}^{+}(l) W_{k_{2} l} W_{l k_{1}} \delta_{k_{2} l} \delta_{l k_{2}}\\
 \quad=\left(\frac{N}{\Omega}\right)^{2} G_{0}^{+}\left(\mathbf{k}_{1}\right) W_{k_{1} k_{1}}^{2} \delta_{k_{2} k_{1}}
 \end{array}$$
-With the aid of these results, we can write out the series for the averaged propagator. It helps here to introduce a couple of new diagram conventions. First of all, we use just an empty circle to represent $V_{lk}(\mathbf{R}_i)$, for the transition probability amplitude $W_{lk}$ Secondly, \bluep{\textbf{because each group of two or more successive scatterings at the same ion has an associated density factor N/Q,}} we connect successive circles representing the same ion by dotted
+With the aid of these results, we can write out the series for the averaged propagator. It helps here to introduce a couple of new diagram conventions. First of all, we use just an empty circle to represent $V_{lk}(\mathbf{R}_i)$, for the transition probability amplitude $W_{lk}$ Secondly, \bluep{\textbf{because each group of two or more successive scatterings at the same ion has an associated density factor $N/\Omega$,}} we connect successive circles representing the same ion by dotted
 lines. (Note that a single scattering also has this factor associated with it.) Thus, taking the $\delta$-functions into account, and letting $\mathbf{k}_1=\mathbf{k}=\mathbf{k}_2$, we have for the averaged propagator:
 
 \begin{equation}
@@ -814,3 +814,390 @@ intermediate momentum, I & $\int \frac{d^{3} l}{(2 \pi)^{3}}$                   
 \end{table}
 
 Let's evaluate \ref{whole-impurity-diagram-series} by assuming the most important processes are single scattering, and double scattering by the same impurity. This means that diagrams containing more than two successive scatterings off the same ion are neglected.The partial sum may easily be carried out and yields
+\begin{equation}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,410); %set diagram left start at 0, and has height of 410
+
+%Straight Lines [id:da6679599183950475] 
+\draw    (42.75,129.9) -- (42.75,52.4)(45.75,129.9) -- (45.75,52.4) ;
+\draw [shift={(44.25,91.15)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da96866989164835] 
+\draw    (78.25,56.4) -- (97.25,89.4) -- (79.25,123.4) ;
+%Straight Lines [id:da6934326937577064] 
+\draw    (26.25,55.4) -- (8.25,91.4) -- (27.25,125.4) ;
+%Straight Lines [id:da3013274600825496] 
+\draw [line width=1.5]    (102,83.02) -- (122.25,83.02) ;
+%Straight Lines [id:da002431265709683772] 
+\draw [line width=1.5]    (102,91.4) -- (122.25,91.4) ;
+
+%Straight Lines [id:da5008643601850559] 
+\draw    (136.25,128.9) -- (136.25,51.4) ;
+\draw [shift={(136.25,90.15)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da6945756947603086] 
+\draw    (176.5,80.72) -- (176.5,50.4) ;
+\draw [shift={(176.5,65.56)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Ellipse [id:dp3530646460829052] 
+\draw   (166.75,90.4) .. controls (166.75,85.05) and (171.12,80.72) .. (176.5,80.72) .. controls (181.88,80.72) and (186.25,85.05) .. (186.25,90.4) .. controls (186.25,95.75) and (181.88,100.08) .. (176.5,100.08) .. controls (171.12,100.08) and (166.75,95.75) .. (166.75,90.4) -- cycle ;
+%Straight Lines [id:da43208207245118435] 
+\draw    (176.5,130.4) -- (176.5,100.08) ;
+\draw [shift={(176.5,115.24)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+
+%Straight Lines [id:da7828111751257385] 
+\draw    (220.5,57.72) -- (220.5,27.4) ;
+\draw [shift={(220.5,42.56)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Ellipse [id:dp6295020134353576] 
+\draw   (210.75,67.4) .. controls (210.75,62.05) and (215.12,57.72) .. (220.5,57.72) .. controls (225.88,57.72) and (230.25,62.05) .. (230.25,67.4) .. controls (230.25,72.75) and (225.88,77.08) .. (220.5,77.08) .. controls (215.12,77.08) and (210.75,72.75) .. (210.75,67.4) -- cycle ;
+%Straight Lines [id:da5190411567838193] 
+\draw    (220.5,107.4) -- (220.5,77.08) ;
+\draw [shift={(220.5,92.24)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+
+%Shape: Ellipse [id:dp1856254885258023] 
+\draw   (210.75,117.08) .. controls (210.75,111.74) and (215.12,107.4) .. (220.5,107.4) .. controls (225.88,107.4) and (230.25,111.74) .. (230.25,117.08) .. controls (230.25,122.43) and (225.88,126.77) .. (220.5,126.77) .. controls (215.12,126.77) and (210.75,122.43) .. (210.75,117.08) -- cycle ;
+%Straight Lines [id:da12064415501164083] 
+\draw    (220.5,157.08) -- (220.5,126.77) ;
+\draw [shift={(220.5,141.93)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da7079596940921928] 
+\draw    (267.5,59.72) -- (267.5,29.4) ;
+\draw [shift={(267.5,44.56)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Ellipse [id:dp22478419986022313] 
+\draw   (257.75,69.4) .. controls (257.75,64.05) and (262.12,59.72) .. (267.5,59.72) .. controls (272.88,59.72) and (277.25,64.05) .. (277.25,69.4) .. controls (277.25,74.75) and (272.88,79.08) .. (267.5,79.08) .. controls (262.12,79.08) and (257.75,74.75) .. (257.75,69.4) -- cycle ;
+%Straight Lines [id:da11608178895592369] 
+\draw    (267.5,109.4) -- (267.5,79.08) ;
+\draw [shift={(267.5,94.24)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+
+%Shape: Ellipse [id:dp33421438233375045] 
+\draw   (257.75,119.08) .. controls (257.75,113.74) and (262.12,109.4) .. (267.5,109.4) .. controls (272.88,109.4) and (277.25,113.74) .. (277.25,119.08) .. controls (277.25,124.43) and (272.88,128.77) .. (267.5,128.77) .. controls (262.12,128.77) and (257.75,124.43) .. (257.75,119.08) -- cycle ;
+%Straight Lines [id:da8470461387935158] 
+\draw    (267.5,159.08) -- (267.5,128.77) ;
+\draw [shift={(267.5,143.93)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da5580045724596926] 
+\draw [line width=1.5]    (145.25,92.8) -- (162.25,92.8) ;
+%Straight Lines [id:da21350536390327923] 
+\draw [line width=1.5]    (153.75,102.4) -- (153.75,83.21) ;
+
+%Straight Lines [id:da8624253903000908] 
+\draw [line width=1.5]    (191.25,91.8) -- (208.25,91.8) ;
+%Straight Lines [id:da39200924475692256] 
+\draw [line width=1.5]    (199.75,101.4) -- (199.75,82.21) ;
+
+%Straight Lines [id:da11442905940915027] 
+\draw [line width=1.5]    (233.25,90.8) -- (250.25,90.8) ;
+%Straight Lines [id:da6458220565812314] 
+\draw [line width=1.5]    (241.75,100.4) -- (241.75,81.21) ;
+
+%Curve Lines [id:da5905027576335966] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (277.25,69.4) .. controls (310.25,71.4) and (308.25,119.4) .. (277.25,119.08) ;
+%Straight Lines [id:da09806150660985813] 
+\draw [line width=1.5]    (313.25,96.8) -- (330.25,96.8) ;
+%Straight Lines [id:da8319212817021413] 
+\draw [line width=1.5]    (321.75,106.4) -- (321.75,87.21) ;
+
+%Straight Lines [id:da17267749447821656] 
+\draw    (352.5,36.72) -- (352.5,6.4) ;
+\draw [shift={(352.5,21.56)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Ellipse [id:dp6338000815403856] 
+\draw   (342.75,46.4) .. controls (342.75,41.05) and (347.12,36.72) .. (352.5,36.72) .. controls (357.88,36.72) and (362.25,41.05) .. (362.25,46.4) .. controls (362.25,51.75) and (357.88,56.08) .. (352.5,56.08) .. controls (347.12,56.08) and (342.75,51.75) .. (342.75,46.4) -- cycle ;
+%Straight Lines [id:da6359368270166951] 
+\draw    (352.5,86.4) -- (352.5,56.08) ;
+\draw [shift={(352.5,71.24)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+
+%Shape: Ellipse [id:dp8160936873445316] 
+\draw   (342.75,96.08) .. controls (342.75,90.74) and (347.12,86.4) .. (352.5,86.4) .. controls (357.88,86.4) and (362.25,90.74) .. (362.25,96.08) .. controls (362.25,101.43) and (357.88,105.77) .. (352.5,105.77) .. controls (347.12,105.77) and (342.75,101.43) .. (342.75,96.08) -- cycle ;
+%Straight Lines [id:da9286035597952149] 
+\draw    (352.5,136.08) -- (352.5,105.77) ;
+\draw [shift={(352.5,120.93)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Ellipse [id:dp07506037090452533] 
+\draw   (342.75,145.77) .. controls (342.75,140.42) and (347.12,136.08) .. (352.5,136.08) .. controls (357.88,136.08) and (362.25,140.42) .. (362.25,145.77) .. controls (362.25,151.12) and (357.88,155.45) .. (352.5,155.45) .. controls (347.12,155.45) and (342.75,151.12) .. (342.75,145.77) -- cycle ;
+%Straight Lines [id:da3948811378599879] 
+\draw    (352.5,185.77) -- (352.5,155.45) ;
+\draw [shift={(352.5,170.61)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Curve Lines [id:da8457780212222412] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (362.25,96.08) .. controls (394.25,95.4) and (394.25,45.4) .. (362.25,46.4) ;
+%Straight Lines [id:da17632381462435154] 
+\draw [line width=1.5]    (424,87.02) -- (444.25,87.02) ;
+%Straight Lines [id:da2860027932323479] 
+\draw [line width=1.5]    (424,95.4) -- (444.25,95.4) ;
+
+%Straight Lines [id:da3219886118472701] 
+\draw    (473.67,138.63) -- (473.67,88.63) ;
+\draw [shift={(473.67,113.63)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da7155527870457447] 
+\draw    (517.71,103.59) -- (517.71,89.63) ;
+%Shape: Ellipse [id:dp6470069643074525] 
+\draw   (505.75,115.47) .. controls (505.75,108.91) and (511.1,103.59) .. (517.71,103.59) .. controls (524.31,103.59) and (529.67,108.91) .. (529.67,115.47) .. controls (529.67,122.03) and (524.31,127.35) .. (517.71,127.35) .. controls (511.1,127.35) and (505.75,122.03) .. (505.75,115.47) -- cycle ;
+%Straight Lines [id:da765234496553557] 
+\draw    (517.71,140.63) -- (517.71,127.35) ;
+%Straight Lines [id:da9234724283302328] 
+\draw    (460.67,87.63) -- (530.67,87.63) ;
+
+
+% Text Node
+\draw (55,47.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (55,112.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (385,85.02) node [anchor=north west][inner sep=0.75pt]    {$\dotsc $};
+% Text Node
+\draw (491,66.3) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (485,104.3) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (473.67,88.63) node [anchor=north west][inner sep=0.75pt]    {$^{-1}$};
+% Text Node
+\draw (509,105.3) node [anchor=north west][inner sep=0.75pt]    {$\Sigma $};
+\end{tikzpicture}
+\label{single-impurity-series}
+\end{equation}
+where 
+\begin{center}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,410); %set diagram left start at 0, and has height of 410
+
+%Straight Lines [id:da2478555353047407] 
+\draw    (57.71,237.59) -- (57.71,223.63) ;
+%Shape: Ellipse [id:dp8195879996221702] 
+\draw   (45.75,249.47) .. controls (45.75,242.91) and (51.1,237.59) .. (57.71,237.59) .. controls (64.31,237.59) and (69.67,242.91) .. (69.67,249.47) .. controls (69.67,256.03) and (64.31,261.35) .. (57.71,261.35) .. controls (51.1,261.35) and (45.75,256.03) .. (45.75,249.47) -- cycle ;
+%Straight Lines [id:da49340395084618693] 
+\draw    (57.71,274.63) -- (57.71,261.35) ;
+%Straight Lines [id:da7965677357458768] 
+\draw    (119.5,242.4) -- (119.5,212.08) ;
+%Shape: Ellipse [id:dp5834867502072995] 
+\draw   (109.75,252.08) .. controls (109.75,246.74) and (114.12,242.4) .. (119.5,242.4) .. controls (124.88,242.4) and (129.25,246.74) .. (129.25,252.08) .. controls (129.25,257.43) and (124.88,261.77) .. (119.5,261.77) .. controls (114.12,261.77) and (109.75,257.43) .. (109.75,252.08) -- cycle ;
+%Straight Lines [id:da26210627528994135] 
+\draw    (119.5,292.08) -- (119.5,261.77) ;
+%Straight Lines [id:da5450531939398274] 
+\draw    (175.5,213.72) -- (175.5,183.4) ;
+%Shape: Ellipse [id:dp7406102462871901] 
+\draw   (165.75,223.4) .. controls (165.75,218.05) and (170.12,213.72) .. (175.5,213.72) .. controls (180.88,213.72) and (185.25,218.05) .. (185.25,223.4) .. controls (185.25,228.75) and (180.88,233.08) .. (175.5,233.08) .. controls (170.12,233.08) and (165.75,228.75) .. (165.75,223.4) -- cycle ;
+%Straight Lines [id:da10558237608158416] 
+\draw    (175.5,263.4) -- (175.5,233.08) ;
+%Shape: Ellipse [id:dp052195730584338906] 
+\draw   (165.75,273.08) .. controls (165.75,267.74) and (170.12,263.4) .. (175.5,263.4) .. controls (180.88,263.4) and (185.25,267.74) .. (185.25,273.08) .. controls (185.25,278.43) and (180.88,282.77) .. (175.5,282.77) .. controls (170.12,282.77) and (165.75,278.43) .. (165.75,273.08) -- cycle ;
+%Straight Lines [id:da620708222735995] 
+\draw    (175.5,313.08) -- (175.5,282.77) ;
+%Straight Lines [id:da3887554298477651] 
+\draw [line width=1.5]    (141.25,251.8) -- (158.25,251.8) ;
+%Straight Lines [id:da3055944791539196] 
+\draw [line width=1.5]    (149.75,261.4) -- (149.75,242.21) ;
+
+%Curve Lines [id:da439299640958546] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (185.25,223.4) .. controls (218.25,225.4) and (216.25,273.4) .. (185.25,273.08) ;
+
+% Text Node
+\draw (49,239.3) node [anchor=north west][inner sep=0.75pt]    {$\Sigma $};
+% Text Node
+\draw (119.5,212.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{k}};
+% Text Node
+\draw (75,238.3) node [anchor=north west][inner sep=0.75pt]    {$\approx $};
+% Text Node
+\draw (119.5,276.93) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{k}};
+% Text Node
+\draw (175.5,183.4) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{k}};
+% Text Node
+\draw (175.5,297.93) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{k}};
+% Text Node
+\draw (177.5,239.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{l}};
+\end{tikzpicture}
+\end{center}
+Note that the complete series for \Circled{$\Sigma$} is
+\begin{center}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,705); %set diagram left start at 0, and has height of 705
+
+%Straight Lines [id:da2478555353047407] 
+\draw    (47.71,269.59) -- (47.71,255.63) ;
+%Shape: Ellipse [id:dp8195879996221702] 
+\draw   (35.75,281.47) .. controls (35.75,274.91) and (41.1,269.59) .. (47.71,269.59) .. controls (54.31,269.59) and (59.67,274.91) .. (59.67,281.47) .. controls (59.67,288.03) and (54.31,293.35) .. (47.71,293.35) .. controls (41.1,293.35) and (35.75,288.03) .. (35.75,281.47) -- cycle ;
+%Straight Lines [id:da49340395084618693] 
+\draw    (47.71,306.63) -- (47.71,293.35) ;
+%Straight Lines [id:da7965677357458768] 
+\draw    (109.5,274.4) -- (109.5,244.08) ;
+%Shape: Ellipse [id:dp5834867502072995] 
+\draw   (99.75,284.08) .. controls (99.75,278.74) and (104.12,274.4) .. (109.5,274.4) .. controls (114.88,274.4) and (119.25,278.74) .. (119.25,284.08) .. controls (119.25,289.43) and (114.88,293.77) .. (109.5,293.77) .. controls (104.12,293.77) and (99.75,289.43) .. (99.75,284.08) -- cycle ;
+%Straight Lines [id:da26210627528994135] 
+\draw    (109.5,324.08) -- (109.5,293.77) ;
+%Shape: Ellipse [id:dp7406102462871901] 
+\draw   (155.75,255.4) .. controls (155.75,250.05) and (160.12,245.72) .. (165.5,245.72) .. controls (170.88,245.72) and (175.25,250.05) .. (175.25,255.4) .. controls (175.25,260.75) and (170.88,265.08) .. (165.5,265.08) .. controls (160.12,265.08) and (155.75,260.75) .. (155.75,255.4) -- cycle ;
+%Straight Lines [id:da10558237608158416] 
+\draw    (165.5,295.4) -- (165.5,265.08) ;
+%Shape: Ellipse [id:dp052195730584338906] 
+\draw   (155.75,305.08) .. controls (155.75,299.74) and (160.12,295.4) .. (165.5,295.4) .. controls (170.88,295.4) and (175.25,299.74) .. (175.25,305.08) .. controls (175.25,310.43) and (170.88,314.77) .. (165.5,314.77) .. controls (160.12,314.77) and (155.75,310.43) .. (155.75,305.08) -- cycle ;
+%Straight Lines [id:da3887554298477651] 
+\draw [line width=1.5]    (131.25,283.8) -- (148.25,283.8) ;
+%Straight Lines [id:da3055944791539196] 
+\draw [line width=1.5]    (139.75,293.4) -- (139.75,274.21) ;
+
+%Curve Lines [id:da439299640958546] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (175.25,255.4) .. controls (208.25,257.4) and (206.25,305.4) .. (175.25,305.08) ;
+%Shape: Ellipse [id:dp7383206567205944] 
+\draw   (226.75,283.4) .. controls (226.75,278.05) and (231.12,273.72) .. (236.5,273.72) .. controls (241.88,273.72) and (246.25,278.05) .. (246.25,283.4) .. controls (246.25,288.75) and (241.88,293.08) .. (236.5,293.08) .. controls (231.12,293.08) and (226.75,288.75) .. (226.75,283.4) -- cycle ;
+%Straight Lines [id:da38047468848179744] 
+\draw    (236.5,323.4) -- (236.5,293.08) ;
+%Shape: Ellipse [id:dp3403133897193449] 
+\draw   (226.75,333.08) .. controls (226.75,327.74) and (231.12,323.4) .. (236.5,323.4) .. controls (241.88,323.4) and (246.25,327.74) .. (246.25,333.08) .. controls (246.25,338.43) and (241.88,342.77) .. (236.5,342.77) .. controls (231.12,342.77) and (226.75,338.43) .. (226.75,333.08) -- cycle ;
+%Curve Lines [id:da007009060601548378] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (246.25,233.72) .. controls (302.67,232.63) and (304.67,332.63) .. (246.25,333.08) ;
+%Shape: Ellipse [id:dp35771829373861763] 
+\draw   (226.75,233.72) .. controls (226.75,228.37) and (231.12,224.03) .. (236.5,224.03) .. controls (241.88,224.03) and (246.25,228.37) .. (246.25,233.72) .. controls (246.25,239.06) and (241.88,243.4) .. (236.5,243.4) .. controls (231.12,243.4) and (226.75,239.06) .. (226.75,233.72) -- cycle ;
+%Straight Lines [id:da9875841078417118] 
+\draw    (236.5,273.72) -- (236.5,243.4) ;
+%Straight Lines [id:da7015118023288028] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (246.25,283.4) -- (287.67,283.4) ;
+%Straight Lines [id:da4960628325151931] 
+\draw [line width=1.5]    (205.25,283.8) -- (222.25,283.8) ;
+%Straight Lines [id:da6480371797669408] 
+\draw [line width=1.5]    (213.75,293.4) -- (213.75,274.21) ;
+
+%Shape: Ellipse [id:dp7003520544377538] 
+\draw   (321.75,260.4) .. controls (321.75,255.05) and (326.12,250.72) .. (331.5,250.72) .. controls (336.88,250.72) and (341.25,255.05) .. (341.25,260.4) .. controls (341.25,265.75) and (336.88,270.08) .. (331.5,270.08) .. controls (326.12,270.08) and (321.75,265.75) .. (321.75,260.4) -- cycle ;
+%Straight Lines [id:da30398624837511] 
+\draw    (331.5,300.4) -- (331.5,270.08) ;
+%Shape: Ellipse [id:dp0013092697739560677] 
+\draw   (321.75,310.08) .. controls (321.75,304.74) and (326.12,300.4) .. (331.5,300.4) .. controls (336.88,300.4) and (341.25,304.74) .. (341.25,310.08) .. controls (341.25,315.43) and (336.88,319.77) .. (331.5,319.77) .. controls (326.12,319.77) and (321.75,315.43) .. (321.75,310.08) -- cycle ;
+%Curve Lines [id:da1762989116442294] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (341.25,210.72) .. controls (405.67,211.63) and (406.67,359.63) .. (341.25,359.77) ;
+%Shape: Ellipse [id:dp0919059432356526] 
+\draw   (321.75,210.72) .. controls (321.75,205.37) and (326.12,201.03) .. (331.5,201.03) .. controls (336.88,201.03) and (341.25,205.37) .. (341.25,210.72) .. controls (341.25,216.06) and (336.88,220.4) .. (331.5,220.4) .. controls (326.12,220.4) and (321.75,216.06) .. (321.75,210.72) -- cycle ;
+%Straight Lines [id:da4592700821469805] 
+\draw    (331.5,250.72) -- (331.5,220.4) ;
+%Straight Lines [id:da4092399922684642] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (341.25,260.4) -- (389.67,286.63) ;
+%Shape: Ellipse [id:dp8221836318702264] 
+\draw   (321.75,359.77) .. controls (321.75,354.42) and (326.12,350.08) .. (331.5,350.08) .. controls (336.88,350.08) and (341.25,354.42) .. (341.25,359.77) .. controls (341.25,365.12) and (336.88,369.45) .. (331.5,369.45) .. controls (326.12,369.45) and (321.75,365.12) .. (321.75,359.77) -- cycle ;
+%Straight Lines [id:da7228735126740514] 
+\draw    (331.5,350.08) -- (331.5,319.77) ;
+%Straight Lines [id:da5303593504365808] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (389.67,286.63) -- (341.25,310.08) ;
+%Straight Lines [id:da5698850434080588] 
+\draw [line width=1.5]    (299.25,283.8) -- (316.25,283.8) ;
+%Straight Lines [id:da4432963135610114] 
+\draw [line width=1.5]    (307.75,293.4) -- (307.75,274.21) ;
+
+%Straight Lines [id:da2415266398742839] 
+\draw [line width=1.5]    (400.25,284.8) -- (417.25,284.8) ;
+%Straight Lines [id:da4340372921474619] 
+\draw [line width=1.5]    (408.75,294.4) -- (408.75,275.21) ;
+
+%Shape: Brace [id:dp6448676796499818] 
+\draw  [line width=1.5]  (111,376.63) .. controls (111,381.3) and (113.33,383.63) .. (118,383.63) -- (259.83,383.63) .. controls (266.5,383.63) and (269.83,385.96) .. (269.83,390.63) .. controls (269.83,385.96) and (273.16,383.63) .. (279.83,383.63)(276.83,383.63) -- (421.67,383.63) .. controls (426.34,383.63) and (428.67,381.3) .. (428.67,376.63) ;
+%Straight Lines [id:da07410677749346861] 
+\draw [line width=1.5]    (108.25,520.8) -- (125.25,520.8) ;
+%Straight Lines [id:da700700060848846] 
+\draw [line width=1.5]    (116.75,530.4) -- (116.75,511.21) ;
+
+%Shape: Ellipse [id:dp25309314883514067] 
+\draw   (141.75,520.4) .. controls (141.75,515.05) and (146.12,510.72) .. (151.5,510.72) .. controls (156.88,510.72) and (161.25,515.05) .. (161.25,520.4) .. controls (161.25,525.75) and (156.88,530.08) .. (151.5,530.08) .. controls (146.12,530.08) and (141.75,525.75) .. (141.75,520.4) -- cycle ;
+%Straight Lines [id:da15361398879570853] 
+\draw    (151.5,560.4) -- (151.5,530.08) ;
+%Shape: Ellipse [id:dp11922541802264952] 
+\draw   (141.75,570.08) .. controls (141.75,564.74) and (146.12,560.4) .. (151.5,560.4) .. controls (156.88,560.4) and (161.25,564.74) .. (161.25,570.08) .. controls (161.25,575.43) and (156.88,579.77) .. (151.5,579.77) .. controls (146.12,579.77) and (141.75,575.43) .. (141.75,570.08) -- cycle ;
+%Curve Lines [id:da6846534275233958] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (161.25,470.72) .. controls (217.67,469.63) and (219.67,569.63) .. (161.25,570.08) ;
+%Shape: Ellipse [id:dp8919508088411173] 
+\draw   (141.75,470.72) .. controls (141.75,465.37) and (146.12,461.03) .. (151.5,461.03) .. controls (156.88,461.03) and (161.25,465.37) .. (161.25,470.72) .. controls (161.25,476.06) and (156.88,480.4) .. (151.5,480.4) .. controls (146.12,480.4) and (141.75,476.06) .. (141.75,470.72) -- cycle ;
+%Straight Lines [id:da9808659240915968] 
+\draw    (151.5,510.72) -- (151.5,480.4) ;
+%Shape: Ellipse [id:dp6898707679738483] 
+\draw   (249.75,509.4) .. controls (249.75,504.05) and (254.12,499.72) .. (259.5,499.72) .. controls (264.88,499.72) and (269.25,504.05) .. (269.25,509.4) .. controls (269.25,514.75) and (264.88,519.08) .. (259.5,519.08) .. controls (254.12,519.08) and (249.75,514.75) .. (249.75,509.4) -- cycle ;
+%Straight Lines [id:da3999992844031298] 
+\draw    (259.5,549.4) -- (259.5,519.08) ;
+%Shape: Ellipse [id:dp4709695539942117] 
+\draw   (249.75,559.08) .. controls (249.75,553.74) and (254.12,549.4) .. (259.5,549.4) .. controls (264.88,549.4) and (269.25,553.74) .. (269.25,559.08) .. controls (269.25,564.43) and (264.88,568.77) .. (259.5,568.77) .. controls (254.12,568.77) and (249.75,564.43) .. (249.75,559.08) -- cycle ;
+%Curve Lines [id:da940049566421093] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (269.25,459.72) .. controls (333.67,460.63) and (334.67,608.63) .. (269.25,608.77) ;
+%Shape: Ellipse [id:dp6253341496158781] 
+\draw   (249.75,459.72) .. controls (249.75,454.37) and (254.12,450.03) .. (259.5,450.03) .. controls (264.88,450.03) and (269.25,454.37) .. (269.25,459.72) .. controls (269.25,465.06) and (264.88,469.4) .. (259.5,469.4) .. controls (254.12,469.4) and (249.75,465.06) .. (249.75,459.72) -- cycle ;
+%Straight Lines [id:da8751810296393059] 
+\draw    (259.5,499.72) -- (259.5,469.4) ;
+%Shape: Ellipse [id:dp8407456531271822] 
+\draw   (249.75,608.77) .. controls (249.75,603.42) and (254.12,599.08) .. (259.5,599.08) .. controls (264.88,599.08) and (269.25,603.42) .. (269.25,608.77) .. controls (269.25,614.12) and (264.88,618.45) .. (259.5,618.45) .. controls (254.12,618.45) and (249.75,614.12) .. (249.75,608.77) -- cycle ;
+%Straight Lines [id:da14298245758103656] 
+\draw    (259.5,599.08) -- (259.5,568.77) ;
+%Straight Lines [id:da6036254548506781] 
+\draw [line width=1.5]    (220.25,521.8) -- (237.25,521.8) ;
+%Straight Lines [id:da28515530631102337] 
+\draw [line width=1.5]    (228.75,531.4) -- (228.75,512.21) ;
+
+%Curve Lines [id:da2089293006978581] 
+\draw [line width=1.5]  [dash pattern={on 5.63pt off 4.5pt}]  (269.25,509.4) .. controls (294.67,510.97) and (294.67,559.97) .. (269.25,559.08) ;
+%Straight Lines [id:da7741500484806249] 
+\draw [line width=1.5]    (331.25,524.8) -- (348.25,524.8) ;
+%Straight Lines [id:da7102780089195931] 
+\draw [line width=1.5]    (339.75,534.4) -- (339.75,515.21) ;
+
+%Shape: Brace [id:dp23003029551106846] 
+\draw  [line width=1.5]  (140,628.63) .. controls (140,633.3) and (142.33,635.63) .. (147,635.63) -- (252.33,635.63) .. controls (259,635.63) and (262.33,637.96) .. (262.33,642.63) .. controls (262.33,637.96) and (265.66,635.63) .. (272.33,635.63)(269.33,635.63) -- (377.67,635.63) .. controls (382.34,635.63) and (384.67,633.3) .. (384.67,628.63) ;
+
+% Text Node
+\draw (39,271.3) node [anchor=north west][inner sep=0.75pt]    {$\Sigma $};
+% Text Node
+\draw (65,270.3) node [anchor=north west][inner sep=0.75pt]    {$=$};
+% Text Node
+\draw (430,276.02) node [anchor=north west][inner sep=0.75pt]    {$\dotsc $};
+% Text Node
+\draw (242,394.63) node [anchor=north west][inner sep=0.75pt]    {$\varpropto \left(\frac{N}{\Omega }\right)$};
+% Text Node
+\draw (363,511.02) node [anchor=north west][inner sep=0.75pt]    {$\dotsc $};
+% Text Node
+\draw (229,644.63) node [anchor=north west][inner sep=0.75pt]    {$\varpropto \left(\frac{N}{\Omega }\right)^{2}$};
+
+
+\end{tikzpicture}
+\end{center}
+For small $N/\Omega$, we only consider the terms $\varpropto(N/\Omega)$, i.e., terms representing multiple scattering from a single impurity. Translating (\ref{single-impurity-series}) into functions
+\begin{equation}\langle G(\mathbf{k}, \omega)\rangle=1 /\left[\omega-\epsilon_{k}+i \delta-\Sigma(\mathbf{k}, \omega)\right]
+\label{single-impurity-G}
+\end{equation}
+where
+\begin{equation}\Sigma(\mathbf{k}, \omega)=\frac{N}{\Omega} W_{\mathbf{k} \mathbf{k}}+\frac{N}{\Omega} \int \frac{d^{3} \mathbf{l}}{(\mathbf{2} \pi)^{3}} \frac{\left|W_{k l}\right|^{2}}{\omega-\epsilon_{l}+i \delta}
+\label{single-impurity-sigma}
+\end{equation}
+In order to find the new energy and lifetime of the electron, we need the complex pole of (\ref{single-impurity-G}), that is:
+\begin{equation}\omega-\epsilon_{k}-\Sigma(\mathbf{k}, \omega)+i \delta=0
+\label{inplace-370}
+\end{equation}
+\redp{Note: if in \ref{single-impurity-G} we use the original sum over $\mathbf{l}$,$\Sigma_{\mathbf{l}}$ instead of $\int d^3\mathbf{l}$, we find that, the pole equation \ref{single-impurity-sigma} will have real solutions. This can be seen at once by plotting $(N / \Omega) W_{\mathbf{k} \mathbf{k}}+(N / \Omega) \sum_{\mathbf{t}}\left|W_{\mathbf{kl}}\right|^{2} /\left(\omega-\epsilon_{\mathbf{l}}+i \delta\right)$ and $y(\mathbf{k}, \omega)=\omega-\epsilon_{\mathbf{k}} \mathbf{v} s . \omega$ and noting that the poles occur at the intersection of $\Sigma(k,\omega)$ and $y(\mathbf{k},\omega)$.\textbf{The complex solution of \ref{inplace-370}} arise because we have gone from a sum to an integral.} 
+
+\begin{imp}
+If $W$ is small so that $\Sigma$ is small then the zeroth-order approximation to $\omega$ is $\omega=\epsilon_{\mathbf{k}}$. 
+
+The first-order approximation may be obtained by setting $\omega=\epsilon_k$ into $\Sigma(\mathbf{k},\omega)$ and re-solving for $\omega$. TO do this, we imagine $\delta$ is finite to start with, then take the limit $\delta\rightarrow0$. Multiplying numerator and denominator of the integrand of $\Sigma$ by $\omega-\epsilon_{\mathbf{l}}-i\delta$ we find for the real and imaginary parts of $\Sigma(\mathbf{k},\epsilon_{k})$:
+\begin{equation}\begin{aligned}
+\operatorname{Re} \sum\left(\mathbf{k}, \epsilon_{k}\right) &=\frac{N}{\Omega} W_{k k}+\lim _{\delta \rightarrow 0}\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}} \frac{\left|W_{l k}\right|^{2}\left(\epsilon_{k}-\epsilon_{l}\right)}{\left(\epsilon_{k}-\epsilon_{l}\right)^{2}+\delta^{2}} \\
+&=\frac{N}{\Omega} W_{k k}+\left(\frac{N}{\Omega}\right) P\left( \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}} \frac{\left|W_{l k}\right|^{2}}{\left(\epsilon_{k}-\epsilon_{l}\right)}\right)
+\end{aligned}
+\label{real-sigma}
+\end{equation}
+\begin{equation}\begin{aligned}
+\operatorname{Im} \sum\left(\mathbf{k}, \epsilon_{k}\right) &=-\lim _{\delta \rightarrow 0}\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left|W_{kl}\right|^{2} \frac{\delta}{\left(\epsilon_{k}-\epsilon_{l}\right)^{2}+\delta^{2}} \\
+&=-\pi\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left|W_{kl}\right|^{2} \delta\left(\epsilon_{k}-\epsilon_{l}\right)
+\end{aligned}
+\label{imaginary-sigma}
+\end{equation}
+\end{imp}
+\bluep{Where $P$ stands for "principal part"}. Using the usual definition, we have the following example of "principal part":
+$$P \left(\int_{-a}^{+b} \frac{d x}{x}\right)=\lim _{\delta \rightarrow 0}\left\{\int_{-\delta}^{-b} \frac{d x}{x}+\int_{+\delta}^{+b} \frac{d x}{x}\right\}=\lim _{\delta \rightarrow 0}\{\ln (-\delta)-\ln (-a)+\ln b-\ln \delta\}=\ln b / a$$
+or using the alternative definition:
+$$P (\int_{-a}^{+b} \frac{d x}{x})=\lim _{\delta \rightarrow 0} \int_{-a}^{+b} d x \frac{x}{x^{2}+\delta^{2}}=\lim _{\delta \rightarrow 0} \frac{1}{2} \int_{-a}^{+b} \frac{d\left(x^{2}\right)}{x^{2}+\delta^{2}}=\left.\lim _{\delta \rightarrow 0} \frac{1}{2} \ln \left(x^{2}+\delta^{2}\right)\right|_{-a} ^{b}=\ln b / a$$
+\begin{equation}\begin{aligned}
+\operatorname{Im} \sum\left(\mathbf{k}, \epsilon_{k}\right) &=-\lim _{\delta \rightarrow 0}\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left|W_{\mathbf{lk}}\right|^{2} \frac{\delta}{\left(\epsilon_{\mathbf{k}}-\epsilon_{l}\right)^{2}+\delta^{2}} \\
+&=-\pi\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left|W_{\mathbf{lk}}\right|^{2} \delta\left(\epsilon_{\mathbf{k}}-\epsilon_{l}\right)
+\end{aligned}\end{equation}
+In \ref{imaginary-sigma} we used the \redp{"squeezed Lorentzian"} definition of $\delta$-function. The results of \ref{real-sigma} and \ref{imaginary-sigma} are usually obtained with the following theorem:
+\begin{imp}
+\begin{equation}\frac{1}{x+i \delta}=P (\frac{1}{x})-i \pi \delta(x)\end{equation}
+which is short for 
+\begin{equation}\int \frac{d x f(x)}{x+i \delta}=P \int \frac{d x f(x)}{x}-i \pi \int d x f(x) \delta(x)
+\label{well-known-complex-function-theorem}
+\end{equation}
+\end{imp}
+This can be applied in the present case by noting that the integral in $\Sigma(\mathbf{k},\omega)$ may be written in the general form:
+\begin{equation}\int d^{3} \mathbf{l} \frac{\boldsymbol{A}(\mathbf{l}, \ldots)}{\boldsymbol{B}(\mathbf{l}, \ldots)+i \boldsymbol{\delta}}=\int d \phi \int d \boldsymbol{\theta} \sin \theta \int d l  \frac{l^{2}A(l, \boldsymbol{\theta}, \phi, \ldots)}{B(l, \boldsymbol{\theta}, \boldsymbol{\phi}, \ldots)+i \delta}\end{equation}
+Only the $\mathbf{l}$-variable is relevant here. If we let $x=B(l)$ so $l=B^{-1}(x)$ then $\int d l$ may be written in terms of $x$ using (\ref{well-known-complex-function-theorem}).(\bluep{$f(x)=l^2B^{\prime,-1}(x)A$}). Transforming back to $\mathbf{l}$ again after this is done yields
+$$\int d^{3} \mathbf{l} \frac{A(\mathbf{l}, \ldots)}{B(\mathbf{l}, \ldots)+i \delta}=P \int d^{3} \mathbf{l} \frac{A(\mathbf{l}, \ldots)}{B(\mathbf{l}, \ldots)}-i \pi \int d^{3} \mathbf{l} A(\mathbf{l}, \ldots) \delta[B(\mathbf{l}, \ldots)]$$
+Hence, using (\ref{real-sigma},\ref{imaginary-sigma}) we find
+\begin{equation}\epsilon_{k}^{\prime}=\epsilon_{k}+\frac{N}{\Omega} W_{k k}+\left(\frac{N}{\Omega}\right) P \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}} \frac{\left|W_{l k}\right|^{2}}{\epsilon_{k}-\epsilon_{l}}\end{equation}
+\begin{equation}\tau_{k}^{-1}=\pi\left(\frac{N}{\Omega}\right) \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left|W_{l k}\right|^{2} \delta\left(\epsilon_{k}-\epsilon_{l}\right)\end{equation}

@@ -33,9 +33,7 @@
 }
 \usepackage{stackengine}
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
-\newcommand\encircle[1]{%
-  \tikz[baseline=(X.base)] 
-    \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+\usepackage{circledsteps}
 
 \begin{document}
 \title{Notes on Feynman Diagrams in Many-body Problems}
@@ -54,6 +52,6 @@
 
 \input{IntroToDiagrams}
 \input{QuantumQuasiParticles}
-
+\input{QuantumParticleInFermiSys}
 
 \end{document}
