@@ -33,6 +33,14 @@
 }
 \usepackage{stackengine}
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\arraystretch}{0.01}
+
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\counterwithin{figure}{section}
+
 \usepackage{circledsteps}
 
 \begin{document}
@@ -52,6 +60,6 @@
 
 \input{IntroToDiagrams}
 \input{QuantumQuasiParticles}
-\input{QuantumParticleInFermiSys}
+\input{QuantumParticleInFermiSys}       
 
 \end{document}

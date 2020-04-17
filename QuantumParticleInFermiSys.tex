@@ -1,1 +1,133 @@
 \section{Quantum Particle in Fermi System}
+\subsection{Propagator method in many-body systems}
+In this chapter we will start with non-interacting Fermi-system problem. This is really a fake many-body problem,since as the problem is actually only a one-body problem. By doing this trivial problem, we will describe Fermi system very simply in terms of a few particles above the Fermi level, and a few removed particles, or "holes" below. Second, it allows us to introduce the language of the many-body problem,"\bluep{occupation number formalism}", or "\bluep{second quantization}". Finally, it shows us how to extend the definition of the propagator to the case where $t_2<t_1$. In this case, \textbf{the Green's function turns out to describe the propagation of removed particles, or "holes", which are represented diagrammatically by a downward-going arrow.}
+
+By introducing a tree-level two-body interaction 
+\begin{center}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,705); %set diagram left start at 0, and has height of 705
+
+%Straight Lines [id:da613823184290475] 
+\draw [line width=1.5]    (491.42,548.13) .. controls (493.09,546.46) and (494.75,546.46) .. (496.42,548.13) .. controls (498.09,549.8) and (499.75,549.8) .. (501.42,548.13) .. controls (503.09,546.46) and (504.75,546.46) .. (506.42,548.13) .. controls (508.09,549.8) and (509.75,549.8) .. (511.42,548.13) .. controls (513.09,546.46) and (514.75,546.46) .. (516.42,548.13) .. controls (518.09,549.8) and (519.75,549.8) .. (521.42,548.13) .. controls (523.09,546.46) and (524.75,546.46) .. (526.42,548.13) .. controls (528.09,549.8) and (529.75,549.8) .. (531.42,548.13) .. controls (533.09,546.46) and (534.75,546.46) .. (536.42,548.13) .. controls (538.09,549.8) and (539.75,549.8) .. (541.42,548.13) .. controls (543.09,546.46) and (544.75,546.46) .. (546.42,548.13) .. controls (548.09,549.8) and (549.75,549.8) .. (551.42,548.13) .. controls (553.09,546.46) and (554.75,546.46) .. (556.42,548.13) -- (559.42,548.13) -- (559.42,548.13) ;
+%Straight Lines [id:da6353755682299548] 
+\draw [line width=1.5]    (464.75,522.3) -- (491.42,548.13) ;
+%Straight Lines [id:da6254606220772768] 
+\draw [line width=1.5]    (559.42,548.13) -- (586.08,573.97) ;
+%Straight Lines [id:da5480869883300985] 
+\draw [line width=1.5]    (491.42,548.13) -- (468.75,582.3) ;
+%Straight Lines [id:da49445752084181116] 
+\draw [line width=1.5]    (580.75,514.3) -- (559.42,548.13) ;
+%Shape: Triangle [id:dp022384072825595847] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (471.18,528.57) -- (488.37,538.35) -- (481.61,545.37) -- cycle ;
+%Shape: Triangle [id:dp5669679661948073] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (565.84,554.41) -- (583.04,564.18) -- (576.28,571.21) -- cycle ;
+%Shape: Triangle [id:dp23872151900315752] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (574.92,522.94) -- (569.46,541.95) -- (561.04,537.03) -- cycle ;
+%Shape: Triangle [id:dp5504301680867448] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (484.92,556.94) -- (479.46,575.95) -- (471.04,571.03) -- cycle ;
+
+
+
+
+\end{tikzpicture}
+\end{center}
+we again can represent the propagator for this case as an infinite series of diagrams, which may be evaluated approximately by partial summation.
+
+\bluep{The Hartree and Hartree-Fock are the crudest of the approximations and yield quasi particles with infinite lifetimes. The RPA yields the energy and lifetime of quasi particles in a high-density electron gas, while the ladder approxiamation is good for low-density systems like nuclear matter. Only the Hartree and Hartree-Fock will be discussed in this chapter.}
+\begin{table}[H]
+        \centering
+        \caption{Some important partial sum approx.}
+\begin{tabular}{|p{0.45\textwidth}|p{0.33\textwidth}|}
+\hline 
+ \begin{center}
+{\fontfamily{helvet}\selectfont Types of diagrams summed over}
+\end{center}
+ & \begin{center}
+{\fontfamily{helvet}\selectfont Name of approximation}
+\end{center}
+ \\
+\hline 
+ \begin{center}
+{\fontfamily{helvet}\selectfont Bubbles}
+\end{center}
+ & \begin{center}
+{\fontfamily{helvet}\selectfont Hartree}
+\end{center}
+ \\
+\hline 
+ \begin{center}
+{\fontfamily{helvet}\selectfont Bubbles and open oysters}
+\end{center}
+ & \begin{center}
+{\fontfamily{helvet}\selectfont Hartree-Fock}
+\end{center}
+ \\
+\hline 
+ \begin{center}
+{\fontfamily{helvet}\selectfont Rings}
+\end{center}
+ & \begin{center}
+{\fontfamily{helvet}\selectfont Random phase approx(RPA)}
+\end{center}
+ \\
+\hline 
+ \begin{center}
+{\fontfamily{helvet}\selectfont Ladders}
+\end{center}
+ & \begin{center}
+{\fontfamily{helvet}\selectfont Ladder approximation}
+\end{center}
+ \\
+ \hline
+\end{tabular}
+        \end{table}
+\subsection{Non-interacting Fermi system in external potential: particle- hole picture}
+We first introduce the particle-hole nomenclature for describing Fermi systems. Suppose we have a single particle in a potential $U(\mathbf{r})$, with energy eigenstates $\phi_k(\mathbf{r})$. The energy levels may be represented as in Fig.\ref{fig:non-interacting-fermi},where for simplicity the system is non-degenerate.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{screenshots/particle-hole.PNG}
+    \caption{Non-interacting Fermi System}
+    \label{fig:non-interacting-fermi}
+\end{figure}
+In the case where $U(\mathbf{r})=0$, the particles are free and $\mathbf{k}$ in \ref{fig:non-interacting-fermi}(a) are momentum, or wavenumber. The ground state of the single particle has energy $\epsilon_F$. If we now put N particles into the system, by Pauli principle the energy levels will be filled from the bottom as shown in \ref{fig:non-interacting-fermi}(a) for $N=5$. The highest filled energy level is the \textit{\textbf{Fermi level}},$\epsilon_F$. In ground state, the free particles fill a sphere in $\mathbf{k}-$space having radius $k_F=\sqrt{2m\epsilon_F}$,where $k_F$ is called the \textbf{Fermi momentum}. The filled sphere is called Fermi sea. The surface of this sphere is \textbf{Fermi surface}.
+
+In Fig \ref{fig:non-interacting-fermi}(b) the excited states of the system are formed by removing a particle from a state below $\epsilon_F$ to a state above. The empty state here is called "hole". In "\bluep{particle-hole description}" we can omit the filled Fermi sea and only focus on excited particle and holes, yielding \ref{fig:non-interacting-fermi}(c) and (d). \textbf{\redp{Since a hole in state $\phi_k$ is actually removal of a particle from the system, the hole represents energy $\epsilon_k$ removed. Hence the hole energy is}}
+\begin{equation}\epsilon_{k}^{\text {hole }}=-\epsilon_{k}\end{equation}
+The time-dependent wave function is thus
+\begin{equation}\psi_{k}(t)^{\text {hole }}=\phi_{k} e^{-i\left(-\epsilon_{k}\right) t}, \quad \epsilon_{k}<\epsilon_{F}\end{equation}
+\subsection{A primer of second quantization formalism}
+The total wave function for the ground and excited states of a system of non-interacting particles is the Slater determinant:
+\begin{equation}\Phi_{k_{1}, \ldots, k_{N}}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right)=\frac{1}{\sqrt{(N !)}}\left|\begin{array}{cc}
+\phi_{k_{1}}\left(\mathbf{r}_{1}\right) \ldots \phi_{k_{1}}\left(\mathbf{r}_{N}\right) \\
+\vdots & \vdots \\
+\phi_{k_{N}}\left(\mathbf{r}_{1}\right) \ldots \phi_{k_{N}}\left(\mathbf{r}_{N}\right)
+\end{array}\right|
+\label{slater-determinant}
+\end{equation}
+\textbf{If the particles are allowed to interact with each other or external potential,} then the exact wave function of the system is a linear combination of \ref{slater-determinant}:
+\begin{equation}\Psi\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right)=\sum_{k_{1}, \ldots, k_{N}} A_{k_{1}, \ldots, k_{N}} \Phi_{k_{1}, \ldots, k_{N}}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right)\end{equation}
+That is, the $\Phi_{k_1,k_2,\ldots}$ for the non-interacting system are the basis states used to describe the interacting system. Noting that all particles are indistinguishable, the essential information in \ref{slater-determinant} is just how many particles in each state, $n$. For short, we shall represent this as
+\begin{equation}
+    \Phi_{k_1,k_2,\ldots}=\left|n_{p_1},n_{p_2},\ldots\right\rangle
+\end{equation}
+meaning:$n_{p_{1}}$ particles in state $\phi_{p_{1}}, n_{p_{2}}$ in $\phi_{p_{3}},$ etc., where $n=0$ or 1 by Pauli principle. This notation is called "\redp{occupation number notation}". It is important to note that just as the original Slater determinant form a complete orthogonal set of basis functions, so do the states in occupation number notation and we have
+\begin{equation}\left\langle n_{1}^{\prime}, \ldots n_{i}^{\prime} \ldots | n_{1}, \ldots, n_{i} \ldots\right\rangle=\delta_{n_1^{\prime}n_1}\ldots\delta_{n_i^{\prime}n_i}\ldots
+\end{equation}
+The wave function for interacting system is now becoming:
+\begin{equation}\Psi=\sum_{n_{1}, \ldots, n_{i}, \ldots} A_{n_{1}, \ldots, n_{i}, \ldots}\left|n_{1}, \ldots, n_{i}, \ldots\right\rangle\end{equation}
+In the particle-hole notation, it is necessary to introduce hole creation and destruction operators, $b_1^{\dagger}, b_{1}$, and similarly particle operators $a_1^{\dagger}, a_{1},$ as follows:
+if $k_{i}<k_{F},$ then $c_{i}$ destroys a particle under the Fermi level, thus creating a hole. Hence
+\begin{equation}\begin{aligned}
+\text { for } k_{l}>k_{F}, & c_{l}=a_{l} \\
+k_{l}<k_{F}, & c_{l}=b^{\dagger}_l
+\end{aligned}\end{equation}
+and
+\begin{equation}\begin{aligned}
+\text { for } k_{l}>k_{F}, & c_{l}^{\dagger}=a_{l}^{\dagger} \\
+k_{l}<k_{F}, & c_{l}^{\dagger}=b_{l}
+\end{aligned}\end{equation}
+Simple examples of how the particle-hole operators work are:
+$$a_{i}^{\dagger}|0\rangle=\left|1_i^{p}\right\rangle, \quad a_{i}\left|1_l^{p}\right\rangle=\delta_{il}|0\rangle, \quad b_{j}^{\dagger} a_{i}^{\dagger}\left|1_{m}^{\rho}\right\rangle=\left|1_{m}^{p}, 1_i^{p}, 1_j^{h}\right\rangle$$
+where the superscripts represent "particle" and "hole", respectively.
