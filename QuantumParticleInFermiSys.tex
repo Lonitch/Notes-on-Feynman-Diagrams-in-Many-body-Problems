@@ -443,9 +443,6 @@ By changing the dummy indices in \ref{Vklmn-defi} we have $V_{klmn}=V_{lknm}$, s
 \begin{imp}
 It is important to note that although the collisions conserves momentum, they do not conserve energy. For example, at the lower interaction of the diagram shown below we see the energy flow into the interaction \bluep{(in the unit of $\hbar^2/2m$)} is $k^2+l^2$, while the energy flow out is $(k-q)^2+(l+q)^2$. Hence we are dealing with virtual particles during the interactions.
 \begin{center}
-    
-
-
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -688,4 +685,429 @@ The diagrams may also be interpreted physically from a particular time $t_0$:
     \includegraphics[width=0.8\textwidth]{screenshots/goldstone-particular-time.PNG}
 \end{center}
 At $t_{0}$ we see that besides the bare particle, there may exist in the many-body system two "virtual' particles plus one hole created by second-order process $d$ or two particles and a hole created by second-order sequence $e,$ and so on, with the particle plus three particle-hole pairs created during the eighth-order poodle process illustrating a typical higher-order case. That is, \textbf{the diagrams show all the particles and holes which may be kicked up by the bare particle as it churns through the Fermi sea.}
-\subsection{The "quasi-physical" nature of Feynman diagrams}
+\subsection{Hartree and Hartree- Fock quasi particles}
+Imagine we have a hypothetical system with no external potential and with an interaction between particles which is dominated by \textbf{forward-scattering processes}(both particles emerge from the interaction with the same momentum they had when they entered). We ask for the energy dispersion law of the elementary excitations(quasi particles) in this case.
+
+The most important interaction diagrams are the forward-scattering ones. The diagrams which dominate the series will be those in which every interaction is of the forward-scattering type. The only diagrams of this sort are
+\begin{equation}
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,235); %set diagram left start at 0, and has height of 235
+
+%Straight Lines [id:da10068577398388545] 
+\draw    (157.38,31.2) -- (157.38,120) ;
+%Shape: Triangle [id:dp19925235312138345] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (157.46,49.04) -- (160.93,58.23) -- (154,58.23) -- cycle ;
+%Shape: Triangle [id:dp004394430560968221] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (158.14,97.7) -- (161.6,106.89) -- (154.68,106.89) -- cycle ;
+%Shape: Ellipse [id:dp41514745661808317] 
+\draw   (181.03,80.89) .. controls (181.03,74.12) and (186.52,68.64) .. (193.28,68.64) .. controls (200.05,68.64) and (205.53,74.12) .. (205.53,80.89) .. controls (205.53,87.65) and (200.05,93.14) .. (193.28,93.14) .. controls (186.52,93.14) and (181.03,87.65) .. (181.03,80.89) -- cycle ;
+%Straight Lines [id:da9922958867186198] 
+\draw    (157.55,80.89) .. controls (159.22,79.22) and (160.88,79.22) .. (162.55,80.89) .. controls (164.22,82.56) and (165.88,82.56) .. (167.55,80.89) .. controls (169.22,79.22) and (170.88,79.22) .. (172.55,80.89) .. controls (174.22,82.56) and (175.88,82.56) .. (177.55,80.89) -- (181.03,80.89) -- (181.03,80.89) ;
+%Shape: Triangle [id:dp2263151698703949] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (188.69,69.27) -- (197.91,65.9) -- (197.84,72.83) -- cycle ;
+%Straight Lines [id:da5407884786763255] 
+\draw    (104,124) -- (104,28.6) ;
+\draw [shift={(104,76.3)}, rotate = 450] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da7971289439607688] 
+\draw    (35.5,122) -- (35.5,26.6)(38.5,122) -- (38.5,26.6) ;
+\draw [shift={(37,74.3)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da12339598719830225] 
+\draw    (257.14,69.82) -- (257.14,126) ;
+%Shape: Triangle [id:dp8081717807936885] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (257.62,111.89) -- (259.81,117.71) -- (255.43,117.71) -- cycle ;
+%Shape: Ellipse [id:dp3504589334552972] 
+\draw   (272.1,94.26) .. controls (272.1,89.98) and (275.57,86.51) .. (279.85,86.51) .. controls (284.13,86.51) and (287.6,89.98) .. (287.6,94.26) .. controls (287.6,98.54) and (284.13,102.01) .. (279.85,102.01) .. controls (275.57,102.01) and (272.1,98.54) .. (272.1,94.26) -- cycle ;
+%Straight Lines [id:da7813421183318351] 
+\draw    (257.24,94.26) .. controls (258.91,92.59) and (260.57,92.59) .. (262.24,94.26) .. controls (263.91,95.93) and (265.57,95.93) .. (267.24,94.26) -- (272.1,94.26) -- (272.1,94.26) ;
+%Shape: Triangle [id:dp8847678340198828] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (276.95,86.72) -- (282.59,84.11) -- (282.91,88.48) -- cycle ;
+%Straight Lines [id:da35906810110006815] 
+\draw    (257.14,14.82) -- (257.14,71) ;
+%Shape: Triangle [id:dp43277568851192416] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (257.19,29.9) -- (259.38,35.72) -- (255,35.72) -- cycle ;
+%Shape: Triangle [id:dp6586704789658937] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (257.14,68.09) -- (259.33,73.91) -- (254.95,73.91) -- cycle ;
+%Shape: Ellipse [id:dp7900642734315325] 
+\draw   (272.1,53.26) .. controls (272.1,48.98) and (275.57,45.51) .. (279.85,45.51) .. controls (284.13,45.51) and (287.6,48.98) .. (287.6,53.26) .. controls (287.6,57.54) and (284.13,61.01) .. (279.85,61.01) .. controls (275.57,61.01) and (272.1,57.54) .. (272.1,53.26) -- cycle ;
+%Straight Lines [id:da590446672559086] 
+\draw    (257.24,53.26) .. controls (258.91,51.59) and (260.57,51.59) .. (262.24,53.26) .. controls (263.91,54.93) and (265.57,54.93) .. (267.24,53.26) -- (272.1,53.26) -- (272.1,53.26) ;
+%Shape: Triangle [id:dp3829321790372957] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (276.95,45.72) -- (282.59,43.11) -- (282.91,47.48) -- cycle ;
+%Straight Lines [id:da4118327533110844] 
+\draw [line width=1.5]    (125.25,78.8) -- (142.25,78.8) ;
+%Straight Lines [id:da21640587901935815] 
+\draw [line width=1.5]    (133.75,88.4) -- (133.75,69.21) ;
+
+%Straight Lines [id:da04127081135262434] 
+\draw [line width=1.5]    (224.25,81.8) -- (241.25,81.8) ;
+%Straight Lines [id:da3404376520711404] 
+\draw [line width=1.5]    (232.75,91.4) -- (232.75,72.21) ;
+
+%Straight Lines [id:da19872197953124104] 
+\draw [line width=1.5]    (301.25,81.8) -- (318.25,81.8) ;
+%Straight Lines [id:da08065561550870459] 
+\draw [line width=1.5]    (309.75,91.4) -- (309.75,72.21) ;
+
+%Shape: Circle [id:dp455427374462828] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (332.07,82.67) .. controls (332.07,81.27) and (333.2,80.13) .. (334.6,80.13) .. controls (336,80.13) and (337.13,81.27) .. (337.13,82.67) .. controls (337.13,84.07) and (336,85.2) .. (334.6,85.2) .. controls (333.2,85.2) and (332.07,84.07) .. (332.07,82.67) -- cycle ;
+%Shape: Circle [id:dp8369683943730808] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (342.07,82.67) .. controls (342.07,81.27) and (343.2,80.13) .. (344.6,80.13) .. controls (346,80.13) and (347.13,81.27) .. (347.13,82.67) .. controls (347.13,84.07) and (346,85.2) .. (344.6,85.2) .. controls (343.2,85.2) and (342.07,84.07) .. (342.07,82.67) -- cycle ;
+%Shape: Circle [id:dp032593667434301477] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (352.07,82.67) .. controls (352.07,81.27) and (353.2,80.13) .. (354.6,80.13) .. controls (356,80.13) and (357.13,81.27) .. (357.13,82.67) .. controls (357.13,84.07) and (356,85.2) .. (354.6,85.2) .. controls (353.2,85.2) and (352.07,84.07) .. (352.07,82.67) -- cycle ;
+%Straight Lines [id:da8747013992556422] 
+\draw    (479.88,80) -- (387.88,80) ;
+%Straight Lines [id:da9235043672443867] 
+\draw [line width=1.5]    (364.62,77.73) -- (380.88,77.73) ;
+%Straight Lines [id:da7317669535949963] 
+\draw [line width=1.5]    (364.62,85.73) -- (380.88,85.73) ;
+%Straight Lines [id:da4557558903425205] 
+\draw    (406,113) -- (406,86.6) ;
+%Shape: Triangle [id:dp5985092604692424] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (405.88,95.2) -- (409.46,104.4) -- (402.54,104.4) -- cycle ;
+%Shape: Ellipse [id:dp37241435198422335] 
+\draw   (463.1,97.26) .. controls (463.1,92.98) and (466.57,89.51) .. (470.85,89.51) .. controls (475.13,89.51) and (478.6,92.98) .. (478.6,97.26) .. controls (478.6,101.54) and (475.13,105.01) .. (470.85,105.01) .. controls (466.57,105.01) and (463.1,101.54) .. (463.1,97.26) -- cycle ;
+%Straight Lines [id:da257382242568612] 
+\draw    (448.24,97.26) .. controls (449.91,95.59) and (451.57,95.59) .. (453.24,97.26) .. controls (454.91,98.93) and (456.57,98.93) .. (458.24,97.26) -- (463.1,97.26) -- (463.1,97.26) ;
+%Shape: Triangle [id:dp887336772772499] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (467.95,89.72) -- (473.59,87.11) -- (473.91,91.48) -- cycle ;
+%Straight Lines [id:da7683283520076601] 
+\draw [line width=1.5]    (427.62,96.73) -- (439.88,96.73) ;
+
+% Text Node
+\draw (104,124) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (143,109.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (144,19.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (189,43.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {l};
+% Text Node
+\draw (279,21.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {l};
+% Text Node
+\draw (281,63.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {l};
+% Text Node
+\draw (259.81,117.71) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (260.81,61.71) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (257.14,14.82) node [anchor=north west][inner sep=0.75pt]   [align=left] {k};
+% Text Node
+\draw (52.62,63.17) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$\approx $};
+% Text Node
+\draw (428.62,56.73) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (405.62,79.73) node [anchor=north west][inner sep=0.75pt]  [font=\small] [align=left] {\mbox{-}1};
+
+
+\end{tikzpicture}
+\label{Hartree-bubble-approx}
+\end{equation}
+Translate into equations, the series becomes:
+\begin{equation}i G^{+}(\mathbf{k}, \omega)=\frac{1}{\left[i G_{0}^{+}(\mathbf{k}, \omega)\right]^{-1}-(-1) \sum_{l<k_{F}}\left(-i V_{klkl}\right)(-1)}\end{equation}
+or
+\begin{equation}G^{+}(\mathbf{k}, \omega)=\frac{1}{\omega-\epsilon_{k}-\sum_{l<k_{F}} V_{k l k l}+i \delta}\end{equation}
+Thus the dispersion law and lifetime of the quasi-particle are:
+\begin{equation}\epsilon_{k}^{\prime}=\epsilon_{k}+\sum_{l<k_{F}} V_{k l k l} ; \quad \tau_{k}=1 / \delta=\infty\end{equation}
+where $\sum_{l<k_{F}} V_{k l k l}$ is the "self-energy" of the particle. If spin is included there is a factor 2 multiplying $V_{klkl}$.
+
+This result has a simple physical meaning. First we note that \ref{Hartree-bubble-approx} has the exactly same form as the diagram series for a single particle moving through an external cation potential. Thus,\redp{$\sum_{i<k_{F}}(-i) V_{k l k l}$ can be interpreted as a transition probability for $\phi_k\rightarrow\phi_k$ scattering caused by an "effective external potential", $\nu_{eff}$.} We can find $\nu_{eff}$ by writing out $\sum_{i<k_{F}} V_{k l k l}$ in detail, using (\ref{Vklmn-defi}):
+\begin{equation}
+    \sum_{i<k_{F}} V_{k l k l}=\int d^{3} \mathbf{r} \phi_{k}^{*}(\mathbf{r})\{\underbrace{\left.\sum_{l \leq k_{F}} \int\left|\phi_{l}\left(\mathbf{r}^{\prime}\right)\right|^{2} V\left(\mathbf{r}-\mathbf{r}^{\prime}\right) d^{3} \mathbf{r}^{\prime}\right.}_{\nu_{\mathrm{eff}}}\}\phi_{k}(\mathbf{r})
+\end{equation}
+$\left|\phi_{1}\left(\mathbf{r}^{\prime}\right)\right|^{2}$ is the density at point $\mathbf{r}^{\prime}$ of a particle in $\phi_{1}, \nu_{\mathrm{eqf}}$ is evidently the average potential at point $\mathbf{r}$ due to all the particles in the Fermi sea. (In the present case, since the $\phi_{t}$ are plane waves, $\nu_{\mathrm{eff}}$ is independent of $\mathbf{r} .$ ) If we write a Schrodinger equation with energy eigenvalues $\epsilon^{\prime}_k$ by using $\nu_{eff}$ as external potential, we end up with \redp{Hartree equation}:
+\begin{equation}\left[\frac{p^{2}}{2 m}+\nu_{\mathrm{eff}}(\mathrm{r})\right] \phi_{k}(\mathrm{r})=\epsilon_{k}^{\prime} \phi_{k}(\mathrm{r})
+\label{Hartree-equation}
+\end{equation}
+If the eigenfunctions are to be solved for in (\ref{Hartree-equation}), we must calculate $\phi_k$ \bluep{\textbf{self-consistently}}:
+\begin{mybox}
+put an assumed $\phi_{k}$ in $\nu_{\text {eff }},$ find a new $\phi_{k}$ from (\ref{Hartree-equation}) put the new $\phi_{k}$ in $\nu_{\text {eff }}$ calculate a newer $\phi_{k},$ etc., until $\phi_{k}$ stops changing appreciably.
+\end{mybox}
+From here, we take another step to the quasi-particle in Hartree-Fock (HF) approximation by assuming the exchange scattering (open oyster diagrams) is also an important forward scattering.
+\begin{equation}
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,235); %set diagram left start at 0, and has height of 235
+
+%Straight Lines [id:da10068577398388545] 
+\draw    (157.38,31.2) -- (157.38,120) ;
+%Shape: Triangle [id:dp19925235312138345] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (157.46,49.04) -- (160.93,58.23) -- (154,58.23) -- cycle ;
+%Shape: Triangle [id:dp004394430560968221] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (158.14,97.7) -- (161.6,106.89) -- (154.68,106.89) -- cycle ;
+%Shape: Ellipse [id:dp41514745661808317] 
+\draw   (181.03,80.89) .. controls (181.03,74.12) and (186.52,68.64) .. (193.28,68.64) .. controls (200.05,68.64) and (205.53,74.12) .. (205.53,80.89) .. controls (205.53,87.65) and (200.05,93.14) .. (193.28,93.14) .. controls (186.52,93.14) and (181.03,87.65) .. (181.03,80.89) -- cycle ;
+%Straight Lines [id:da9922958867186198] 
+\draw    (157.55,80.89) .. controls (159.22,79.22) and (160.88,79.22) .. (162.55,80.89) .. controls (164.22,82.56) and (165.88,82.56) .. (167.55,80.89) .. controls (169.22,79.22) and (170.88,79.22) .. (172.55,80.89) .. controls (174.22,82.56) and (175.88,82.56) .. (177.55,80.89) -- (181.03,80.89) -- (181.03,80.89) ;
+%Shape: Triangle [id:dp2263151698703949] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (188.69,69.27) -- (197.91,65.9) -- (197.84,72.83) -- cycle ;
+%Straight Lines [id:da5407884786763255] 
+\draw    (104,124) -- (104,28.6) ;
+\draw [shift={(104,76.3)}, rotate = 450] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da7971289439607688] 
+\draw    (35.5,122) -- (35.5,26.6)(38.5,122) -- (38.5,26.6) ;
+\draw [shift={(37,74.3)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Straight Lines [id:da12339598719830225] 
+\draw    (316.14,78.82) -- (316.14,135) ;
+%Shape: Triangle [id:dp8081717807936885] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (316.62,120.89) -- (318.81,126.71) -- (314.43,126.71) -- cycle ;
+%Shape: Ellipse [id:dp3504589334552972] 
+\draw   (331.1,103.26) .. controls (331.1,98.98) and (334.57,95.51) .. (338.85,95.51) .. controls (343.13,95.51) and (346.6,98.98) .. (346.6,103.26) .. controls (346.6,107.54) and (343.13,111.01) .. (338.85,111.01) .. controls (334.57,111.01) and (331.1,107.54) .. (331.1,103.26) -- cycle ;
+%Straight Lines [id:da7813421183318351] 
+\draw    (316.24,103.26) .. controls (317.91,101.59) and (319.57,101.59) .. (321.24,103.26) .. controls (322.91,104.93) and (324.57,104.93) .. (326.24,103.26) -- (331.1,103.26) -- (331.1,103.26) ;
+%Shape: Triangle [id:dp8847678340198828] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (335.95,95.72) -- (341.59,93.11) -- (341.91,97.48) -- cycle ;
+%Straight Lines [id:da35906810110006815] 
+\draw    (316.14,23.82) -- (316.14,80) ;
+%Shape: Triangle [id:dp43277568851192416] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (316.19,38.9) -- (318.38,44.72) -- (314,44.72) -- cycle ;
+%Shape: Triangle [id:dp6586704789658937] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (316.14,77.09) -- (318.33,82.91) -- (313.95,82.91) -- cycle ;
+%Shape: Ellipse [id:dp7900642734315325] 
+\draw   (331.1,62.26) .. controls (331.1,57.98) and (334.57,54.51) .. (338.85,54.51) .. controls (343.13,54.51) and (346.6,57.98) .. (346.6,62.26) .. controls (346.6,66.54) and (343.13,70.01) .. (338.85,70.01) .. controls (334.57,70.01) and (331.1,66.54) .. (331.1,62.26) -- cycle ;
+%Straight Lines [id:da590446672559086] 
+\draw    (316.24,62.26) .. controls (317.91,60.59) and (319.57,60.59) .. (321.24,62.26) .. controls (322.91,63.93) and (324.57,63.93) .. (326.24,62.26) -- (331.1,62.26) -- (331.1,62.26) ;
+%Shape: Triangle [id:dp3829321790372957] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (335.95,54.72) -- (341.59,52.11) -- (341.91,56.48) -- cycle ;
+%Straight Lines [id:da4118327533110844] 
+\draw [line width=1.5]    (212.25,80.8) -- (229.25,80.8) ;
+%Straight Lines [id:da21640587901935815] 
+\draw [line width=1.5]    (220.75,90.4) -- (220.75,71.21) ;
+
+%Straight Lines [id:da04127081135262434] 
+\draw [line width=1.5]    (287.25,79.8) -- (304.25,79.8) ;
+%Straight Lines [id:da3404376520711404] 
+\draw [line width=1.5]    (295.75,89.4) -- (295.75,70.21) ;
+
+%Straight Lines [id:da19872197953124104] 
+\draw [line width=1.5]    (359.25,80.8) -- (376.25,80.8) ;
+%Straight Lines [id:da08065561550870459] 
+\draw [line width=1.5]    (367.75,90.4) -- (367.75,71.21) ;
+
+%Shape: Circle [id:dp455427374462828] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (510.07,79.67) .. controls (510.07,78.27) and (511.2,77.13) .. (512.6,77.13) .. controls (514,77.13) and (515.13,78.27) .. (515.13,79.67) .. controls (515.13,81.07) and (514,82.2) .. (512.6,82.2) .. controls (511.2,82.2) and (510.07,81.07) .. (510.07,79.67) -- cycle ;
+%Shape: Circle [id:dp8369683943730808] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (520.07,79.67) .. controls (520.07,78.27) and (521.2,77.13) .. (522.6,77.13) .. controls (524,77.13) and (525.13,78.27) .. (525.13,79.67) .. controls (525.13,81.07) and (524,82.2) .. (522.6,82.2) .. controls (521.2,82.2) and (520.07,81.07) .. (520.07,79.67) -- cycle ;
+%Shape: Circle [id:dp032593667434301477] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (530.07,79.67) .. controls (530.07,78.27) and (531.2,77.13) .. (532.6,77.13) .. controls (534,77.13) and (535.13,78.27) .. (535.13,79.67) .. controls (535.13,81.07) and (534,82.2) .. (532.6,82.2) .. controls (531.2,82.2) and (530.07,81.07) .. (530.07,79.67) -- cycle ;
+%Straight Lines [id:da8747013992556422] 
+\draw    (232.88,173) -- (80.88,173) ;
+%Straight Lines [id:da9235043672443867] 
+\draw [line width=1.5]    (57.62,170.73) -- (73.88,170.73) ;
+%Straight Lines [id:da7317669535949963] 
+\draw [line width=1.5]    (57.62,178.73) -- (73.88,178.73) ;
+%Straight Lines [id:da4557558903425205] 
+\draw    (91,206) -- (91,179.6) ;
+%Shape: Triangle [id:dp5985092604692424] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (90.88,188.2) -- (94.46,197.4) -- (87.54,197.4) -- cycle ;
+%Shape: Ellipse [id:dp37241435198422335] 
+\draw   (142.1,190.26) .. controls (142.1,185.98) and (145.57,182.51) .. (149.85,182.51) .. controls (154.13,182.51) and (157.6,185.98) .. (157.6,190.26) .. controls (157.6,194.54) and (154.13,198.01) .. (149.85,198.01) .. controls (145.57,198.01) and (142.1,194.54) .. (142.1,190.26) -- cycle ;
+%Straight Lines [id:da257382242568612] 
+\draw    (127.24,190.26) .. controls (128.91,188.59) and (130.57,188.59) .. (132.24,190.26) .. controls (133.91,191.93) and (135.57,191.93) .. (137.24,190.26) -- (142.1,190.26) -- (142.1,190.26) ;
+%Shape: Triangle [id:dp887336772772499] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (146.95,182.72) -- (152.59,180.11) -- (152.91,184.48) -- cycle ;
+%Straight Lines [id:da7683283520076601] 
+\draw [line width=1.5]    (106.62,189.73) -- (118.88,189.73) ;
+%Straight Lines [id:da9666146127032775] 
+\draw    (236.61,79.06) .. controls (238.28,77.39) and (239.94,77.39) .. (241.61,79.06) .. controls (243.28,80.73) and (244.94,80.73) .. (246.61,79.06) .. controls (248.28,77.39) and (249.94,77.39) .. (251.61,79.06) .. controls (253.28,80.73) and (254.94,80.73) .. (256.61,79.06) .. controls (258.28,77.39) and (259.94,77.39) .. (261.61,79.06) .. controls (263.28,80.73) and (264.94,80.73) .. (266.61,79.06) .. controls (268.28,77.39) and (269.94,77.39) .. (271.61,79.06) -- (275.88,79.06) -- (275.88,79.06) ;
+%Curve Lines [id:da4572731900651573] 
+\draw    (236.61,79.06) .. controls (236.16,97.85) and (275.88,97.85) .. (275.88,79.06) ;
+%Shape: Triangle [id:dp8376019680606532] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (260.35,92.78) -- (254.72,95.31) -- (254.6,91.01) -- cycle ;
+%Straight Lines [id:da19573379881355923] 
+\draw    (236.61,79.06) -- (236.61,115.6) ;
+%Straight Lines [id:da9335760144993632] 
+\draw    (275.88,42.52) -- (275.88,79.06) ;
+%Straight Lines [id:da09418803398791387] 
+\draw    (385.14,77.82) -- (385.14,134) ;
+%Shape: Triangle [id:dp9867837205580375] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (385.62,119.89) -- (387.81,125.71) -- (383.43,125.71) -- cycle ;
+%Shape: Ellipse [id:dp4503646148732011] 
+\draw   (400.1,102.26) .. controls (400.1,97.98) and (403.57,94.51) .. (407.85,94.51) .. controls (412.13,94.51) and (415.6,97.98) .. (415.6,102.26) .. controls (415.6,106.54) and (412.13,110.01) .. (407.85,110.01) .. controls (403.57,110.01) and (400.1,106.54) .. (400.1,102.26) -- cycle ;
+%Straight Lines [id:da7748386106748664] 
+\draw    (385.24,102.26) .. controls (386.91,100.59) and (388.57,100.59) .. (390.24,102.26) .. controls (391.91,103.93) and (393.57,103.93) .. (395.24,102.26) -- (400.1,102.26) -- (400.1,102.26) ;
+%Shape: Triangle [id:dp613225232644511] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (404.95,94.72) -- (410.59,92.11) -- (410.91,96.48) -- cycle ;
+%Shape: Triangle [id:dp38545102979767887] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (385.14,76.09) -- (387.33,81.91) -- (382.95,81.91) -- cycle ;
+%Straight Lines [id:da06195096196417926] 
+\draw    (385.61,50.3) .. controls (387.28,48.63) and (388.94,48.63) .. (390.61,50.3) .. controls (392.28,51.97) and (393.94,51.97) .. (395.61,50.3) .. controls (397.28,48.63) and (398.94,48.63) .. (400.61,50.3) .. controls (402.28,51.97) and (403.94,51.97) .. (405.61,50.3) .. controls (407.28,48.63) and (408.94,48.63) .. (410.61,50.3) -- (413.88,50.3) -- (413.88,50.3) ;
+%Curve Lines [id:da11164601469735969] 
+\draw    (385.61,50.3) .. controls (385.29,63.82) and (413.88,63.82) .. (413.88,50.3) ;
+%Shape: Triangle [id:dp49420464714238543] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (402.7,60.17) -- (398.65,61.99) -- (398.56,58.9) -- cycle ;
+%Straight Lines [id:da7565580191296282] 
+\draw    (385.61,50.3) -- (385.61,76.6) ;
+%Straight Lines [id:da2073518338843121] 
+\draw    (413.88,24) -- (413.88,50.3) ;
+%Straight Lines [id:da4063499851872394] 
+\draw [line width=1.5]    (123.25,81.8) -- (140.25,81.8) ;
+%Straight Lines [id:da52053011177684] 
+\draw [line width=1.5]    (131.75,91.4) -- (131.75,72.21) ;
+
+%Straight Lines [id:da10426908085416242] 
+\draw    (470.14,45.82) -- (470.14,102) ;
+%Shape: Triangle [id:dp04527669666717671] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (470.62,87.89) -- (472.81,93.71) -- (468.43,93.71) -- cycle ;
+%Shape: Ellipse [id:dp5545663112148201] 
+\draw   (485.1,70.26) .. controls (485.1,65.98) and (488.57,62.51) .. (492.85,62.51) .. controls (497.13,62.51) and (500.6,65.98) .. (500.6,70.26) .. controls (500.6,74.54) and (497.13,78.01) .. (492.85,78.01) .. controls (488.57,78.01) and (485.1,74.54) .. (485.1,70.26) -- cycle ;
+%Straight Lines [id:da10563142283656302] 
+\draw    (470.24,70.26) .. controls (471.91,68.59) and (473.57,68.59) .. (475.24,70.26) .. controls (476.91,71.93) and (478.57,71.93) .. (480.24,70.26) -- (485.1,70.26) -- (485.1,70.26) ;
+%Shape: Triangle [id:dp19981906870945276] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (489.95,62.72) -- (495.59,60.11) -- (495.91,64.48) -- cycle ;
+%Shape: Triangle [id:dp25011011578985787] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (441.61,115.45) -- (443.8,121.26) -- (439.42,121.26) -- cycle ;
+%Straight Lines [id:da20337617575483058] 
+\draw    (441.61,102.3) .. controls (443.28,100.63) and (444.94,100.63) .. (446.61,102.3) .. controls (448.28,103.97) and (449.94,103.97) .. (451.61,102.3) .. controls (453.28,100.63) and (454.94,100.63) .. (456.61,102.3) .. controls (458.28,103.97) and (459.94,103.97) .. (461.61,102.3) .. controls (463.28,100.63) and (464.94,100.63) .. (466.61,102.3) -- (469.88,102.3) -- (469.88,102.3) ;
+%Curve Lines [id:da6741697347472683] 
+\draw    (441.61,102.3) .. controls (441.29,115.82) and (469.88,115.82) .. (469.88,102.3) ;
+%Shape: Triangle [id:dp2958109540935576] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (458.7,112.17) -- (454.65,113.99) -- (454.56,110.9) -- cycle ;
+%Straight Lines [id:da8235538232587646] 
+\draw    (441.61,102.3) -- (441.61,128.6) ;
+%Shape: Triangle [id:dp1123399297414529] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (470.14,54.09) -- (472.33,59.91) -- (467.95,59.91) -- cycle ;
+%Straight Lines [id:da47908457415856043] 
+\draw [line width=1.5]    (423.25,81.8) -- (440.25,81.8) ;
+%Straight Lines [id:da3836796368081298] 
+\draw [line width=1.5]    (431.75,91.4) -- (431.75,72.21) ;
+
+%Straight Lines [id:da4264852226074891] 
+\draw    (184.61,187.3) .. controls (186.28,185.63) and (187.94,185.63) .. (189.61,187.3) .. controls (191.28,188.97) and (192.94,188.97) .. (194.61,187.3) .. controls (196.28,185.63) and (197.94,185.63) .. (199.61,187.3) .. controls (201.28,188.97) and (202.94,188.97) .. (204.61,187.3) .. controls (206.28,185.63) and (207.94,185.63) .. (209.61,187.3) -- (212.88,187.3) -- (212.88,187.3) ;
+%Curve Lines [id:da09830988157752873] 
+\draw    (184.61,187.3) .. controls (184.29,200.82) and (212.88,200.82) .. (212.88,187.3) ;
+%Shape: Triangle [id:dp879627428924058] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (201.7,197.17) -- (197.65,198.99) -- (197.56,195.9) -- cycle ;
+%Straight Lines [id:da694814247534972] 
+\draw [line width=1.5]    (162.25,191.8) -- (179.25,191.8) ;
+%Straight Lines [id:da5323779681620588] 
+\draw [line width=1.5]    (170.75,201.4) -- (170.75,182.21) ;
+
+%Curve Lines [id:da007273577365227046] 
+\draw [line width=1.5]    (128.88,178) .. controls (121.88,185) and (121.88,202) .. (127.88,207) ;
+%Curve Lines [id:da8156366031528229] 
+\draw [line width=1.5]    (217.88,177) .. controls (222.88,186) and (221.88,201) .. (216.88,206) ;
+
+% Text Node
+\draw (52.62,63.17) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$\approx $};
+% Text Node
+\draw (149.62,151.73) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (90.62,172.73) node [anchor=north west][inner sep=0.75pt]  [font=\small] [align=left] {\mbox{-}1};
+
+
+\end{tikzpicture}
+\label{Hartree-fock-diagram-series}
+\end{equation}
+Translating by means of propagator dictionary yields
+\begin{equation}G^{+}(\mathbf{k}, \omega)=\frac{1}{\omega-\epsilon_{k}-\sum_{i<k_{F}}\left(V_{k l k l}-V_{l k k l}\right)+i \delta}\end{equation}
+The dispersion law and the lifetime are therefore
+\begin{equation}\begin{array}{l}
+\epsilon_{k}^{\prime}=\epsilon_{k}+\sum_{k<k_{F}}\left(V_{k l k l}-V_{l k k l}\right) \\
+r_{k}=\infty
+\end{array}\end{equation}
+where $V_{lkkl}$ is the well-known "exchange term". Analogous to what was done in the Hartreen approximation, we can here construct another Schrodinger equation including the effective external "exchange" potential. This turns out to be the \redp{\textbf{Hartree-Fock}} equation. \bluep{Note that the lifetime here is infinite because of the crudeness of the HF approximation. Better approximations produce finite lifetimes.}
+
+\subsection{Hartree-Fock quasi particles in nuclear matter}
+the HF can be used as a very crude "first approximation" to the propagator, as we show now for the case of nuclear matter. \bluep{Nuclear matter is a hypothetical matter based on the "liquid drop" model of the nucleus.} For nuclear interaction potential, we assume it has the form of a simple Yukawa potential ($V_0<0$):
+\begin{equation}V=+a V_{0} \frac{e^{-\left|r-r^{\prime}\right| / a}}{\left|\mathbf{r}-\mathbf{r}^{\prime}\right|}
+\label{Yukawa-potential}
+\end{equation}
+If we convert the sum in k-space to an integral using
+\begin{equation}\sum_{l} \rightarrow \Omega \int \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\end{equation}
+we have the energy of HF quasi particle is
+\begin{equation}\epsilon_{k}^{\prime}=\frac{k^{2}}{2 m}+\Omega \int_{|\mathbf{l}|<k_{r}} \frac{d^{3} \mathbf{l}}{(2 \pi)^{3}}\left(V_{k l k l}-V_{l k k l}\right)
+\label{nuclear-quasi-energy}
+\end{equation}
+The transition matrix element $V_{klmn}$ is
+\begin{equation}V_{k l m n}=+\frac{V_{0}}{\Omega^{2}} \iint d^{3} \mathbf{r} d^{3} \mathbf{r}^{\prime} e^{-i\left(\mathbf{k} \cdot \mathbf{r}+1 \cdot \mathbf{r}^{\prime}-\mathbf{m} \cdot \mathbf{r}-\mathbf{n} \cdot \mathbf{r}^{\prime}\right)} \frac{e^{-\left|r-r^{\prime}\right| / a}}{\left|\mathbf{r}-\mathbf{r}^{\prime}\right| / a}\end{equation}
+\redp{If we substitute $\mathbf{r}^{\prime\prime}+\mathbf{r}^{\prime}=\mathbf{r}$, and integrate over $\mathbf{r}^{\prime}$}, we find:
+\begin{equation}
+V_{klmn}=\frac{1}{\Omega} \frac{4 \pi V_{0} a^{3} \delta_{k+l, m+n}}{\left[1+(\mathbf{k}-\mathbf{m})^{2} a^{2}\right]}=\frac{1}{\Omega} \frac{4 \pi V_{0} a^{3} \delta_{k+l, m+n}}{\left[1+\left(k^{2}+m^{2}-2 k m \cos \theta\right) a^{2}\right]}
+\label{Yukawa-transition-element}
+\end{equation}
+where $\theta$ is the angle between $\mathbf{k}$ and $\mathbf{m}$ and we have used that $\Omega \gg a^{3} .$ Hence
+\begin{equation}V_{k l k l}=+\frac{4 \pi V_{0} a^{3}}{\Omega}, \quad V_{l k k l}=+\frac{1}{\Omega} \frac{4 \pi V_{0} a^{3}}{\left[1+\left(l^{2}+k^{2}-2 k / \cos \theta\right) a^{2}\right]}\end{equation}
+Substituting these expressions in (\ref{nuclear-quasi-energy}) we find that the $V_{\text {klkl }}$ integral is trivial and yields $2 V_{0} a^{3} k_{F}^{3} / 3 \pi .$ The $V_{lkkl}$ integral is first integrated over $\phi$ and $\theta$ which yields terms involving $(k+l) a$ and $(k-l)a$. The remaining $l$ -integration is easily carried out with the aid of the substitutions $y=(k+l) a,$ and $z=(k-l) a$ and we obtain for the quasi particle energy
+\begin{equation}\epsilon_{k}^{\prime}=\frac{k^{2}}{2 m}+\frac{2 V_{0} a^{3} k_{F}^{3}}{3 \pi}-\frac{V_{0}}{2 \pi}\left[F\left(k a+k_{F} a\right)-F\left(k a-k_{F} a\right)\right]\end{equation}
+where
+\begin{equation}F(z)=\frac{1}{2 k a}\left[1+z^{2}\right]\left[\ln \left(1+z^{2}\right)-1\right]-\left[z \ln \left(1+z^{2}\right)-2 z+2 \tan ^{-1} z\right]\end{equation}
+This expression can be evaluated to find the effective mass in the limit when ka and $k_{F} a$ are both $\ll 1,$ so that $z \ll 1 .$ In order to get a non-vanishing contribution from $\left[F\left(k a+k_{F} a\right)-F\left(k a-k_{F} a\right)\right],$ it is necessary to expand the logarithm and tan $^{-1}$ functions up through order $z^{6}$. Keeping only terms up through order $k^{2}$ we find:
+\begin{equation}\epsilon_{k}^{\prime} \approx \frac{2 V_{0} a^{5} k_{F}^{3}}{5 \pi}+\left[\frac{1}{2 m}+\frac{2 V_{0} a^{5} k_{F}^{3}}{3 \pi}\right] k^{2}\end{equation}
+from which we see that the effective mass in $k^2/2m^*$ is
+\begin{equation}m^{*}=\frac{m}{1+\frac{4 m V_{0} a^{5} k_{F}^{3}}{3 \pi}}\end{equation}
+
+\subsection{Quasi particles in the electron gas, and the random phase approximation}
+If the electrons in metal is assumed to interact by purely Coulomb forces, and the ions are motionless, we call this system as \redp{"electron gas"}.
+
+Using the HF approximation, the Coulomb interaction and its transition matrix element are just the Yukawa interaction with $V_0>0$ and its matrix element (\ref{Yukawa-transition-element}) with $V_0a=e^2$,i.e.:
+
+(a) $V\left(\mathbf{r}, \mathbf{r}^{\prime}\right)=\frac{e^{2}}{\left|\mathbf{r}-\mathbf{r}^{\prime}\right|}$
+
+(b) $V_{k l m n}=\frac{4 \pi e^{2}}{|\mathbf{k}-\mathbf{m}|^{2}}$
+
+where spins are left out for simplicity, and we take $\Omega=1 \mathrm{cm}^{3}$.\bluep{That is, the Coulomb interaction has the form of a Yukawa interaction with "infinite range"}.\textbf{Alternatively, one often says that the Yukawa potential has the form of a 'shielded' Coulomb potential, the $exp(-r/a)$ in (\ref{Yukawa-potential}) being the 'shielding factor'.}
+
+The quasi particle energy may be evaluated in exactly the same way as for the nuclear matter case. There is a slight simplification because of the fact that \textbf{the bubble term is cancelled by the positive charge background}:
+\begin{center}
+    
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,235); %set diagram left start at 0, and has height of 235
+
+%Straight Lines [id:da8747013992556422] 
+\draw    (290.88,173) -- (200.88,173) ;
+%Straight Lines [id:da9235043672443867] 
+\draw [line width=1.5]    (177.62,170.73) -- (193.88,170.73) ;
+%Straight Lines [id:da7317669535949963] 
+\draw [line width=1.5]    (177.62,178.73) -- (193.88,178.73) ;
+%Straight Lines [id:da4557558903425205] 
+\draw    (211,206) -- (211,179.6) ;
+%Shape: Triangle [id:dp5985092604692424] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (210.88,188.2) -- (214.46,197.4) -- (207.54,197.4) -- cycle ;
+%Straight Lines [id:da7683283520076601] 
+\draw [line width=1.5]    (226.62,189.73) -- (238.88,189.73) ;
+%Straight Lines [id:da4264852226074891] 
+\draw    (253.61,184.3) .. controls (255.28,182.63) and (256.94,182.63) .. (258.61,184.3) .. controls (260.28,185.97) and (261.94,185.97) .. (263.61,184.3) .. controls (265.28,182.63) and (266.94,182.63) .. (268.61,184.3) .. controls (270.28,185.97) and (271.94,185.97) .. (273.61,184.3) .. controls (275.28,182.63) and (276.94,182.63) .. (278.61,184.3) -- (281.88,184.3) -- (281.88,184.3) ;
+%Curve Lines [id:da09830988157752873] 
+\draw    (253.61,184.3) .. controls (253.29,197.82) and (281.88,197.82) .. (281.88,184.3) ;
+%Shape: Triangle [id:dp879627428924058] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (270.7,194.17) -- (266.65,195.99) -- (266.56,192.9) -- cycle ;
+%Straight Lines [id:da1706580175036373] 
+\draw    (77.5,204) -- (77.5,146)(80.5,204) -- (80.5,146) ;
+\draw [shift={(79,175)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+
+% Text Node
+\draw (238.62,152.73) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (210.62,172.73) node [anchor=north west][inner sep=0.75pt]  [font=\small] [align=left] {\mbox{-}1};
+% Text Node
+\draw (82.62,190.73) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {HF(electron gas)};
+
+
+\end{tikzpicture}
+\end{center}
+The expression for the quasi particle energy turns out to be
+\begin{equation}\epsilon_{k}^{\prime}=\frac{k^{2}}{2 m}-\frac{e^{2} k_{F}}{2 \pi}\left[2+\frac{\left(k_{F}^{2}-k^{2}\right)}{k k_{F}} \ln \left|\frac{k+k_{F}}{k-k_{F}}\right|\right]
+\label{e-prime-electron-gas}
+\end{equation}
+We are mainly interested in quasi particles near $k_{F},$ since it is primarily these which take part in physical processes. For $|\mathbf{k}|$ near $k_{F},$ the effective mass may be found by expanding $\epsilon_{k}^{\prime}$ about $k_{F}:$
+\begin{equation}\epsilon_{k}^{\prime}=\epsilon_{k_F}^{\prime}+\left(\frac{\partial \epsilon_{k}^{\prime}}{\partial k}\right)_{k_{F}}\left(k-k_{F}\right)+\cdots
+\label{eprime-expansion}
+\end{equation}
+where $k=|\mathbf{K}|$. For the non-interacting system
+\begin{equation}\boldsymbol{\epsilon}_{k}=\frac{k_{F}^{2}}{2 m}+\frac{k_{F}}{m}\left(k-k_{F}\right)+\cdots
+\label{e-expansion}
+\end{equation}
+comparing (\ref{eprime-expansion}) with (\ref{e-expansion}), we may regard the effective mass as given by
+\begin{equation}\frac{k_{F}}{m^{*}}=\left(\frac{\partial \epsilon_{k}^{\prime}}{\partial k}\right)_{k_F} \quad \text { or } \quad m^{*}=k_{F} /\left(\frac{\partial \epsilon_{k}^{\prime}}{\partial k}\right)_{k_F}\end{equation}
+For $\epsilon_k^{\prime}$ as in (\ref{e-prime-electron-gas}) we find that \redp{$m_{\mathrm{HF}(\text { electron gas) }}^{*}=0 !$}
+The reason why the Coulomb interaction produces zero effective mass at the Fermi surface, whereas the Yukawa interaction does not, can be traced back to the fact that \redp{the Coulomb interaction is infinite for zero momentum transfer}. \textbf{The HF approximation is not adequate to handle such singular interactions.}
+\begin{mybox}
+The physical reason for the inadequacy of HF lies in the fact that it treats the effect of all the other particles on the test particle by means of a \textbf{time-independent average potential}. But we know that the quasi particle is a bare particle plus a cloud which in a sense 'follows' the bare particle. \textbf{The HF approximation thus gives us what might be called the "static" part of this cloud, but misses out on the "moving" part.} The usual way of putting this is to say that the HF neglects 'correlations', which means that \textbf{it neglects that movement of the other particles which is correlated with (i.e., 'follows') the movement of the bare particle.}
+\end{mybox}
+It turns out that in the limit of a high density electron gas, the most important diagrams are those occurring in the following approximation for G (\redp{Random Phase Approximation}):
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/random-phase-approx.PNG}
+\end{equation}
