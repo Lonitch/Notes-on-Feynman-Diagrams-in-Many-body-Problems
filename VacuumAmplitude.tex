@@ -71,3 +71,197 @@ where the 1 expresses the fact that in the unperturbed case, the probability amp
 \end{equation}
 
 \subsection{Linked cluster theorem for one-particle system}
+The theorem states that
+\begin{equation}
+    lnR(t)=\Sigma\text{ all linked graphs}
+    \label{single-electron-linked-theorem}
+\end{equation}
+The proof is based on the fact that \textbf{the contribution from a unlinked diagram is proportional to the product of the contribution of its various parts.} Consider for example the $V_{11}V_{11}$ term:
+\begin{center}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,244); %set diagram left start at 0, and has height of 244
+
+%Shape: Circle [id:dp6498223397318404] 
+\draw   (81,85.6) .. controls (81,75.33) and (89.33,67) .. (99.6,67) .. controls (109.87,67) and (118.2,75.33) .. (118.2,85.6) .. controls (118.2,95.87) and (109.87,104.2) .. (99.6,104.2) .. controls (89.33,104.2) and (81,95.87) .. (81,85.6) -- cycle ;
+%Shape: Circle [id:dp27995222268876896] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (76.4,85.6) .. controls (76.4,83.06) and (78.46,81) .. (81,81) .. controls (83.54,81) and (85.6,83.06) .. (85.6,85.6) .. controls (85.6,88.14) and (83.54,90.2) .. (81,90.2) .. controls (78.46,90.2) and (76.4,88.14) .. (76.4,85.6) -- cycle ;
+%Shape: Triangle [id:dp3898756772562222] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (92,68.75) -- (105.94,59.79) -- (108.46,70.7) -- cycle ;
+%Shape: Circle [id:dp6531439047197907] 
+\draw   (81,141.6) .. controls (81,131.33) and (89.33,123) .. (99.6,123) .. controls (109.87,123) and (118.2,131.33) .. (118.2,141.6) .. controls (118.2,151.87) and (109.87,160.2) .. (99.6,160.2) .. controls (89.33,160.2) and (81,151.87) .. (81,141.6) -- cycle ;
+%Shape: Circle [id:dp7775379383850192] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (76.4,141.6) .. controls (76.4,139.06) and (78.46,137) .. (81,137) .. controls (83.54,137) and (85.6,139.06) .. (85.6,141.6) .. controls (85.6,144.14) and (83.54,146.2) .. (81,146.2) .. controls (78.46,146.2) and (76.4,144.14) .. (76.4,141.6) -- cycle ;
+%Shape: Triangle [id:dp43271531457083345] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (92,124.75) -- (105.94,115.79) -- (108.46,126.7) -- cycle ;
+
+% Text Node
+\draw (54,131) node [anchor=north west][inner sep=0.75pt]    {$t_{1}$};
+% Text Node
+\draw (53,75) node [anchor=north west][inner sep=0.75pt]    {$t_{2}$};
+\end{tikzpicture}
+\end{center}
+Translating it into equation we have
+$$
+\begin{aligned}
+&V_{11} V_{11} \int_{0}^{t} d t_{1} \int_{0}^{t} \underset{t_2>t_1}{d t_{2}} G_{0}^{-} G_{0}^{-}=V_{11}^{2} G_{0}^{-2} \int_{0}^{t} d t_{1} \int_{0}^{t} \underset{t_2>t_1}{d t_{2}}\\
+&=V_{11}^{2} G_{0}^{-2} \int_{0}^{t} d t_{1} \int_{0}^{t} d t_{2} \times \frac{1}{2} \quad \text { (where } t_{2}>\text { or }<t_{1})\\
+&=\frac{1}{2}\left[V_{11} \int_{0}^{1} d t_{1} G_{0}^{-}\left(1, t_{1}-t_{1}\right)\right] \times\left[V_{11} \int_{0}^{t} d t_{2} G_{0}^{-}\left(1, t_{2}-t_{2}\right)\right]\\
+&=\frac{1}{2!}\times\selfcirc^2
+\end{aligned}
+$$
+In general, it turns out that the value of an unlinked diagram with $n$ identical links $L,$ is just $(1 / n !) \times L^{n}$.
+
+A similar factorization occurs for non-identical links if we first sum over all possible time orders. For example, the following three graphs can be summed over:
+\begin{center}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,244); %set diagram left start at 0, and has height of 244
+
+%Shape: Circle [id:dp6498223397318404] 
+\draw   (81,85.6) .. controls (81,75.33) and (89.33,67) .. (99.6,67) .. controls (109.87,67) and (118.2,75.33) .. (118.2,85.6) .. controls (118.2,95.87) and (109.87,104.2) .. (99.6,104.2) .. controls (89.33,104.2) and (81,95.87) .. (81,85.6) -- cycle ;
+%Shape: Circle [id:dp27995222268876896] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (76.4,85.6) .. controls (76.4,83.06) and (78.46,81) .. (81,81) .. controls (83.54,81) and (85.6,83.06) .. (85.6,85.6) .. controls (85.6,88.14) and (83.54,90.2) .. (81,90.2) .. controls (78.46,90.2) and (76.4,88.14) .. (76.4,85.6) -- cycle ;
+%Shape: Triangle [id:dp3898756772562222] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (92,68.75) -- (105.94,59.79) -- (108.46,70.7) -- cycle ;
+%Shape: Ellipse [id:dp25610156841716825] 
+\draw   (100,121) .. controls (111.05,121) and (120,136.67) .. (120,156) .. controls (120,175.33) and (111.05,191) .. (100,191) .. controls (88.95,191) and (80,175.33) .. (80,156) .. controls (80,136.67) and (88.95,121) .. (100,121) -- cycle ;
+%Shape: Circle [id:dp9579907217839725] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (95.4,121) .. controls (95.4,118.46) and (97.46,116.4) .. (100,116.4) .. controls (102.54,116.4) and (104.6,118.46) .. (104.6,121) .. controls (104.6,123.54) and (102.54,125.6) .. (100,125.6) .. controls (97.46,125.6) and (95.4,123.54) .. (95.4,121) -- cycle ;
+%Shape: Circle [id:dp44384941541376566] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (95.4,191) .. controls (95.4,188.46) and (97.46,186.4) .. (100,186.4) .. controls (102.54,186.4) and (104.6,188.46) .. (104.6,191) .. controls (104.6,193.54) and (102.54,195.6) .. (100,195.6) .. controls (97.46,195.6) and (95.4,193.54) .. (95.4,191) -- cycle ;
+%Shape: Triangle [id:dp08449835110518966] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (120,163.8) -- (114.4,148.2) -- (125.6,148.2) -- cycle ;
+%Shape: Triangle [id:dp33847857915014856] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (80,148.2) -- (85.6,163.8) -- (74.4,163.8) -- cycle ;
+%Shape: Circle [id:dp16953709843220488] 
+\draw   (253,117.6) .. controls (253,107.33) and (261.33,99) .. (271.6,99) .. controls (281.87,99) and (290.2,107.33) .. (290.2,117.6) .. controls (290.2,127.87) and (281.87,136.2) .. (271.6,136.2) .. controls (261.33,136.2) and (253,127.87) .. (253,117.6) -- cycle ;
+%Shape: Circle [id:dp23125089891886985] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (248.4,117.6) .. controls (248.4,115.06) and (250.46,113) .. (253,113) .. controls (255.54,113) and (257.6,115.06) .. (257.6,117.6) .. controls (257.6,120.14) and (255.54,122.2) .. (253,122.2) .. controls (250.46,122.2) and (248.4,120.14) .. (248.4,117.6) -- cycle ;
+%Shape: Triangle [id:dp3247983028310686] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (264,100.75) -- (277.94,91.79) -- (280.46,102.7) -- cycle ;
+%Shape: Ellipse [id:dp473301006793975] 
+\draw   (211,84) .. controls (222.05,84) and (231,99.67) .. (231,119) .. controls (231,138.33) and (222.05,154) .. (211,154) .. controls (199.95,154) and (191,138.33) .. (191,119) .. controls (191,99.67) and (199.95,84) .. (211,84) -- cycle ;
+%Shape: Circle [id:dp7910773789667759] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (206.4,84) .. controls (206.4,81.46) and (208.46,79.4) .. (211,79.4) .. controls (213.54,79.4) and (215.6,81.46) .. (215.6,84) .. controls (215.6,86.54) and (213.54,88.6) .. (211,88.6) .. controls (208.46,88.6) and (206.4,86.54) .. (206.4,84) -- cycle ;
+%Shape: Circle [id:dp29762035839742207] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (206.4,154) .. controls (206.4,151.46) and (208.46,149.4) .. (211,149.4) .. controls (213.54,149.4) and (215.6,151.46) .. (215.6,154) .. controls (215.6,156.54) and (213.54,158.6) .. (211,158.6) .. controls (208.46,158.6) and (206.4,156.54) .. (206.4,154) -- cycle ;
+%Shape: Triangle [id:dp5382643640790852] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (231,126.8) -- (225.4,111.2) -- (236.6,111.2) -- cycle ;
+%Shape: Triangle [id:dp787103954892548] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (191,111.2) -- (196.6,126.8) -- (185.4,126.8) -- cycle ;
+%Shape: Circle [id:dp4980802915672331] 
+\draw   (359,172.6) .. controls (359,162.33) and (367.33,154) .. (377.6,154) .. controls (387.87,154) and (396.2,162.33) .. (396.2,172.6) .. controls (396.2,182.87) and (387.87,191.2) .. (377.6,191.2) .. controls (367.33,191.2) and (359,182.87) .. (359,172.6) -- cycle ;
+%Shape: Circle [id:dp9401870635500967] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (354.4,172.6) .. controls (354.4,170.06) and (356.46,168) .. (359,168) .. controls (361.54,168) and (363.6,170.06) .. (363.6,172.6) .. controls (363.6,175.14) and (361.54,177.2) .. (359,177.2) .. controls (356.46,177.2) and (354.4,175.14) .. (354.4,172.6) -- cycle ;
+%Shape: Triangle [id:dp7535245748392855] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (370,155.75) -- (383.94,146.79) -- (386.46,157.7) -- cycle ;
+%Shape: Ellipse [id:dp796880375497128] 
+\draw   (374,63) .. controls (385.05,63) and (394,78.67) .. (394,98) .. controls (394,117.33) and (385.05,133) .. (374,133) .. controls (362.95,133) and (354,117.33) .. (354,98) .. controls (354,78.67) and (362.95,63) .. (374,63) -- cycle ;
+%Shape: Circle [id:dp2607772888080764] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (369.4,63) .. controls (369.4,60.46) and (371.46,58.4) .. (374,58.4) .. controls (376.54,58.4) and (378.6,60.46) .. (378.6,63) .. controls (378.6,65.54) and (376.54,67.6) .. (374,67.6) .. controls (371.46,67.6) and (369.4,65.54) .. (369.4,63) -- cycle ;
+%Shape: Circle [id:dp36338449977521137] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (369.4,133) .. controls (369.4,130.46) and (371.46,128.4) .. (374,128.4) .. controls (376.54,128.4) and (378.6,130.46) .. (378.6,133) .. controls (378.6,135.54) and (376.54,137.6) .. (374,137.6) .. controls (371.46,137.6) and (369.4,135.54) .. (369.4,133) -- cycle ;
+%Shape: Triangle [id:dp6814504901438665] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (394,105.8) -- (388.4,90.2) -- (399.6,90.2) -- cycle ;
+%Shape: Triangle [id:dp44737264879533356] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (354,90.2) -- (359.6,105.8) -- (348.4,105.8) -- cycle ;
+%Shape: Cross [id:dp06220635309920053] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (152.1,107) -- (156.9,107) -- (156.9,119.1) -- (169,119.1) -- (169,123.9) -- (156.9,123.9) -- (156.9,136) -- (152.1,136) -- (152.1,123.9) -- (140,123.9) -- (140,119.1) -- (152.1,119.1) -- cycle ;
+%Shape: Cross [id:dp6139216079282784] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (319.1,107) -- (323.9,107) -- (323.9,119.1) -- (336,119.1) -- (336,123.9) -- (323.9,123.9) -- (323.9,136) -- (319.1,136) -- (319.1,123.9) -- (307,123.9) -- (307,119.1) -- (319.1,119.1) -- cycle ;
+
+% Text Node
+\draw (52,109) node [anchor=north west][inner sep=0.75pt]    {$t_{c}$};
+% Text Node
+\draw (56,185) node [anchor=north west][inner sep=0.75pt]    {$t_{b}$};
+% Text Node
+\draw (52,63) node [anchor=north west][inner sep=0.75pt]    {$t_{a}$};
+% Text Node
+\draw (264,106) node [anchor=north west][inner sep=0.75pt]    {$t_{a}$};
+% Text Node
+\draw (187,65) node [anchor=north west][inner sep=0.75pt]    {$t_{c}$};
+% Text Node
+\draw (186,157) node [anchor=north west][inner sep=0.75pt]    {$t_{b}$};
+% Text Node
+\draw (391,121) node [anchor=north west][inner sep=0.75pt]    {$t_{b}$};
+% Text Node
+\draw (382,41) node [anchor=north west][inner sep=0.75pt]    {$t_{c}$};
+% Text Node
+\draw (332,161) node [anchor=north west][inner sep=0.75pt]    {$t_{a}$};
+
+
+\end{tikzpicture}
+\end{center}
+Translate into equations we have
+\begin{equation}\begin{array}{l}
+\sum_{k} V_{k 1} V_{1 k} V_{11} \iiint d t_{a} d t_{b} d t_{c} \times \\
+\quad \times G_{0}^{+}\left(k, t_{c}-t_{b}\right) G_{0}^{-}\left(1, t_{b}-t_{c}\right) G_{0}^{-}\left(1, t_{a}-t_{a}\right) x \\
+\quad \times\left[\theta_{t_a-t_c}, \theta_{t_c-t_{b}}+\theta_{t_c-t_{a}} \theta_{t_{a}-t_{b}}+\theta_{t_c-t_b} \theta_{t_{b}-t_c}\right]\\
+=\selfcirc\times\fermiloop
+\end{array}\end{equation}
+The $\theta^{\prime} s$ are used as a convenient way of writing the time order in the three diagrams. For $t_{c}>t_{b},$ some concentration shows that the term in brackets $=1$ regardless of where $t_{a}$ lies. This means the integral over $t_{a}$ is independent of that over $t_{b}$ and $t_{c},$ so the triple integral factorizes into two parts producing the result shown.
+
+Combining these results, one finds that R may be written
+\begin{equation}
+\begin{aligned}
+&\includegraphics[width=0.8\textwidth]{screenshots/single-electron-R.PNG}\\
+&\includegraphics[width=0.8\textwidth]{screenshots/single-electron-R2.PNG}
+\end{aligned}
+\label{single-electron-R}
+\end{equation}
+In the many-body case, there is a deeper reason for the importance of the linked cluster theorem, e.g., \bluep{if we do not use it, we find that the perturbation series for the energy appears to diverge badly as the number of particles $N\rightarrow\infty$}.
+\subsection{Finding the ground state energy in one-particle system}
+Because the ground state energy depends only on the logarithm of $R$:
+$$
+E_{0}=\epsilon_{1}+\lim _{t \rightarrow \infty(1-i \eta)} i \frac{d}{d t} \ln R(t)
+$$
+it is now possible to obtain the expression for the ground state energy by translating the above diagrams into the following equations(remember \bluep{the (-1) factor in front of the "limit" is for the "fermion loop"}):
+\begin{equation}
+    \begin{aligned}
+    E_{0}=&\epsilon_{1}-\lim _{n \rightarrow \infty(1-i\eta )} i \frac{d}{d t}\left\{(-i) V_{11} \int_{0}^{t} d t_{1} i G_{0}^{-}\left(1, t_{1}-t_{1}\right)+\right.\\
+    &\left.+\sum_{p \neq 1}(-i)^{2} V_{1 p} V_{p 1} \int_{0}^{t} d t_{1} \int_{0}^{t} \underset{t_2>t_1}{d t_{2}} i G_{0}^{+}\left(p, t_{2}-t_{1}\right) i G_{0}^{-}\left(1, t_{1}-t_{2}\right)+\cdots\right\}
+    \end{aligned}
+\end{equation}
+Thus, 
+$$
+E_0^{(1)}=\lim_{t\rightarrow\infty(1-i\eta)}i\frac{d}{dt}\selfcirc=V_{11}
+$$
+and the second term produces
+$$
+\begin{aligned}
+\fermiloop&=(-1)^{2}(-i)^{2} \sum_{p \neq 1} V_{1 p} V_{p 1} \int_{0}^{1} d t_{1} \int_{0}^{t} d t_{2} \theta_{t_2-t_1} e^{-i\left(\epsilon_{p}-\epsilon_{1}\right)\left(t_{2}-t_{1}\right)}\\
+&=(-1)^{2}(-i)^{2} \sum_{p \neq 1} V_{1 p} V_{p 1} \int_{0}^{t} d t_{1} \int_{0}^{t-t_{1}} d\left(t_{2}-t_{1}\right) e^{-i\left(\epsilon_{p}-\epsilon_1\right)\left(t_{2}-t_{1}\right)}
+\end{aligned}
+$$
+Thus
+$$
+\lim _{t \rightarrow \infty(1-i\eta)} i \frac{d}{d t}\fermiloop=-i \sum_{p \neq 1} V_{1 p} V_{p 1}\left[-\frac{e^{-i\left(\epsilon_{p}-\epsilon_{1}\right) \omega(1-i \eta)}}{i\left(\epsilon_{p}-\epsilon_{1}\right)}+\frac{1}{i\left(\epsilon_{p}-\epsilon_{1}\right)}\right]
+$$
+or
+\begin{equation}E_{0}^{(2)}=\sum_{p \neq 1} \frac{V_{1 p} V_{p 1}}{\epsilon_{1}-\epsilon_{p}}\end{equation}
+where \redp{\textbf{the oscillating exponential is killed because $\left(\epsilon_{1}-\epsilon_{p}\right)$ and the infinitesimal $\eta \text { are both positive. (Note that } \eta \text { is chosen such that } \eta \times \infty=\infty .)$}} Proceeding in this way yields the third-and fourth-order terms:
+\begin{equation}E_{0}^{(3)}=\sum_{p, q \neq 1} \frac{V_{1 p} V_{p q} V_{q 1}}{\left(\epsilon_{1}-\epsilon_{p}\right)\left(\epsilon_{1}-\epsilon_{q}\right)}-\sum_{p \neq 1} \frac{V_{1p}V_{p1} V_{11}}{\left(\epsilon_{1}-\epsilon_{p}\right)^{2}}
+\label{single-electron-third-order}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+E_{0}^{(4)}=& \sum_{p, q, r \neq 1} \frac{V_{1 p} V_{p q} V_{q r} V_{r 1}}{\left(\epsilon_{1}-\epsilon_{p}\right)\left(\epsilon_{1}-\epsilon_{q}\right)\left(\epsilon_{1}-\epsilon_{r}\right)}-\sum_{p, q \neq1} \frac{V_{1p} V_{p q} V_{q 1} V_{11}}{\left(\epsilon_{1}-\epsilon_{p}\right)^{2}\left(\epsilon_{1}-\epsilon_{q}\right)}-\\
+&-\sum_{p, q \neq 1} \frac{V_{1 p} V_{p q} V_{q 1} V_{11}}{\left(\epsilon_{1}-\epsilon_{p}\right)\left(\epsilon_{1}-\epsilon_{q}\right)^{2}}+\sum_{p \neq 1} \frac{V_{1p} V_{p 1} V_{11} V_{11}}{\left(\epsilon_{1}-\epsilon_{p}\right)^{3}}-\\
+&-\sum_{p, q \neq 1} \frac{V_{1 p} V_{p 1} V_{1 q} V_{q 1}}{\left(\epsilon_{1}-\epsilon_{p}\right)^{2}\left(\epsilon_{1}-\epsilon_{q}\right)}
+\end{aligned}
+\label{single-electron-fourth-order}
+\end{equation}
+This is the well-known Rayleigh-Schrodinger perturbation series carried out to fourth order. Now we use diagrammatic method to carry out the calculation to infinite order by \textbf{providing a systematic method for writing out the $nth-$order term in the expansion of $E_0$.}
+\begin{imp}
+To get the numerator of each term in (\ref{single-electron-third-order}-\ref{single-electron-fourth-order}), the product of $V_{kl}$ factors associated with the interaction dots will do. To get the denominator, draw light dotted horizontal lines \redp{between successive (in time) pairs of vertices}, thus
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{screenshots/single-electron-denominator-rule.PNG}
+\end{center}
+and associated a factor of
+\begin{equation}
+    \frac{1}{\underset{\parbox{100pt}{\centering\tiny{all hole lines intersected by dotted line}}}{\Sigma \epsilon_1}-\underset{\parbox{100pt}{\centering\tiny{all particle lines intersected by dotted line}}}{\Sigma\epsilon_p}}
+\end{equation}
+The proper sign is obtained by multiplying by the factor $(-1)^{h+1}$ where h=number of hole lines in the diagram. The final rule is to sum over all particle indices.
+\end{imp}
+Applying these rules (which can be rigorously proved from the vacuum amplitude expansion) yields both of the third-order terms and they also produce the correct result in the other orders. (Note that in fourth order, the last term in (\ref{single-electron-fourth-order}) is obtained by summing the two "mitten" diagrams of (\ref{single-electron-4th-order}).)
