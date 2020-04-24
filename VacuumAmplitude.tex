@@ -265,3 +265,79 @@ and associated a factor of
 The proper sign is obtained by multiplying by the factor $(-1)^{h+1}$ where h=number of hole lines in the diagram. The final rule is to sum over all particle indices.
 \end{imp}
 Applying these rules (which can be rigorously proved from the vacuum amplitude expansion) yields both of the third-order terms and they also produce the correct result in the other orders. (Note that in fourth order, the last term in (\ref{single-electron-fourth-order}) is obtained by summing the two "mitten" diagrams of (\ref{single-electron-4th-order}).)
+
+Imagine that the perturbing potential is so large that it is impossible to get a decent result by using the usual method of cutting off the series after the first few orders. But suppose, for example, that the potential happens to have big matrix elements only between the ground and first excited states, i.e.,that $V_{12}$ and $V_{21}$ are large but all others are small. Then the perturbation series may be approximated by a partial sum over just those special diagrams in which all vertices connect '1' lines and '2' lines. This means that $E_0$ reduces to a sum over just the following diagrams
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/single-electron-V12-series.PNG}
+    \label{single-electron-V12-series}
+\end{equation}
+\bluep{Note that the odd-order diagrams do not occur. And each term representing a graph type is multiplied with a degeneracy factor}. Using the rules this series yields
+\begin{equation}\begin{aligned}
+E_{0} \approx \epsilon_{1} &+\frac{\left|V_{12}\right|^{2}}{\epsilon_{1}-\epsilon_{2}}-\frac{\left|V_{12}\right|^{4}}{\left(\epsilon_{1}-\epsilon_{2}\right) \times 2\left(\epsilon_{1}-\epsilon_{2}\right) \times\left(\epsilon_{1}-\epsilon_{2}\right)} \times 2 \\
+&+\frac{\left|V_{12}\right|^{6}}{\left(\epsilon_{1}-\epsilon_{2}\right) \times 2\left(\epsilon_{1}-\epsilon_{2}\right) \times\left(\epsilon_{1}-\epsilon_{2}\right) \times 2\left(\epsilon_{1}-\epsilon_{2}\right) \times\left(\epsilon_{1}-\epsilon_{2}\right)} \times 4 \\
+&+\frac{\left|V_{12}\right|^{6}}{\left(\epsilon_{1}-\epsilon_{2}\right) \times 2\left(\epsilon_{1}-\epsilon_{2}\right) \times 3\left(\epsilon_{1}-\epsilon_{2}\right) \times 2\left(\epsilon_{1}-\epsilon_{2}\right) \times\left(\epsilon_{1}-\epsilon_{2}\right)} \times 12 \\
+&+\cdots\\
+&=\epsilon_{1}+\frac{\left|V_{12}\right|^{2}}{\epsilon_{1}-\epsilon_{2}}-\frac{\left|V_{12}\right|^{4}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{3}}+\frac{2\left|V_{12}\right|^{6}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{5}}+\cdots
+\end{aligned}\end{equation}
+\redp{Note that the term $2(\epsilon_1-\epsilon_2)$ comes from the fact that the vertical line intersects with 2 hole lines and 2 particle liens}. By adding and subtracting $\epsilon_{1} / 2$ and factoring out $\frac{1}{2}\left(\epsilon_{1}-\epsilon_{2}\right)$ yielding
+\begin{equation}E_{0}=\frac{\epsilon_{1}+\epsilon_{2}}{2}+\frac{\left(\epsilon_{1}-\epsilon_{2}\right)}{2}\left[1+\frac{2\left|V_{12}\right|^{2}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{2}}-\frac{2\left|V_{12}\right|^{4}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{4}}+\frac{4\left|V_{12}\right|^{6}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{6}}+\cdots\right]\end{equation}
+The bracketed term is seen to be just the infinite series for the square root, giving us the final result
+\begin{equation}E_{0} \approx \frac{\epsilon_{1}+\epsilon_{2}}{2}+\frac{\left(\epsilon_{1}-\epsilon_{2}\right)}{2} \sqrt{\left\{1+\frac{4\left|V_{12}\right|^{2}}{\left(\epsilon_{1}-\epsilon_{2}\right)^{2}}\right\}}\end{equation}
+\subsection{The many-body case}
+The vacuum amplitude may then be built up as the sum of all possible sequences of interactions beginning and ending in the many-body ground state, or vacuum. The ground state energy again involves just the sum over linked diagrams and may be written as follows:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/many-body-vacuum-series.PNG}
+    \label{many-body-vacuum-series}
+\end{equation}
+Here we will content ourselves with briefly mentioning a few popular approximations for the ground state energy which can be made with (\ref{many-body-vacuum-series}).
+
+The simplest approximation is the \textbf{\redp{Hartree-Fock (HF), which is just the sum of the double-bubble and oyster diagrams}}:
+\begin{equation}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,244); %set diagram left start at 0, and has height of 244
+
+%Shape: Circle [id:dp6498223397318404] 
+\draw   (302,124.6) .. controls (302,114.33) and (310.33,106) .. (320.6,106) .. controls (330.87,106) and (339.2,114.33) .. (339.2,124.6) .. controls (339.2,134.87) and (330.87,143.2) .. (320.6,143.2) .. controls (310.33,143.2) and (302,134.87) .. (302,124.6) -- cycle ;
+%Shape: Triangle [id:dp3898756772562222] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (313,107.75) -- (326.94,98.79) -- (329.46,109.7) -- cycle ;
+%Shape: Cross [id:dp06220635309920053] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (195.01,115.6) -- (198.19,115.6) -- (198.19,123.61) -- (206.2,123.61) -- (206.2,127.99) -- (198.19,127.99) -- (198.19,136) -- (195.01,136) -- (195.01,127.99) -- (187,127.99) -- (187,123.61) -- (195.01,123.61) -- cycle ;
+%Shape: Circle [id:dp6991360552110061] 
+\draw   (216.87,123.85) .. controls (217.28,113.58) and (225.94,105.6) .. (236.2,106.01) .. controls (246.47,106.43) and (254.45,115.08) .. (254.04,125.35) .. controls (253.63,135.61) and (244.97,143.6) .. (234.71,143.18) .. controls (224.44,142.77) and (216.46,134.11) .. (216.87,123.85) -- cycle ;
+%Shape: Triangle [id:dp7130261056413152] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (243.95,107.93) -- (227.8,111.66) -- (229.11,100.54) -- cycle ;
+%Straight Lines [id:da10547511660578635] 
+\draw    (254.04,125.35) .. controls (255.71,123.68) and (257.37,123.68) .. (259.04,125.35) .. controls (260.71,127.02) and (262.37,127.02) .. (264.04,125.35) .. controls (265.71,123.68) and (267.37,123.68) .. (269.04,125.35) .. controls (270.71,127.02) and (272.37,127.02) .. (274.04,125.35) .. controls (275.71,123.68) and (277.37,123.68) .. (279.04,125.35) .. controls (280.71,127.02) and (282.37,127.02) .. (284.04,125.35) .. controls (285.71,123.68) and (287.37,123.68) .. (289.04,125.35) .. controls (290.71,127.02) and (292.37,127.02) .. (294.04,125.35) .. controls (295.71,123.68) and (297.37,123.68) .. (299.04,125.35) -- (302,125.35) -- (302,125.35) ;
+%Shape: Ellipse [id:dp18198799795452325] 
+\draw   (378,125.3) .. controls (378,112.76) and (401.1,102.6) .. (429.6,102.6) .. controls (458.1,102.6) and (481.2,112.76) .. (481.2,125.3) .. controls (481.2,137.84) and (458.1,148) .. (429.6,148) .. controls (401.1,148) and (378,137.84) .. (378,125.3) -- cycle ;
+%Shape: Triangle [id:dp6530702261537764] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (429.6,102.6) -- (445.47,97.82) -- (444.89,109.01) -- cycle ;
+%Shape: Triangle [id:dp7883771420902802] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (437.37,147.3) -- (422.33,154.28) -- (421.33,143.12) -- cycle ;
+%Straight Lines [id:da8945451528371555] 
+\draw    (378,125.3) .. controls (379.67,123.63) and (381.33,123.63) .. (383,125.3) .. controls (384.67,126.97) and (386.33,126.97) .. (388,125.3) .. controls (389.67,123.63) and (391.33,123.63) .. (393,125.3) .. controls (394.67,126.97) and (396.33,126.97) .. (398,125.3) .. controls (399.67,123.63) and (401.33,123.63) .. (403,125.3) .. controls (404.67,126.97) and (406.33,126.97) .. (408,125.3) .. controls (409.67,123.63) and (411.33,123.63) .. (413,125.3) .. controls (414.67,126.97) and (416.33,126.97) .. (418,125.3) .. controls (419.67,123.63) and (421.33,123.63) .. (423,125.3) .. controls (424.67,126.97) and (426.33,126.97) .. (428,125.3) .. controls (429.67,123.63) and (431.33,123.63) .. (433,125.3) .. controls (434.67,126.97) and (436.33,126.97) .. (438,125.3) .. controls (439.67,123.63) and (441.33,123.63) .. (443,125.3) .. controls (444.67,126.97) and (446.33,126.97) .. (448,125.3) .. controls (449.67,123.63) and (451.33,123.63) .. (453,125.3) .. controls (454.67,126.97) and (456.33,126.97) .. (458,125.3) .. controls (459.67,123.63) and (461.33,123.63) .. (463,125.3) .. controls (464.67,126.97) and (466.33,126.97) .. (468,125.3) .. controls (469.67,123.63) and (471.33,123.63) .. (473,125.3) .. controls (474.67,126.97) and (476.33,126.97) .. (478,125.3) -- (481.2,125.3) -- (481.2,125.3) ;
+%Shape: Cross [id:dp5950770882977249] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (358.01,115.6) -- (361.19,115.6) -- (361.19,123.61) -- (369.2,123.61) -- (369.2,127.99) -- (361.19,127.99) -- (361.19,136) -- (358.01,136) -- (358.01,127.99) -- (350,127.99) -- (350,123.61) -- (358.01,123.61) -- cycle ;
+%Straight Lines [id:da7229955775391892] 
+\draw [line width=3.75]    (100,119) -- (130.2,119) ;
+%Straight Lines [id:da17096551384597625] 
+\draw [line width=3.75]    (100,134) -- (130.2,134) ;
+
+% Text Node
+\draw (142,110) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$W_{0}$};
+% Text Node
+\draw (26,109) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$E_{0( HF)}$};
+
+
+\end{tikzpicture}
+\end{equation}
+These diagrams involve only three simple rules, so we will evaluate them bere. The rules are: (1) $V_{klmn}$ for each interaction,(2) factor (-1) for each hole line and each fermion loop, and (3) a factor of $\frac{1}{2}$ because the graphs are symmetric. Remembering that all lines are hole lines here, we find
+$$E_{0(H F)}=\sum_{k<k_{F}} \epsilon_{k}+\frac{1}{2} \sum_{k, l<k_{F}} V_{k l k l}-\frac{1}{2} \sum_{k ,l<k_{F}} V_{l k k l}$$
+The approximation which is good for the high density electron gas (random phase approximation, or 'RPA') involves a partial sum over all 'ring' diagrams in second and higher order:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/many-body-vacuum-RPA-series.PNG}
+\end{equation}
+In the case of nuclear matter, we have the 'ladder approximation' involving a partial sum over all ladders:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/many-body-vacuum-ladder-series.PNG}
+\end{equation}
