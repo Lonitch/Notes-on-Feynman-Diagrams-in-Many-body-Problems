@@ -1,0 +1,54 @@
+\section{Occupation Number Formalism (Second Quantization)}
+\subsection{Advantages of occupation number formalism}
+Since simple things can sometimes get to look pretty formidable in second quantization it is a good idea to understand why many-body physicists all use it. \bluep{The first reason is that it enables us to deal with systems containing a \textbf{variable number of particles}}.It turns out to give an enormous flexibility in the formalism if \textbf{N is allowed to vary in intermediate stages of a calculation and becomes fixed only at the end.} For example, we can put in and remove test particles at will, as in the case of the propagator. Or we can introduce the particle-hole formalism in which the number of particles and holes is variable.
+
+The second reason for the occupation number formalism has to do with the symmetry properties of Fermi and Boss system. Doing things the old
+way, we always have to worry about the complicated business of keeping the wave function properly symmetrized. But it turns out that in second quantization, the \textbf{creation and destruction operators obey certain commutation rules which have built into them all the symmetry properties of the system}. By just using these rules we are automatically free from symmetrization headaches.
+
+\subsection{Many-body wave function in occupation number formalism}
+Imagine that we are given a system of N identical fermions, which are in general interacting with each other and with an external potential. We have seen that such a system may be described in terms of a set of basis states, $|n_1,...,n_l,...\rangle$ in which the $n_l$ meant $n_l$ particles in the unperturbed single-particle energy eigenstate, $\phi_l$. Actually, \redp{the single-particle states used can be any orthonormal set}. This means that in general, $|n_1,...,n_l,...\rangle$ are not energy eigenstates of either the interacting or the non-interacting system of particles and their choice is determined by convenience. Foe the moment, we will use the $\phi$'s which satisfy the Schrodinger equation:
+\begin{equation}\begin{aligned}
+H \phi_{k \sigma}(\mathbf{r}, \gamma) &=\epsilon_{k o} \phi_{k o}(\mathbf{r}, \gamma) \\
+H=\frac{p^{2}}{2 m}+U(\mathbf{r}) &=-\frac{1}{2 m} \nabla^{2}+U(\mathbf{r}) \\
+(\hbar&=1)
+\end{aligned}\end{equation}
+and $\gamma, \sigma$ are the spin co-ordinate and quantum number respectively. In the case $U(\mathbf{r})=0,$ this has the solutions:
+\begin{equation}\begin{aligned}
+\phi_{k \sigma}(\mathbf{r}, \gamma) &=\frac{1}{\sqrt{\Omega}} e^{+i \mathbf{k} \cdot \mathbf{r}} \eta_{\sigma}(\gamma) \\
+\epsilon_{k} &=\frac{k^{2}}{2 m}(\hbar=1)
+\end{aligned}\end{equation}
+where $\eta$ is the spin eigenfunction. In general, $\sigma, \gamma$ will be suppressed for brevity, and $\mathbf{k}$ will be short for $\mathbf{k}, \sigma,$ and $\mathbf{r} \equiv \mathbf{r}, \gamma$. 
+
+If there are now N identical non-interacting fermions, the Hamiltonian and Schrodinger equation become
+\begin{equation}\begin{array}{c}
+H_{0}=\sum_{l=1}^{N} H_{l}, \quad H_{0} \Phi\left(\mathrm{r}_{1}, \ldots, \mathrm{r}_{N}\right)=E \Phi\left(\mathrm{r}_{1}, \ldots, \mathrm{r}_{N}\right) \\
+H_{i}=\frac{p^{2}}{2 m}+U\left(\mathrm{r}_{i}\right) ; \quad H_{i} \phi_{k_{i}}=\epsilon_{k_{i}} \phi_{k_{i}}
+\end{array}\end{equation}
+since the system consists of identical fermions, the wave function must be antisymmetric, i.e., change sign when any two particle co-ordinates are interchanged. This is accomplished by forming a $\Phi$ given by the Slater determinant.
+\begin{equation}\Phi_{k_{1} \ldots \ldots k_{N}}\left(\mathrm{r}_{1}, \ldots, \mathrm{r}_{N}\right)=\frac{1}{(N !)^{\frac{1}{2}}} \sum_{P} \gamma_{P} P\left[\phi_{k_{1}}\left(\mathrm{r}_{1}\right) \phi_{k_{2}}\left(\mathrm{r}_{2}\right) \ldots \phi_{k_{N}}\left(\mathrm{r}_{N}\right)\right]\end{equation}
+or
+\begin{equation}\Phi_{k_{1}, \ldots, k_{N}}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right)=\frac{1}{(N !)^{\frac{1}{2}}}\left|\begin{array}{c}
+\phi_{k_{1}}\left(\mathbf{r}_{1}\right) \phi_{k_{1}}\left(\mathbf{r}_{2}\right) \ldots \phi_{k_{1}}\left(\mathbf{r}_{N}\right) \\
+\vdots \\
+\phi_{k_{N}}\left(\mathbf{r}_{1}\right) \phi_{k_{N}}\left(\mathbf{r}_{2}\right) \dots \phi_{k_{N}}\left(\mathbf{r}_{N}\right)
+\end{array}\right|
+\label{slater-determinant-2}
+\end{equation}
+In the first form, $P$ is the permutation operator which interchanges the $\mathbf{r}_{i}$ 's in all possible ways (starting from some standard order), and $\gamma_{P}=-1$ for an odd number of interchanges, and +1 for an even number. The fact that $\Phi=0$ when any two $k_{i}$ 's are equal means that there can't be more than one particle in any state.
+
+A tricky thing about (\ref{slater-determinant-2}) is its sign. For example, in a two-particle system with one particle in state $\phi_{1}$, and the other in $\phi_3$, the wave function is $\Phi_{k_1=1,k_2=3}\equiv\Phi_{13}$ or $\Phi_{k_1=3,k_2=1}\equiv\Phi_{31}$. Since the particles are identical, these represent the same state, but by (\ref{slater-determinant-2}) they differ by a minus sign. To remove this ambiguity, we always write $\Phi$ with the $k$'s in standard order given by:
+\begin{equation}\Phi_{k_{1}<k_{2}<\ldots<k_{N}}\end{equation}
+A compact way of writing $\Phi$ is
+\begin{equation}\begin{aligned}
+\Phi_{k_{1}, k_{2}, \ldots, k_{N}}\left(\mathbf{r}_{1}, \mathbf{r}_{2}, \ldots, \mathbf{r}_{N}\right) &=\Phi_{n_{1}, \ldots, n_{i}, \ldots}\left(\mathbf{r}_{1}, \mathbf{r}_{2}, \ldots, \mathbf{r}_{N}\right) \\
+&=\left\langle\mathbf{r}_{1}, \mathbf{r}_{2}, \dots, \mathbf{r}_{N} | n_{1}, \dots, n_{i}, \dots\right\rangle
+\end{aligned}\end{equation}
+It is important to remember that \redp{the $\left|n_{1}, \ldots, n_{1}, \ldots\right\rangle$ are orthogonal and normal because the $\Phi_{k_{1}, \ldots, k_{N}}$ are}, and we may write this in the various equivalent ways
+\begin{equation}\begin{array}{l}
+\begin{aligned}
+&\left\langle n_{1}^{\prime}, n_{2}^{\prime}, \ldots, n_{1}^{\prime}, \ldots | n_{1}, n_{2}, \ldots, n_{1}, \ldots\right\rangle  \\
+& \equiv\left(\Phi_{n_{1}^{\prime}, n_{2}^{\prime}\ldots, n_{l}^{\prime}, \ldots} , \Phi_{n_{1}, n_{2}, \ldots, n_{l}, \ldots}\right) \\
+& \equiv \int d^{3} \mathbf{r}_{1} \ldots d^{3} \mathbf{r}_{N} \Phi_{n_{1}^{\prime}, n_{2}}^{\prime}, \ldots .\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right) \Phi_{n_{1}, n_{2}, \ldots}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right) \\
+&=\delta_{n_{1}^{\prime}, n_{1}} \delta_{n_{2}^{\prime}, n_{2}} \ldots \delta_{n_{l}^{\prime}, n_{l}} \cdots .
+\end{aligned}
+\end{array}\end{equation}
