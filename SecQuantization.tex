@@ -52,3 +52,80 @@ It is important to remember that \redp{the $\left|n_{1}, \ldots, n_{1}, \ldots\r
 &=\delta_{n_{1}^{\prime}, n_{1}} \delta_{n_{2}^{\prime}, n_{2}} \ldots \delta_{n_{l}^{\prime}, n_{l}} \cdots .
 \end{aligned}
 \end{array}\end{equation}
+Now we take the step to allow $N$ to be variable, running from 0 to $\infty$. Thus generates the set of basis functions in the following table:
+\begin{table}[H]
+\caption{Complete set of basis functions used in second quantization}
+\centering
+\begin{tabular}{ccc}
+\hline
+N        & $\Phi_{k_1,k_2,...k_N}$                   & $=|n_1,n_2,\ldots,n_i,\ldots\rangle$                                     \\ \hline
+0        & $\Phi_0$                                  & $|000\ldots\rangle$                                                      \\
+1        & $\Phi_{1}, \Phi_{2}, \Phi_{3}, \ldots$    & $|100 \ldots\rangle,|0100 \ldots\rangle,|00100 \ldots\rangle \ldots$     \\
+2        & $\Phi_{12}, \Phi_{13}, \Phi_{23}, \ldots$ & $|1100 \ldots\rangle,|101000 \ldots\rangle,|01100 \ldots\rangle, \ldots$ \\
+$\vdots$ & $\vdots$                                  & $\vdots$                                                                
+\end{tabular}
+\end{table}
+This Hilbert space may be pictured as follows:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/extended-hilbert-space.PNG}
+\label{extended-hilbert-space}
+\end{equation}
+
+This set is often called 'occupation number basis', and the whole formalism is sometimes referred to as '\redp{occupation number representation}'. Note carefully that we did not get this new basis by unitary transformation (like, for example, is done in going from position to momentum basis).
+
+Only systems of independent fermions without perturbing interactions of any sort have been considered thus far. In the presence of such interactions, \bluep{the $\left.| n_{1}, \ldots, n_{t}, \ldots\right)$ are no longer eigenstates of the total Hamiltonian for the system and the correct eigenstates must be obtained as the linear combination}
+\begin{equation}\begin{aligned}
+\Psi^{\prime} &=\Phi_{0}+\sum_{k_{1}} A_{k_{1}} \Phi_{k_{1}}+\sum_{k_{1}<k_{2}} A_{k_{1}, k_{2}} \Phi_{k_{1}, k_{2}}+\cdots \\
+&=\sum_{n_{1}, \ldots, n_{i}, \ldots} A_{n_{1}, \ldots, n_{i}, \ldots}\left|n_{1}, \ldots, n_{i}, \ldots\right\rangle
+\end{aligned}\end{equation}
+
+\subsection{Operators in occupation number formalism}
+It was pointed out in Chapter 4 that all operators in this new formalism may be expressed in terms of the creation and destruction operator $c_i^{\dagger}$,$c_i$. The definition of these operators must include a factor of $(\pm1)$ because of antisymmetry. Thus, if $c_i^{\dagger}$,$c_i$ act in such a sequence on the wave function that their net efferct is to exchange two particles, then the wave function must change its sign. Some thought shows that the proper definition is 
+\begin{equation}\begin{array}{l}
+c_{1}^{\dagger}\left|n_{1}, \ldots, n_{1}, \ldots\right\rangle=(-1)^{\Sigma_{i}}\left(1-n_{i}\right)\left|n_{1}, \ldots, n_{i}+1, \ldots\right\rangle \\
+c_{1}\left|n_{1}, \ldots, n_{1}, \ldots\right\rangle=(-1)^{\Sigma_{i}} n_{i}\left|n_{1}, \ldots, n_{i}-1, \ldots\right\rangle
+\end{array}\end{equation}
+where $\Sigma_i=n_1+n_2+\ldots n_{i-1}$. That is, we get a factor of (-1) for each particle (i.e., each occupied state) standing to the left of the state i in the wave function.
+
+One of the nice properties of the $c_{1}^{\dagger}$ operators is that by applying them repeatedly to the "true vacuum" state (state with no particles in it), it is possible to generate all other states, thus:
+\begin{equation}\begin{array}{l}
+\Phi_{k_{1}, k_{2}, \ldots, k_{N}}=c_{k_{1}}^{\dagger} c_{k_{2}}^{\dagger} \ldots c_{k_{n}}^{\dagger}|000 \ldots\rangle \\
+\left|n_{1}, n_{2}, \ldots\right\rangle=\left(c_{1}\right)^{n_{1}}\left(c_{2}\right)^{n_{2}} \ldots|0000 \ldots\rangle
+\end{array}\end{equation}
+Another important property of the $c_{1}^{\dagger}, c_{l}$ operators is that they are \redp{\textbf{'hermitian adjoints'}} of each other. This can be seen by constructing matrices for them, using the $\left|n_{1} n_{2}, \ldots, n_{1}, \ldots\right\rangle$ 's as basis states
+\begin{equation}
+    \begin{aligned}
+    &\includegraphics[width=0.8\textwidth]{screenshots/hermitian-adjoint-1.PNG}\\
+    &\includegraphics[width=0.8\textwidth]{screenshots/hermitian-adjoint-2.PNG}
+    \end{aligned}
+\end{equation}
+so that
+\begin{equation}c_{i}^{\dagger}=\left(c_{i}\right)^{\dagger}\end{equation}
+\redp{\textbf{where $\dagger$ means hermitian adjoint. This further shows that $c_{h}^{\dagger} c_{l}$ are nonhermitian and are therefore not observables.}} (otherwise, we should have $c_i=c^{\dagger}_i$). Using the matrices above we can show that:
+\begin{equation}\left(c_{i}^{\dagger} c_{i}\right)^{\dagger}=c_{i}^{\dagger} c_{i}\end{equation}
+so that $c_i^{\dagger}c_i$ is hermitian. This combination is the famous "\textbf{\redp{number operator}}":
+\begin{equation}\hat{n}_{l}=c_{l}^{\dagger} c_{l} ; \quad\left(\hat{N}=\sum_{l} c_{l}^{\dagger} c_{l}\right)\end{equation}
+For example
+$$c_{i}^{\dagger} c_{i}\left|n_{1}, \dots, n_{i}, \dots\right\rangle=n_{i}\left|n_{1}, \dots, n_{i}, \dots\right\rangle$$
+
+\begin{imp}
+The $c_{1}^{\dagger}, c_{1}$ operators obey the following important 'fermion commutation rules':
+\begin{equation}
+\begin{aligned}
+&(1)\left[c_{l}, c_{k}\right]_{+}=c_{l} c_{k}^{\dagger}+c_{k}^{\dagger} c_{l}=\delta_{l k}\\
+&(2)\left[c_{l}, c_{k}\right]_{+}=0\\
+&(3)\left[c_{l}^{\dagger}, c_{k}^{\dagger}\right]_{+}=0
+\end{aligned}
+\label{anti-cmmutation-rules-c}
+\end{equation}
+\end{imp}
+These can be easily proved from the definitions:
+$$\begin{aligned}
+c_{1} c_{k}\left|n_{1}, \ldots, n_{1}, \ldots, n_{k}, \ldots\right\rangle &=(-1)^{\Sigma_{x}} n_{k} c_{l}\left|n_{1}, \ldots, n_{l}, \ldots, n_{k}-1, \ldots\right\rangle \\
+&=(-1)^{\sum_{k}+\Sigma_{l}} n_{k} n_{l}\left|n_{1}, \ldots, n_{l}-1, \ldots, n_{k}-1, \ldots\right\rangle
+\end{aligned}$$
+$$\begin{aligned}
+c_{k} c_{l}\left|n_{1}, \ldots, n_{l}, \ldots, n_{k}, \ldots\right\rangle &=(-1)^{\Sigma_{l}} n_{l} c_{k}\left|n_{1}, \ldots, n_{l}-1, \ldots, n_{k}, \ldots\right\rangle \\
+&=(-1)(-1)^{\Sigma_{k}+\Sigma_{l}} n_{k} n_{l}\left|n_{1}, \ldots, n_{l}-1, \ldots, n_{k}-1, \ldots\right\rangle
+\end{aligned}$$
+where the extra (-1) on line four comes from the fact that there is one less particle to the left of state k. Adding the two equations yields the second rule in (\ref{anti-cmmutation-rules-c}).
