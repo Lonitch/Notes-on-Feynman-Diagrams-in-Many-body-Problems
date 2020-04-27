@@ -129,3 +129,33 @@ c_{k} c_{l}\left|n_{1}, \ldots, n_{l}, \ldots, n_{k}, \ldots\right\rangle &=(-1)
 &=(-1)(-1)^{\Sigma_{k}+\Sigma_{l}} n_{k} n_{l}\left|n_{1}, \ldots, n_{l}-1, \ldots, n_{k}-1, \ldots\right\rangle
 \end{aligned}$$
 where the extra (-1) on line four comes from the fact that there is one less particle to the left of state k. Adding the two equations yields the second rule in (\ref{anti-cmmutation-rules-c}).
+
+The importance of the above sets of' anti-commutation' relations lies in the fact that all the antisymmetry properties are built into them. Therefore, by using them in the right places, we don't have to worry either about the symmetry of the wave functions themselves.
+
+\textbf{\redp{Let us now consider how to express the usual quantum operators in terms of $c_i^{\dagger}$,$c_i$.}} \textbf{We require equality between the matrix elements of the operator as computed in occupation number formalism and in the old cave-man formalism. For example, in a one-particle system, the operator $\mathcal{O}(\mathbf{r,p})$ with matrix elements:}
+\begin{equation}O_{ij}=\left\langle\phi_{1}|\mathcal{O}| \phi_{j}\right\rangle=\int \phi_{i}^{*}(\mathbf{r}) \mathcal{O}(\mathbf{r}, \mathbf{p}) \phi_{j}(\mathbf{r}) d^{3} \mathbf{r}\end{equation}
+has the occupation number form
+\begin{equation}\mathcal{O}^{\mathrm{occ}}=\sum_{\boldsymbol{k}, l} \mathcal{O}_{k l} c_{k}^{\dagger} c_{l}\end{equation}
+This is easily checked as
+\begin{equation}\begin{aligned}
+\left\langle 00 \ldots 1_{i} \ldots\left|\theta^{occ}\right| 00 \ldots 1_{j} \ldots\right\rangle &=\sum_{k, l} \mathcal{O}_{k l}\left\langle 00 \ldots 1_{i} \ldots\left|c_{k}^{\dagger} c_{l}\right| 00 \ldots 1_{j} \ldots\right\rangle \\
+&=\sum_{k, l} \mathcal{O}_{k l} \delta_{lj} \delta_{i k}\\
+&=\mathcal{O}_{ij}
+\end{aligned}\end{equation}
+Suppose we have an operator
+\begin{equation}\mathcal{O}=\sum_{i=1}^{N} \mathcal{O}\left(\mathbf{r}_{i}, \mathbf{p}_{i}\right)\end{equation}
+like for example the external potential:
+\begin{equation}V\left(\mathbf{r}_{1}, \dots, \mathbf{r}_{N}\right)=\sum_{i=1}^{N} V\left(\mathbf{r}_{i}\right)\end{equation}
+Such operators are called \redp{"one-body"} operators sicne they are a sum of operators each of which acts separately on one particle. Thus we have the valuable result that \textbf{\redp{in occupation number formalism, the single-particle operators have a form independent of N.}}
+
+In a similar way, it can be shown that the "two-body" operator
+\begin{equation}\mathcal{O}=\frac{1}{2} \sum_{\substack{i, j=1\\(i \neq j)}}^{N} \mathcal{O}\left(\mathbf{r}_{l}, \mathbf{p}_{i}, \mathbf{r}_{j}, \mathbf{p}_{j}\right)\end{equation}
+For instance the interaction potential
+\begin{equation}V\left(\mathbf{r}_{1}, \dots, \mathbf{r}_{N}\right)=\frac{1}{2} \sum_{\substack{i, j=1\\ (i \neq j)}} V\left(\mathbf{r}_{i}-\mathbf{r}_{j}\right)\end{equation}
+becomes
+\begin{equation}\mathcal{O}^{\mathrm{occ}}=\frac{1}{2} \sum_{k l m n} \mathcal{O}_{k \operatorname{lm} n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}\end{equation}
+where
+\begin{equation}\mathcal{O}_{klmn}=\int d^{3} \mathbf{r} \int d^{3} \mathbf{r}^{\prime} \phi_{k}^{*}(\mathbf{r}) \phi_{i}^{*}\left(\mathbf{r}^{\prime}\right) \mathcal{O}\left(\mathbf{r}, \mathbf{r}^{\prime} ; \mathbf{p}, \mathbf{p}^{\prime}\right) \phi_{m}(\mathbf{r}) \phi_{n}\left(\mathbf{r}^{\prime}\right)\end{equation}
+We remark here that the results also hold true in the case of bosons.
+
+\subsection{Hamiltonian and Schrodinger equation In occupation number formalism}
