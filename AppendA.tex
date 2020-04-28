@@ -1,0 +1,20 @@
+\appendix
+\section{Mismatch in subscript sequence}
+In chapter 7 we have shown that the "two-body" interaction in occupation number formalism is:
+\begin{equation}\mathcal{O}^{\mathrm{occ}}=\frac{1}{2} \sum_{k l m n} \mathcal{O}_{k l m n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}\end{equation}
+where
+\begin{equation}\mathcal{O}_{k l m n}=\int d^{3} \mathbf{r} \int d^{3} \mathbf{r}^{\prime} \phi_{k}^{*}(\mathbf{r}) \phi_{l}^{*}\left(\mathbf{r}^{\prime}\right) \mathcal{O}\left(\mathbf{r}, \mathbf{r}^{\prime} ; \mathbf{p}, \mathbf{p}^{\prime}\right) \phi_{m}(\mathbf{r}) \phi_{n}\left(\mathbf{r}^{\prime}\right)\end{equation}
+This appendix is dedicated to deal with the mismatch between the subscript of $O_{klmn}$ and that of $c^{\dagger}_lc^{\dagger}_kc_mc_n$.
+
+Using the Dirac notation, we have, for a state in the occupation number formalism: 
+\begin{equation}\left\langle n_{1}, n_{2}, \ldots, n_{i} \ldots|=| \overline{\left.n_{1}, n_{2}, \ldots, n_{i}\right\rangle}\right.\end{equation}
+where the overline means the Hermitian adjoint. However, for a product of operators we have
+\begin{equation}\left(\hat{\phi}_{k} \hat{\phi}_{l}\right)^{\dagger}=\hat{\phi}_{l}^{\dagger} \hat{\phi}_{k}^{\dagger}\end{equation}
+Thus, for a two-body interaction $\hat{V}$ we have:
+\begin{equation}\begin{aligned}
+\hat{V} &=\frac{1}{2} \sum_{k l m n}\langle k, l|V| m, n\rangle=\frac{1}{2} \sum_{k l m n} \iint d \mathbf{r} d \mathbf{r}^{\prime}\left(\hat{\phi}_{k} \hat{\phi}_{l}\right)^{\dagger} V\left(\mathbf{r}-\mathbf{r}^{\prime}\right) \hat{\phi}_{m} \hat{\phi}_{n} \\
+&=\frac{1}{2} \sum_{k l m n} \iint d \mathbf{r} d \mathbf{r}^{\prime} \hat{\phi}_{l}^{\dagger} \hat{\phi}_{k}^{\dagger} V\left(\mathbf{r}-\mathbf{r}^{\prime}\right) \hat{\phi}_{m} \hat{\phi}_{n}=\frac{1}{2} \sum_{k l m n} V_{k l m n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}
+\end{aligned}\end{equation}
+where 
+\begin{equation}V_{k l m n}=\iint d \mathbf{r} d \mathbf{r}^{\prime} \phi_{k}^{\dagger} \phi_{l}^{\dagger} V\left(\mathbf{r}-\mathbf{r}^{\prime}\right) \phi_{m} \phi_{n}\end{equation}
+Thus we \textbf{don't have mismatches in Dirac notation to keep things intuitive, but we do need to take care of the effects of " † " when we translate the notation into integrals.}
