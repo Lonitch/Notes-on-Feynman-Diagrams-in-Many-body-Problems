@@ -135,7 +135,9 @@ The importance of the above sets of' anti-commutation' relations lies in the fac
 \textbf{\redp{Let us now consider how to express the usual quantum operators in terms of $c_i^{\dagger}$,$c_i$.}} \textbf{We require equality between the matrix elements of the operator as computed in occupation number formalism and in the old cave-man formalism. For example, in a one-particle system, the operator $\mathcal{O}(\mathbf{r,p})$ with matrix elements:}
 \begin{equation}O_{ij}=\left\langle\phi_{1}|\mathcal{O}| \phi_{j}\right\rangle=\int \phi_{i}^{*}(\mathbf{r}) \mathcal{O}(\mathbf{r}, \mathbf{p}) \phi_{j}(\mathbf{r}) d^{3} \mathbf{r}\end{equation}
 has the occupation number form
-\begin{equation}\mathcal{O}^{\mathrm{occ}}=\sum_{\boldsymbol{k}, l} \mathcal{O}_{k l} c_{k}^{\dagger} c_{l}\end{equation}
+\begin{equation}\mathcal{O}^{\mathrm{occ}}=\sum_{\boldsymbol{k}, l} \mathcal{O}_{k l} c_{k}^{\dagger} c_{l}
+\label{one-body-interaction-occ}
+\end{equation}
 This is easily checked as
 \begin{equation}\begin{aligned}
 \left\langle 00 \ldots 1_{i} \ldots\left|\theta^{occ}\right| 00 \ldots 1_{j} \ldots\right\rangle &=\sum_{k, l} \mathcal{O}_{k l}\left\langle 00 \ldots 1_{i} \ldots\left|c_{k}^{\dagger} c_{l}\right| 00 \ldots 1_{j} \ldots\right\rangle \\
@@ -151,7 +153,9 @@ Such operators are called \redp{"one-body"} operators sicne they are a sum of op
 In a similar way, it can be shown that the "two-body" operator
 \begin{equation}\mathcal{O}=\frac{1}{2} \sum_{\substack{i, j=1\\(i \neq j)}}^{N} \mathcal{O}\left(\mathbf{r}_{l}, \mathbf{p}_{i}, \mathbf{r}_{j}, \mathbf{p}_{j}\right)\end{equation}
 For instance the interaction potential
-\begin{equation}V\left(\mathbf{r}_{1}, \dots, \mathbf{r}_{N}\right)=\frac{1}{2} \sum_{\substack{i, j=1\\ (i \neq j)}} V\left(\mathbf{r}_{i}-\mathbf{r}_{j}\right)\end{equation}
+\begin{equation}V\left(\mathbf{r}_{1}, \dots, \mathbf{r}_{N}\right)=\frac{1}{2} \sum_{\substack{i, j=1\\ (i \neq j)}} V\left(\mathbf{r}_{i}-\mathbf{r}_{j}\right)
+\label{two-body-interaction-occ}
+\end{equation}
 becomes
 \begin{equation}\mathcal{O}^{\mathrm{occ}}=\frac{1}{2} \sum_{k l m n} \mathcal{O}_{k \operatorname{lm} n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}\end{equation}
 where
@@ -159,3 +163,90 @@ where
 We remark here that the results also hold true in the case of bosons.\textbf{If by now you are still confused by the subscript sequence in $c_l^{\dagger}c_k^{\dagger}c_mc_n$, please check Appendix A.}
 
 \subsection{Hamiltonian and Schrodinger equation In occupation number formalism}
+Assume that the particles interact by means of a two-body force of form (\ref{two-body-interaction-occ}), and that there is in addition an external perturbing potential $V(\mathbf{r})$. In the stone-age notation this is
+\begin{equation}H=\sum_{i} \underbrace{\left[\frac{p_{i}^{2}}{2 m}+U\left(\mathbf{r}_{i}\right)\right]}_{H_{0}}+\underbrace{\frac{1}{2} \sum_{i j} V\left(\mathbf{r}_{i}-\mathbf{r}_{j}\right)}_{H_{1}}+\underbrace{\sum_{i} V\left(\mathbf{r}_{i}, \mathbf{p}_{i}\right)}_{H_{2}}\end{equation}
+The first term has the form of the one-body operator, $\mathcal{O}$ in (\ref{one-body-interaction-occ}). Hence,
+\begin{equation}H_{0}=\sum_{k, l}\left\langle\phi_{k}\left|\frac{p^{2}}{2 m}+U(\mathbf{r})\right| \phi_{l}\right\rangle c_{k}^{\dagger} c_{l}\end{equation}
+If $\phi_k$ are chosen to be eigenstates of $p^2/2m+U(\mathbf{r})$, with eigenvalues $\epsilon_k$, then this becomes:
+\begin{equation}H_{0}=\sum_{k, l} \epsilon_{k} \delta_{k l} c_{k}^{\dagger} c_{l}=\sum_{k} \epsilon_{k} c_{k}^{\dagger} c_{k}\end{equation}
+Similarly, $H_1$ is translated into
+\begin{equation}H_{1}=\frac{1}{2} \sum_{k, l, m, n} V_{k l m n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}\end{equation}
+and $H_2$ becomes 
+\begin{equation}H_{2}=\sum_{k, l} V_{k l} c_{k}^{\dagger} c_{l} ; \quad V_{k l}=\int d^{3} r \phi_{k}^{*}(r) V(r, p) \phi_{l}(\mathbf{r})\end{equation}
+Hence in the occupation number formalism $H$ is:
+\begin{equation}\begin{array}{rl}
+H=\sum_{k} \epsilon_{k} c_{k}^{\dagger} c_{k}+\frac{1}{2} \sum_{k, l, m, n} & V_{k l m n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n} \\
+& +\sum_{k, l} V_{k l} c_{k}^{\dagger} c_{l}
+\end{array}\end{equation}
+
+For practice, let us solve the Schrodinger equaion, $H\Phi=E\Phi$, in occupation number formalism in some trivial cases. Suppose that both one-body and two-body interactions are ignored. Then we have
+\begin{equation}H|\Psi\rangle=\sum_{k} \epsilon_{k} c_{k}^{\dagger} c_{k}|\Psi\rangle=E|\Psi\rangle\end{equation}
+It is easy to see that the solution is
+$$|\Psi\rangle=\left|n_{1}, n_{2}, \ldots, n_{i}, \ldots\right\rangle$$
+The energy eigenvalues are evidently
+$$
+E=\Sigma_k\epsilon_kn_k
+$$
+which is the sum of the individual particle energies.
+
+Another example is for a one-particle system subjected to an external perturbing potential $V(\mathbf{r})$. The Schrodinger equation is
+$$
+H\Phi=(H_0+V)\Phi=E\Phi
+$$
+with
+$$
+H_0\phi_k=\epsilon\phi_k
+$$
+which \textbf{\bluep{yields the secular equation for the energy}}:
+$$
+det[(\epsilon_i-E)\delta_{ij}+V_{ij}]=0
+$$
+In the ultra-simple case where all $V_{ij}=0$ except $V_{pq}$ and $V_{qp}$, this becomes
+$$\left(\epsilon_{1}-E\right)\left(\epsilon_{2}-E\right) \ldots\left|_{V_{q p}} ^{\epsilon_{p}-E}\quad {}^{V_{p q}}_{\epsilon_{q}-E} \right| \ldots=0$$
+which has the solutions
+$$
+E=\epsilon_i\quad(i\neq p,q)
+$$
+othewise,
+$$E=\frac{\epsilon_{p}+\epsilon_{q}}{2} \pm \frac{1}{2} \sqrt{\{\left(\epsilon_{p}-\epsilon_{q}\right)^{2}+4\left|V_{p q}\right|^{2}\}}$$
+
+In the occupation number formalism, we have
+\begin{equation}
+    H|\Psi\rangle=\left[\sum_{k} \epsilon_{k} c_{k}^{\dagger}c_{k}+\sum_{k} V_{k l} c^{\dagger}_{k} c_{l}\right]|\Psi\rangle=E|\Psi\rangle
+\label{one-particle-SQE-occ}
+\end{equation}
+Since there is only one particle
+$$|\Psi\rangle=\sum_{j} A_{j}|00 \ldots 1_j, \ldots\rangle$$
+Putting this in(\ref{one-particle-SQE-occ}) and multiplying one the left by $\langle00\ldots 1_i\ldots|$ gives
+$$\Sigma A_{j}\left[H_{ij}-E \delta_{ij}\right]=0$$
+where
+$$\begin{aligned}
+H_{i j} &=\left\langle 00 \ldots 1_{i} \ldots|H| \ldots 1_{j} \ldots\right\rangle \\
+&=\sum_{k} \epsilon_{k}\left\langle\ldots 1_{i} \ldots\left|c_{k}^{\dagger} c_{k}\right| \ldots 1_{j} \ldots\right\rangle+\sum_{k, l} V_{k l}\left\langle\ldots 1_{i} \ldots\left|c_{k}^{\dagger} c_{l}\right| \ldots 1_{j} \ldots\right\rangle
+\end{aligned}$$
+
+The real many-body case we shall deal with most often is one in which the external potential is zero and the interaction potential depends only on the distance between pairs of particles. In this case, $V_{kl}=0$. Let's now work out the form of $V_{klmn}$ in this case. Remembering $\mathbf{k}\equiv\mathbf{k},\sigma$, and summing over spin variables yields
+\begin{equation}\begin{aligned}
+V_{k \sigma_{1}, l \sigma_{2}, m \sigma_{3}, n \sigma_{4}} &=\frac{\delta_{\sigma_{1}\sigma_3}  \delta_{\sigma_{2} \sigma_{4}}}{\Omega^{2}} \int d^{3} \mathbf{r} \int d^{3} \mathbf{r}^{\prime} V\left(\mathbf{r}-\mathbf{r}^{\prime}\right) e^{-i\left((\mathbf{k}-\mathbf{m}) \cdot r+(\mathbf{l}-\mathbf{n}) \cdot r^{\prime}\right]} \\
+&=\frac{\delta_{\sigma_{1} \sigma_{3}} \delta_{\sigma_{2} \sigma_{4}}}{\Omega^{2}} \int d^{3} \rho V(\rho) e^{-i(\mathbf{k}-\mathbf{m}) \cdot \rho} \int d^{3} \mathbf{r}^{\prime} e^{-i(\mathbf{k}-\mathbf{m}+\mathbf{l}-\mathbf{n}) \cdot \mathbf{r}^{\prime}}\\
+&\delta_{\sigma_{1} \sigma_{3}} \delta_{\sigma_{2} \sigma_{4}} \Omega^{-2} V_{k-m} \Omega \delta_{k+l, m+n}
+\end{aligned}
+\label{Vklmn-spin-int}
+\end{equation}
+where
+\begin{equation}V_{k-m}=\int d^{3} \rho e^{-i(k-m) \cdot \rho} V(\rho)\end{equation}
+and
+\begin{equation}V(\rho)=\frac{1}{(2 \pi)^{3}} \int d^{3} \mathbf{k} e^{+i(\mathbf{k}-\mathbf{m}) \cdot \rho} V_{k-m}\end{equation}
+Since
+$$I=\int d^{3} \mathbf{r} e^{-i(p-q) \cdot r}=\Omega \delta_{p q}$$
+Equation (\ref{Vklmn-spin-int}) may be written
+$$V_{m+q, \sigma_{1}, n-q, \sigma_{2}: m \sigma_{3}, n \sigma_{4}}=\Omega^{-1} \delta_{\sigma_{1} \sigma_{3}} \delta_{\sigma_{2} \sigma_{4}} V_{q}$$
+The $\delta$ -functions express conservation of spin angular momentum (since $V$ does not involve spin) and linear momentum (since $V$ depends only on $\mathbf{r}-\mathbf{r}^{\prime}$ and therefore cannot move the centre of mass). 
+\begin{mybox}
+The Coulomb case where $V\left(\mathbf{r}-\mathbf{r}^{\prime}\right)=e^{2} /\left|\mathbf{r}^{\prime}-\mathbf{r}\right|$ yields
+$$V_{k o_{1}, \ldots, n o_{4}}=\frac{\delta_{o_{1} \sigma_{3}} \delta_{\sigma_{2} \sigma_{4}}}{\Omega} \frac{4 \pi e^{2}}{|\mathbf{k}-\mathbf{m}|^{2}} \delta_{k+l, m+n}$$
+or
+$$V_{q \sigma_{1} o_{2} \sigma_{3} o_{4}}=\delta_{\sigma_{1} \sigma_{3}} \delta_{o_{2} \sigma_{4}} \frac{4 \pi e^{2}}{q^{2}} \times \frac{1}{\Omega}$$
+\end{mybox}
+
+\subsection{Particle-hole formalism}
