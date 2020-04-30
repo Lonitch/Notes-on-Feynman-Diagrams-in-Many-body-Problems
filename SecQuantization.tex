@@ -250,3 +250,145 @@ $$V_{q \sigma_{1} o_{2} \sigma_{3} o_{4}}=\delta_{\sigma_{1} \sigma_{3}} \delta_
 \end{mybox}
 
 \subsection{Particle-hole formalism}
+A few comments about particle-hole formalism will be added here.
+
+First of all, since particles in the particle-hole formalism exist only above the Fermi level $\mathbf{k}_F$ and holes exist only below, we may write:
+\begin{equation}\mathbf{k}_{\mathrm{holo}} \neq \mathbf{k}_{\text {particle}}\end{equation}
+
+Second, we can enlarge the commutation rules for the $c^{\dagger}_i,c_i$ to take care of holes. Using the definition of the $a$'s and $b$'s in Chapter 4, one can write out a complete set of rules for all these operators:
+\begin{imp}
+\begin{equation}\begin{array}{c}
+{\left[a_{k}, a_{l}^{\dagger}\right]_{+}=\delta_{k l}, \quad\left[a_{k}, a_{l}\right]_{+}=\left[a_{k}^{\dagger}, a_{l}^{\dagger}\right]_{+}=0} \\
+{\left[b_{m}, b_{p}^{\dagger}\right]_{+}=\delta_{m p}, \quad\left[b_{m}, b_{p}\right]_{+}=\left[b_{m}^{\dagger}, b_{p}^{\dagger}\right]_{+}=0} \\
+{\left[a_{k}, b_{m}\right]_{+}=\left[a_{k}, b_{m}^{\dagger}\right]_{+}=\left[a_{k}^{\dagger}, b_{m}\right]_{+}=\left[a_{k}, b_{m}^{\dagger}\right]_{+}=0}
+\end{array}\end{equation}
+\end{imp}
+Rewriting the many-body Hamiltonian in particle-hole scheme is straightforward. Making use of the definition and rules for the $b$'s yields
+\begin{equation}H_{0}=\sum_{k<k_{F}} \epsilon_{k}-\sum_{k<k_{F}} \epsilon_{k} b_{k}^{\dagger} b_{k}+\sum_{k>k_{r}} \epsilon_{k} a_{k}^{\dagger} a_{k}
+\label{H0-particle-hole}
+\end{equation}
+Similarly
+\begin{equation}\begin{array}{c}
+H_{1}=\frac{1}{2} \sum_{k, l, m, n>k_F} V_{klmn} a_{1}^{\dagger} a_{k}^{\dagger} a_{m} a_{n}+\frac{1}{2} \sum_{\substack{k, l, m>k_{F}\\n<k_F}} V_{k lm n} a_{l}^{\dagger} a_{k}^{\dagger} a_{m} b_{n}^{\dagger} \\
++\cdots \frac{1}{2} \sum_{k, l, m, n<k_{F}} V_{klmn} b_{l} b_{k} b_{m}^{\dagger} b_{n}^{\dagger}
+\end{array}
+\label{H1-particle-hole}
+\end{equation}
+and
+\begin{equation}\begin{aligned}
+H_{2}=& \sum_{m, n>k_F} V_{m n} a_{m}^{\dagger} a_{n}+\sum_{\substack{m > k_F\\n<k_F}} V_{m n} a_{m}^{\dagger} b_{n}^{\dagger} \\
+&+\sum_{\substack{m<k_{F} n<k_F}} V_{m n} b_{m} a_{n}+\sum_{m, n<k_{F}} V_{m n} b_{m} b_{n}^{\dagger}
+\end{aligned}
+\label{H2-particle-hole}
+\end{equation}
+With the aid of (\ref{H0-particle-hole}), we can deduce an equation for the hole wave function. Suppose we have a system of N non-interacting particles filling the Fermi sea up to $\epsilon_F$ and remove $N_h$ of them, thus creating $N_h$ holes but not particles. Then (\ref{H0-particle-hole}) becomes
+$$H_{0}^{\text {bole }}=W_{0}-\sum_{k<k_{F}} \epsilon_{k} b_{k}^{\dagger} b_{k}$$
+where
+$$W_{0}=\sum_{k<k_{F} } \epsilon_{k} \text { and } \sum_{k} b_{k}^{\dagger} b_{k}=N_{h}$$
+Hence we can reason backwards and conclude that $H_0^{hole}$ in ordinary notation must be
+\begin{equation}H_{0}^{hole}=W_{\mathrm{0}}+\sum_{i=1}^{N_{\mathrm{h}}}\left[\frac{-p_{i}^{2}}{2 m}-U\left(\mathrm{r}_{i}\right)\right]\end{equation}
+The corresponding wave equation for the single hole is
+\begin{equation}\left[\frac{p_{i}^{2}}{2 m}+U(\mathbf{r})\right] \phi_{k}(\mathbf{r})=-\epsilon_{k} \phi_{k}(\mathbf{r})\end{equation}
+Finally, it may be remarked that for the same reason that the hole energy is
+negative we find
+\begin{imp}
+hole momentum $=-\mathbf{k}(\text { for } U=0)$
+
+hole spin $=-\sigma$
+
+hole charge $=-$ particle charge
+\end{imp}
+
+\subsection{Occupation number formalism based on single-particle position eigentates}
+The treatment up to now has been based on single-particle states which are eigenstates of the single-particle Hamiltonian, i.e., the energy operator. However,\bluep{there is no law against using any convenient set of single-particle states. For example, eigenstates of the single-particle momentum or position operator. Because of its utility, we will discuss the case of a scheme based on the position operator $\mathbf{\hat{r}}$}.
+
+The single-particle position operator has the eigenvalue equation
+\begin{equation}\hat{\mathbf{f}} \delta(\mathbf{r}-\mathbf{R})=\mathbf{R} \delta(\mathbf{r}-\mathbf{R})\end{equation}
+where the eigenvalue $\mathbf{R}$ is at any point in space. In a similar way, we have here the total position (i.e., \redp{center of mass}) operator for N particles
+\begin{equation}\hat{R}=\sum_{i=1}^{N} \hat{r}_{i}\end{equation}
+with eigenfunction
+\begin{equation}\Phi_{R_{1}, R_{2}, \ldots, R_{N}}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right)=\frac{1}{(N !)^{\frac{1}{2}}}\left|\begin{array}{c}
+\delta\left(\mathbf{r}_{1}-\mathbf{R}_{1}\right) \ldots \delta\left(\mathbf{r}_{N}-\mathbf{R}_{1}\right) \\
+\vdots \\
+\delta\left(\mathbf{r}_{1}-\mathbf{R}_{N}\right) \ldots \delta\left(\mathbf{r}_{N}-\mathbf{R}_{N}\right)
+\end{array}\right|\end{equation}
+This is of caurse not an eigenstate of $H_0$. The transition to occupation number scheme is made by:
+\begin{equation}\begin{aligned}
+\Phi_{R_{1}, R_{2}, \ldots, R_{N}} &=\Phi_{n_{x_1}, n_{x_{2}}, \ldots, n_{x_{i}}} \\
+& \equiv\left|n_{x_{1}}, n_{x_{2}}, \ldots, n_{x_{i}} \ldots\right\rangle
+\end{aligned}\end{equation}
+where $n_{x_i}$ is the particle number at the point $\mathbf{x}_i$. Thus, $\left|n_{x_{1}}, n_{x_{2}}, \ldots, n_{x_{i}} \ldots\right\rangle$ \textbf{describes the distribution of particles in space.}
+
+Similarly, the creation and destruction operators here are: $c_{x_{1}}^{\dagger}, c_{x_{1}}$ which respectively create and destroy a particle at the point $x_{i}$. These operators are usually written in an form which makes them look as though they were ordinary wave functions:
+\begin{equation}\begin{aligned}
+&\psi^{\dagger}\left(\mathbf{x}_{i}\right) \equiv c_{x_{i}}^{\dagger}: \text { creates particle at point } \mathbf{x}_{i}\\
+&\psi\left(\mathbf{x}_{i}\right) \equiv c_{x_{i}}: \text { destroys particle at point } \mathbf{x}_{i}
+\end{aligned}\end{equation}
+The $\psi^{\dagger}(\mathbf{x}), \psi(\mathbf{x})$ are the basic field operators of quantum field theory. The combination
+\begin{equation}p(\mathbf{x})=\psi^{\dagger}(\mathbf{x}) \psi(\mathbf{x})\end{equation}
+is the number operator for this case, and has eigenfunctions. Since its eigenvalues are the number of particles ar the point $\mathbf{x}$, it is evidently just a \textbf{density operator}.
+
+It is easy to show that the $\psi^{\dagger}\left(\mathbf{x}_{i}\right), \psi\left(\mathbf{x}_{i}\right),$ are related to the $c_{i}^{\dagger}, c_{i}$ the same transformation which connects the eigenfunctions $\delta(\mathbf{r-R})$ to the $\phi_k(\mathbf{r})$. Thus, we have
+$$\delta\left(\mathbf{r}-\mathbf{x}_{i}\right)=\sum_{k} A_{l k} \phi_{k}(\mathbf{r})$$
+or
+$$\left|00 \ldots 1_{x_{i}} 00 \ldots\right\rangle=\sum_{k} A_{i k}\left|00 \ldots 1_{k} 00 \ldots\right\rangle$$
+or
+$$c_{x_{1}}^{\dagger}|000 \ldots\rangle=\sum_{k} A_{l k} c_{k}^{\dagger}|000 \ldots\rangle$$
+whence
+\begin{imp}
+\begin{equation}\begin{array}{l}
+\psi^{\dagger}\left(x_{i}\right)=\sum_{k} A_{i k} c_{k}^{\dagger} \\
+\psi\left(x_{i}\right)=\sum_{k} A_{i k}^{*} c_{k}
+\end{array}
+\label{x-occ-transform}
+\end{equation}
+where
+\begin{equation}
+    A_{i k}=\int d^{3} r \phi_{k}^{*}(r) \delta\left(r-x_{i}\right)=\phi_{k}^{*}\left(x_{i}\right)
+\label{x-occ-transform-Aik}
+\end{equation}
+\end{imp}
+By using this transformation, it can be shown that the Hamiltonian may be written in terms of the field operators like this:
+$$\begin{aligned}
+H=& \int d^{3} \mathbf{x} \psi^{\dagger}(\mathbf{x})\left[-\frac{1}{2 m} \nabla_{x}^{2}+U(\mathbf{x})\right] \psi(\mathbf{x})+\\
+&+\frac{1}{2} \iint d^{3} \mathbf{x} d^{3} \mathbf{x}^{\prime} \psi^{\dagger}(\mathbf{x}) \psi^{\dagger}\left(\mathbf{x}^{\prime}\right) V\left(\mathbf{x}-\mathbf{x}^{\prime}\right) \psi\left(\mathbf{x}^{\prime}\right) \psi(\mathbf{x})
+\end{aligned}$$
+Substituting (\ref{x-occ-transform}) into the first term of $H$ with $\mathbf{x}\equiv\mathbf{x}_i$:
+$$H_{0}=\int d^{3} \mathbf{x_{i}} \sum_{k, l} A_{l k} c_{k}^{\dagger}\left[-\frac{1}{2 m} \nabla_{x_{i}}^{2}+U\left(x_{i}\right)\right] A_{i l}^{*} c_{l}$$
+Using (\ref{x-occ-transform-Aik}), we find
+$$\begin{aligned}
+H_{0} &=\sum_{k, l} c_{k}^{\dagger} c_{l} \int d^{3} \mathbf{x}_{i} \phi_{k}\left(\mathbf{x}_{i}\right) \epsilon_{l} \phi_{l}^{*}\left(\mathbf{x}_{i}\right) \\
+&=\sum_{k} \epsilon_{k} c_{k}^{\dagger} c_{k}
+\end{aligned}$$
+
+The transformation (\ref{x-occ-transform}) allows us to break $\psi^{\dagger}$,$\psi$ up into "particle" and "hole" parts, thus:
+\begin{equation}\begin{aligned}
+\psi^{\dagger}\left(\mathbf{x}_{i}\right) &=\sum_{k>k_{F}} A_{i k} a_{k}^{\dagger}+\sum_{k<k_{F}} A_{i k} b_{k} \\
+&=\psi_{p a r t}^{\dagger}\left(\mathbf{x}_{i}\right)+\psi_{h o l e}\left(\mathbf{x}_{i}\right)
+\end{aligned}\end{equation}
+\begin{equation}\psi\left(x_{i}\right)=\psi_{\text {hole }}^{\dagger}\left(x_{i}\right)+\psi_{\text {part }}\left(x_{i}\right)\end{equation}
+
+\subsection{Bosons}
+The occupation number story can easily be re-written with the boson as protagonist. We find:
+
+(1) The wavefunction becomes replaced by the symmetrized
+\begin{equation}\begin{aligned}
+\Phi_{k_{1}, k_{2} \ldots k_{N}}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right) &=\sqrt{\left(\frac{n_{1} ! n_{2} ! \ldots}{N !}\right) \sum_{P}(+1) P\left[\phi_{k_{1}}\left(\mathbf{r}_{1}\right) \ldots \phi_{k_{N}}\left(\mathbf{r}_{N}\right)\right]} \\
+&=\Phi_{n_{1}, \ldots, n_{1}, \ldots}\left(\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}\right) \equiv\left\langle\mathbf{r}_{1}, \ldots, \mathbf{r}_{N} | n_{1}, \ldots, n_{i}, \ldots\right\rangle
+\end{aligned}\end{equation}
+where: $n_i=0,1,2,3,\ldots$
+
+(2)The $c_{i}^{\dagger}, c_{i}$ operators are re-defined by
+\begin{equation}\begin{array}{l}
+c_{i}^{\dagger}\left|n_{1} \ldots n_{i} \ldots\right\rangle=\sqrt{( n_{i}+1)}\left|n_{1}, \ldots, n_{i}+1, \ldots\right\rangle \\
+c_{i}\left|n_{1} \ldots n_{i} \ldots\right\rangle=\sqrt{n_{i}}\left|n_{1}, \ldots, n_{i}-1, \ldots\right\rangle
+\end{array}\end{equation}
+(3) The commutation relations are replaced by
+\begin{equation}\begin{array}{l}
+{\left[c_{l}, c_{k}^{\dagger}\right]_{-}=c_{l} c_{k}^{\dagger}-c_{k}^{\dagger} c_{l}=\delta_{l k}} \\
+{\left[c_{l}, c_{k}\right]_{-}=0} \\
+{\left[c_{l}^{\dagger}, c_{k}^{\dagger}\right]_{-}=0}
+\end{array}\end{equation}
+(4) There are no holes in the boson case, hence no particle-hole formalism.
+
+(5) The one- and two-body operators are the same as in the fermion case, hence also the expression for the Hamiltonian. (\textbf{This is not true for phonons, where the interaction terms may involve the product of any number of creation and destruction operators})
