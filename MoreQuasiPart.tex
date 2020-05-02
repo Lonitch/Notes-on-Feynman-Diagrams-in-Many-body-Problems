@@ -133,7 +133,9 @@ Hence the only graphs occurring in the series for the ground state energy are
     \label{pure-hartree-diam}
 \end{equation}
 Note that \textbf{the propagator lines in these diagrams are all hole lines. Also the diagrams in brackets violate the exclusion principle since there are simultaneously two hole lines in state $\mathbf{k}$}.
-\begin{equation}E_{0}=\sum_{k<k=7} \epsilon_{k}+\frac{1}{2} \sum_{\substack{k, l<k_F\\\mathbf{k}\neq\mathbf{l}}}^{\prime} V_{k l k l}\end{equation}
+\begin{equation}E_{0}=\sum_{k<k=7} \epsilon_{k}+\frac{1}{2} \sum_{\substack{k, l<k_F\\\mathbf{k}\neq\mathbf{l}}}^{\prime} V_{k l k l}
+\label{pure-hartree-E0}
+\end{equation}
 The $\mathbf{k=l}$ graphs cancel because of the fermion loop in bubble diagram.
 
 Now let us get the quasi particle energies, $\epsilon_k^{\prime}$, from the poles of the Green's function. In this case, the propagator is given exactly by the sum over just the bubble graphs:
@@ -145,7 +147,9 @@ Series (\ref{pure-hartree-diam-series}) was summed and gives the result for quas
 \begin{equation}\begin{array}{l}
 \epsilon_{k}^{\prime}=\epsilon_{k}+\sum_{l<k_F} V_{k l k l}, \quad k>k_{F} \\
 \tau_{k}=\infty
-\end{array}\end{equation}
+\end{array}
+\label{pure-hartree-E-particle}
+\end{equation}
 In the case of quasi holes we just sum
 \begin{equation}
     \includegraphics[width=0.8\textwidth]{screenshots/pure-hartree-hole-diam-series.PNG}
@@ -155,6 +159,80 @@ The bracketed diagrams cancel because of the fermion loop and we get the result:
 \begin{equation}\begin{aligned}
 &\epsilon_{k}^{\prime}=\epsilon_{k}+\sum_{l<k_{F}}{}^{\prime} V_{k l k l}, \quad k<k_{F}\\
 &\tau_{k}=\infty
-\end{aligned}\end{equation}
+\end{aligned}
+\label{pure-hartree-E-hole}
+\end{equation}
 
 Finally, we need the interaction between quasi particles ($f$-term in (\ref{pure-hartree-hamil})).This can be obtained from the various two-particle propagators. Consider the particle-particle propagator first. In the present case, this is given by the sum:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/particle-particle-diam-series.PNG}
+    \label{particle-particle-diam-series}
+\end{equation}
+The crossed "exchange" diagrams in the brackets in (\ref{particle-particle-diam-series}) contribute only when $\mathbf{k}=\mathbf{l}$. because the labels on the incoming and outgoing lines in each diagram must match those of $G_2$ on the left. \redp{\textbf{Since these diagrams are negative, they cancel all the uncrossed diagrams when $\mathbf{k=l}$, so $G_2=0$ for $\mathbf{k=l}$}}.
+
+We can greatly simplify (\ref{particle-particle-diam-series}) in the following way:
+Consider the diagram subset consisting of more and more bubbles inserted into the first propagator,i.e.,:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/particle-particle-diam-series-2.PNG}
+    \label{particle-particle-diam-series-2}
+\end{equation}
+This can be summed as:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/particle-particle-diam-series-3.PNG}
+\end{equation}
+Similarly, we sum over all bubble insertions in all bare propagators, leading to a sum in which all propagators are clothed,\redp{i.e.,} in which all propagators are the quasi particle propagators:
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/particle-particle-diam-series-4.PNG}
+\end{equation}
+In this form, we can see that the quasi particle interaction is:$V=V_{klkl}(l\neq k), V=0(l=k)$. Similar arguments applied to the particle-hole and hole-hole propagators yield this same interaction.
+
+We can now combine these results into a Hamiltonian of form (\ref{pure-hartree-hamil}). The expressions for $E_0$ and $\epsilon_q^{\prime}$ are in (\ref{pure-hartree-E0}),(\ref{pure-hartree-E-particle}), and (\ref{pure-hartree-E-hole}). The interaction term $f$ in (\ref{pure-hartree-hamil}) will have the form
+$$H_{1}=\frac{1}{2} \sum_{k, l, m, n} V_{k l m n} c^{\dagger}, c_{k}^{\dagger} c_{m} c_{n}$$
+since the quasi particles here are fermions.
+
+Letting $A_{k}^{\dagger}, A_{k}, B_{k}^{\dagger}, B_{k},$ be the quasi particle and quasi hole operators we find
+\begin{equation}\begin{aligned}
+H^{\prime}=[&\sum_{k<k_{F}} \epsilon_{k}+\frac{1}{2} \sum_{k,l<k_F}^{\prime} V_{k l k l}]+\\
+&+\sum_{k<k_{F}}\left(\epsilon_{k}+\sum_{l<k_{p}} V_{k l k l}\right) A_{k}^{\dagger} A_{k}-\sum_{k<k_{F}}\left(\epsilon_{k}+\sum_{l<k_{F}}^{\prime} V_{klkl}\right) B_{k}^{\dagger} B_{k}+\\
+&+\frac{1}{2} \sum_{l,k>k_{F}}^{\prime} V_{kl k l} A_{l}^{\dagger} A_{k}^{\dagger} A_{k} A_{l}-\sum_{\substack{k>k_{F}\\l<k_F}} V_{k l k l} B_{l}^{\dagger} A_{k}^{\dagger} A_{k} B_{l}+\\
+&+\frac{1}{2} \sum_{\substack{k<k_F\\l<k_F}}^{\prime} V_{klkl} B_{l}^{\dagger} B_{k}^{\dagger} B_{k} B_{l}
+\end{aligned}\end{equation}
+Observe that in the particle-particle and hole-hole interaction terms, \textbf{it is necessary to put in a factor $\frac{1}{2}$ to avoid counting interactions twice when we sum freely over $\mathbf{k}$ and $\mathbf{l}$.} Note that the $(-)$ sign in the $B_{k}^{1} B_{k}$ term is put in because the hole energies (and therefore the quasi hole energies) are negative. The (-) in the $B_{l}^{t} A_{k}^{1} A_{k} B_{l}$ term occurs for the following reason: \bluep{The energy of a quasi particle in, say, state $k_1>k_F$, includes interactions with all particles in the filled Fermi sea. But if there is a hole in, say, state $l_1<k_F$, then the corresponding energy,$V_{k_1l_1k_1l_1}$ does not exist, and should be subtracted from the quasi particle energy. The term $-V_{k_1l_1k_1l_1}B_{l_1}^{\dagger}A_{k_1}^{\dagger}A_{k_1}B_{l_1}$  takes care of this substraction.}
+
+\subsection{Crude calculation of quasi particle lifetime}
+We mentioned that \redp{the quasi particle picture breaks down if the energy is two far away from the Fermi energy.} In a Fermi system, since one deals with particle-like excitation above $\epsilon_F^{\prime}$ (the Fermi energy of the interacting system), and hole-like ones below, the criterion is taken relative to the Fermi energy, i.e.:
+\begin{equation}\frac{1}{\tau_{k}} \ll \epsilon_{k}^{\prime}-\epsilon_{F}^{\prime}\end{equation}
+In the pure Hartree model,$\tau_k=\infty$, so this is satisfied for any $k$. But this is not true in general. In fact, we are now going to show that in most Fermi systems the quasi particle lifetime obeys
+\begin{equation}\frac{1}{\tau_{k}} \propto\left(\epsilon_{k}^{\prime}-\epsilon_{F}^{\prime}\right)^{2}
+\label{lifetime-criterion}
+\end{equation}
+Here we will give a crude quasi-proof of (\ref{lifetime-criterion}).
+
+\bluep{The lifetime of a quasi particle in momentum state $\mathbf{k}$ will be the \textbf{inverse of the transition probability per second that the quasi particle will be scattered out of state $\mathbf{k}$ by collisions with other quasi particles}.} Let us pretend that quasi particle collisions are like those between real particles (they are not, actually, since quasi particles can have a 'retarded', i.e., time-dependent, interaction even when the bare particles interact instantaneously) and calculate the transition probability out of state $\mathbf{k}_1$ for a particle in state $\mathbf{k}_1$, where $|\mathbf{k}_1|\geq k_F$. In a typical interaction, the particle will collide with a particle in state $|\mathbf{k}_2|\leq k_F$ and final state will be a particle in $\mathbf{k}_3$ and $\mathbf{k}_4$, where
+\begin{equation}\mathbf{k}_{4}=\mathbf{k}_{1}+\mathbf{k}_{2}-\mathbf{k}_{3}\end{equation}
+The transition probability is
+\begin{equation}W_{k_{1}} \propto \int d^{3} k_{2} \int d^{3} k_{3}\left|V_{k_{3}, k_{1}+k_{2}-k_{3}, k_{1}, k_{2}}\right|^{2}
+\label{crude-quasi-interaction-probability}
+\end{equation}
+To evaluate (\ref{crude-quasi-interaction-probability}) we note that by the Pauli principle all states under $k_F$ are occupied so that \begin{equation}\left|\mathbf{k}_{3}\right| \geqslant k_{F}, \quad\left|\mathbf{k}_{4}\right| \geqslant k_{F}
+\label{crude-proof-1}
+\end{equation}
+by conservation of energy,
+\begin{equation}k_{1}^{2}+k_{2}^{2}=k_{3}^{2}+k_{4}^{2}
+\label{crude-proof-2}
+\end{equation}
+The equations above imply that 
+\begin{equation}k_{1}^{2}+k_{2}^{2} \geqslant 2 k_{F}^{2}
+\label{crude-proof-3}
+\end{equation}
+Consider first the limiting case when $\left|\mathbf{k}_{1}\right|=k_{F} .$ Then by (\ref{crude-proof-3})$, k_{2}^{2} \geqslant k_{F}^{2} .$ But since $\left|\mathbf{k}_{2}\right| \leqslant k_{F},$ this implies $\left|\mathbf{k}_{2}\right|=k_{F}$. Similarly, $\left|\mathbf{k}_{3}\right|=\left|\mathbf{k}_{4}\right|=k_{F} .$ \textbf{That is, all momenta lie on the Fermi sphere.} Suppose now that $\left|\mathbf{k}_{1}\right|=k_{F}+\delta$ where $k_{F} \gg \delta>0 .$ Then by (\ref{crude-proof-3}) $,\left|\mathbf{k}_{2}\right| \geqslant k_{F}-\delta .$ Similarly, since $\left|\mathbf{k}_{2}\right| \leqslant k_{F},$ we have that in order to satisfy (\ref{crude-proof-2}), $\left|\mathbf{k}_{\mathbf{3}}\right|,\left|\mathbf{k}_{4}\right|$ must be less than $k_{F}+\delta .$ Hence all momenta lie in a shell of thickness $\delta=\left|\mathbf{k}_{1}\right|-k_{F}$ around the Fermi sphere. Assuming there's nothing peculiar about the behaviour of $V$, the integral over the $\mathbf{k}_{2}$ -shell gives a factor $\propto 4 \pi k_{F}^{2}\left(\left|\mathbf{k}_{1}\right|-k_{F}\right),$ and the same for the $\mathbf{k}_{3}$ -shell, so
+\begin{equation}W_{k_{1}} \propto\left(\left|\mathbf{k}_{1}\right|-k_{F}\right)^{2}\end{equation}
+But
+\begin{equation}\begin{aligned}
+\epsilon_{k_{1}}-\epsilon_{p} \propto\left(k_{1}^{2}-k_{F}^{2}\right) &=\left(\left|\mathbf{k}_{1}\right|-k_{P}\right)\left(\left|\mathbf{k}_{1}\right|+k_{F}\right) \\
+& \approx 2 k_{F}\left(\left|\mathbf{k}_{1}\right|-k_{F}\right)
+\end{aligned}\end{equation}
+Whence
+\begin{equation}\frac{1}{\tau_{k}}=W_{k} \propto\left(\epsilon_{k}-\epsilon_{F}\right)^{2}\end{equation}
+
+\subsection{General form of quasi particle propagator}
