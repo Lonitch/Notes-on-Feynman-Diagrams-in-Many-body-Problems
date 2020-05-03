@@ -236,3 +236,32 @@ Whence
 \begin{equation}\frac{1}{\tau_{k}}=W_{k} \propto\left(\epsilon_{k}-\epsilon_{F}\right)^{2}\end{equation}
 
 \subsection{General form of quasi particle propagator}
+We have learned that the single-particle propagator or "Green's function" is defined as
+\begin{equation}G\left(k_{2}, k_{1}, t_{2}-t_{1}\right)=G^{+}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)_{t_{2}>t_{1}}+G^{-}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)_{t_{2}\leq t_{1}}\end{equation}
+where $iG^+(k_2,k_1,t_2-t1)$ is probability amplitude that if at time $t_{1}$ we add a particle in $\phi_{k_{1}}$ to the interacting system in its ground state, then at time $t_{2}$ the system will be in its ground state with an added particle in $\phi_{k_{2}}$, and $-iG^-(k_2,k_1,t_2-t1)$ is probability amplitude that if at time $t_{2}$ we add a hole in $\phi_{z_{2}}$ to the interacting system in its ground state, then at time $t_{1}$ the system will be in its ground state with an added hole in $\phi_{k_{1}}$. (\redp{\textbf{The "-" sign on $G^-$ is for fermions; bosons have a $+iG^-$ instead}}.) These results may be written in a compact way by introducing the functions
+\begin{equation}\theta_{x}\left\{\begin{array}{lll}
+=1, & \text { for } x>1 \\
+=0, & \text { for } x<1
+\end{array} ; \quad \delta_{k}\left\{\begin{array}{lll}
+&=+\delta, \quad \epsilon_{k}>\epsilon_{F} \\
+&=-\delta, \quad \epsilon_{k}<\epsilon_{F}
+\end{array}\right.\right.\end{equation}
+Letting $t=t_2-t_1$, this c=gives
+\begin{equation}\begin{aligned}
+G_{0}(k, t) &=-i\left[\theta_{t} \theta_{\epsilon_k-\epsilon_F }e^{-i\epsilon_{k} t}-\theta_{-t} \theta_{\epsilon_F-\epsilon_{k}} e^{-i\epsilon_kt}\right], \quad t \neq 0 \\
+&=+i \theta_{t_{p-t_{2}}}, \quad t=0
+\end{aligned}\end{equation}
+and
+\begin{equation}G_{0}(k, \omega)=\frac{1}{\omega-\epsilon_{k}+i \delta_{k}}\end{equation}
+
+Now in Chapter 3 we argue that in systems describable by quasi particles, $G$ will look like $G_{0}$ except for replacing $\epsilon_{\mathbf{k}}$ by $\epsilon_{\mathbf{k}}^{\prime}$, introducing a lifetime $\tau_{k},$ and an amplitude factor, $Z_{k}$ as in (\ref{partial-occ-factor-t},\ref{partial-occ-factor-k}). However, this is not quite right, because it neglects the fact that when the bare particle is first put into the system, it will take some finite time, say $t_{c},$ for it to become 'clothed' so it will not act like a quasi particle until $t_{2}-t_{1}>t_{c} .$ Further, it can be shown that the quasi particle expression for the propagator is no longer valid when $t_{2}-t_{1} \gg \tau_{k}$ where $\tau_{k}$ is the lifetime. For this reason \textbf{it is necessary to write the propagator as the sum of a pure quasi particle part plus a correction term which will be important for $t<t_{e}$ and $t>\tau_{k}$}. This consideration yields (setting $t=t_2-t_1$ and $t\neq0$):
+\begin{equation}\begin{aligned}
+G_{\substack{quasi\\particle}}(k, t)=&-i Z_{k}\left[\theta_{t} \theta_{\epsilon^{\prime}_{k}-\epsilon^{\prime}_F} e^{-i\left(\epsilon_{k}^{\prime}-i \tau_{k}^{-1}\right) t}-\right.\\
+&\left.-\theta_{-t} \theta_{\epsilon^{\prime}_F-\epsilon_{k}^{\prime}} e^{-i\left(\epsilon_{k}^{\prime}+i_{\tau_{k}}^{-1}\right)t}\right]+F(k, t)
+\end{aligned}\end{equation}
+where $0<Z_{k} \leqslant 1\left(Z_{k} \text { independent of } t\right)$. \bluep{Don't be scared by the term of $\epsilon_k^{\prime}\pm i\tau_k^{-1}$. For $G_0$ we have $\epsilon_k\pm i\delta$. Since $\delta$ is infinitesimally small, so we have instead $\epsilon_k$ in the exponential of $G_0$. So they are the same thing with different lifetime.(finite vs. infinite)}
+
+Taking the Fourier transform :
+\begin{equation}G_{\substack{quasi\\particle}}(k, \omega)=\frac{Z_{k}}{\omega-\epsilon_{k}^{\prime}+i\left[2 \theta_{\epsilon^{\prime}_{k}-\epsilon_F^{\prime}}-1\right] \tau_{k}^{-1}}+F(k, \omega)\end{equation}
+\redp{\textbf{It must be remembered that these are bona fide quasi particles only if }}
+\begin{equation}\frac{1}{\tau_{k}} \ll \epsilon_{k}^{\prime}-\epsilon_{F}^{\prime}\end{equation}

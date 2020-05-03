@@ -76,8 +76,12 @@ Also from \ref{G0-k-omega-delta}, we have the particle lifetime $\tau$ as $\delt
 where \redp{$\tau_k$ is the quasi-particle lifetime at the state of $\epsilon_k$}.
 
 In a Fermi system, because of the Pauli's principle, each state can only be occupied by one fermion. If a state is partially occupied by a fermion, the possibility of adding another fermion at the same state will be less than 1. Hence we have to multiply the propagator by a factor $Z_k\leq 1$:
-\begin{equation}G_{\text {\stackanchor{quasi}{particle} }}^{+}\left(k,t_{2}-t_{1}\right)=-i Z_{k} e^{-i \epsilon_{k}^{\prime}\left(t_{2}-t_{1}\right)} e^{-\left(t_{2}-t_{1}\right) / \tau_{k}}\end{equation}
-\begin{equation}G_{\text {\stackanchor{quasi}{particle}}}^{+}(k, \omega)=\frac{Z_{k}}{\omega-\epsilon_{k}^{\prime}+i \tau_{k}^{-1}}\end{equation}
+\begin{equation}G_{\text {\stackanchor{quasi}{particle} }}^{+}\left(k,t_{2}-t_{1}\right)=-i Z_{k} e^{-i \epsilon_{k}^{\prime}\left(t_{2}-t_{1}\right)} e^{-\left(t_{2}-t_{1}\right) / \tau_{k}}
+\label{partial-occ-factor-t}
+\end{equation}
+\begin{equation}G_{\text {\stackanchor{quasi}{particle}}}^{+}(k, \omega)=\frac{Z_{k}}{\omega-\epsilon_{k}^{\prime}+i \tau_{k}^{-1}}
+\label{partial-occ-factor-k}
+\end{equation}
 The poles in the equation above are 
 \begin{equation}
     \omega = \epsilon_k^{\prime}-i\tau_k^{-1}
