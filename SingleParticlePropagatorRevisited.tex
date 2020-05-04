@@ -5,4 +5,64 @@ The closed mathematical expression for the propagator,$G$, appears usually in on
 \begin{equation}\begin{aligned}
 G\left(k_{2}, k_{1}, t_{2}-t_{1}\right) &=-i\left\langle\Psi_{0}\left|T\left\{c_{k_{2}}\left(t_{2}\right) c^{\dagger}_{k_{1}}\left(t_{1}\right)\right\}\right| \Psi_{0}\right\rangle \\
 G\left(\mathrm{r}_{2}, \mathrm{r}_{1}, t_{2}-t_{1}\right) &=-i\left\langle\Psi_{0}\left|T\left\{\psi\left(\mathrm{r}_{2}, t_{2}\right) \psi^{\dagger}\left(\mathrm{r}_{1}, t_{1}\right)\right\}\right| \Psi_{0}\right\rangle
+\end{aligned}
+\label{sandwitch-defi-G}
+\end{equation}
+We shall only consider the first form-the second may be analysed in a similar way. First, $\Psi_{0}$ is the exact normalized wave function of the ground state of the interacting $N$ -particle system. The operators $c_{k}(t), c_{k}^{\dagger}(t)$ respectively, destroy and create a particle in state $k$ at time $t .$ More precisely, they are the ordinary $c_{k}, c_{k}^{\dagger}$ transformed to \redp{'Heisenberg picture'}, defined by
+\begin{equation}\begin{array}{l}
+c^{\dagger}_{k_{1}}\left(t_{1}\right)=e^{+i Ht_{1}} c_{k_{1}} e^{-i H t_{1}} \\
+c_{k_{2}}\left(t_{2}\right)=e^{+i Ht_2} c_{k_{2}} e^{-i Ht_{2}}
+\end{array}\end{equation}
+Finally the Wick time-ordering operator, T, is defined by
+\begin{imp}
+\begin{equation}
+\begin{aligned}
+T\left\{A\left(t_{1}\right) B\left(t_{2}\right) \ldots\right\}=&(-1)^{P} \times\begin{varwidth}[t]{\linewidth}operators rearranged so that time\\decreases from left to right, assuming\\no two times are equal,\end{varwidth}\\
+&=(-1)^P\times\begin{varwidth}[t]{\linewidth}operators rearranged so all $c^{\dagger}$ 's (or\\ $a^{\dagger}$' s or $b$'s) stand to the left of $c$'s $($ or\\ $a$'s or $\boldsymbol{b}^{\dagger}$ 's ) for the case of equal\\ times)\end{varwidth}
+\end{aligned}
+\end{equation}
+where $P$ is the number of interchanges of operators required to get the operators in the proper time order, starting with the order given in the brackets.
+\end{imp}
+Thus, 
+\begin{equation}\begin{aligned}
+T\left\{c_{k_{2}}\left(t_{2}\right) c_{k_{1}}\left(t_{1}\right)\right\} &=c_{k_{2}}\left(t_{2}\right) c^{\dagger}_{k_{1}}\left(t_{1}\right) \text { for } t_{2}>t_{1} \\
+&=-c_{k_{1}}^{\dagger}\left(t_{1}\right) c_{k_{2}}\left(t_{2}\right) \text { for } t_{2} \leqslant t_{1}
 \end{aligned}\end{equation}
+and
+\begin{equation}\begin{aligned}
+G &=G^{+}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)=-i\left\langle\Psi_{0}\left|c_{k_{2}}\left(t_{2}\right) c^{\dagger}_{k_{1}}\left(t_{1}\right)\right| \Psi_{0}\right\rangle, \quad t_{2}>t_{1} \\
+&=G^{-}\left(k_{2}, k_{1}, t_{2}-t_{1}\right)=+i\left\langle\Psi_{0}\left|c^{\dagger}_{k_{1}}\left(t_{1}\right) c_{k_{2}}\left(t_{2}\right)\right| \Psi_{0}\right\rangle, \quad t_{2} \leqslant t_{1}
+\end{aligned}\end{equation}
+Consider the $t_2>t_1$ case first, we have
+\begin{equation}G^{+}=-\underbrace{I\left\langle\Psi_{0}\right| e^{i Ht_{2}} c_{k_{2}}}_{B^{\dagger}} \underbrace{e^{-i H\left(t_{2}-t_{1}\right)} c^{\dagger}_{k_{1}} e^{-i Ht_{1}}\left|\Psi_{0}\right\rangle}_{A}\end{equation}
+Now \redp{$exp(-iHt)$ is the time development operator}, so that $exp(-iHt_1)|\Psi_0\rangle$ is the ground state at time $t_1$, and $c^{\dagger}_{k_1}exp(-iHt_1)|\Psi_0\rangle$ is the state with one particle in $\phi_{k_1}$ added to the ground state at time $t_1$. Hence $\mathbf{A}$ is the state of the system at time $t_2$ when a particle $\phi_{k_1}$ was added at $t_1$. The $B^{\dagger}$ is
+\begin{equation}B^{\dagger}=\overline{c^{\dagger}_{k_{2}} e^{-iH t_{2}} |\Psi_{0}}\rangle\end{equation}
+This is \bluep{the complex conjugate of the state with one particle in $\phi_{k_2}$ added to the ground state at time $t_2$.} Hence we obtain
+\begin{equation}
+    \begin{aligned}
+    G^+=B^{\dagger}A&=\text{component of B along A}\\
+    &=\begin{varwidth}[t]{\linewidth}
+    probability amplitude that the state of the system\\
+    at $t_{2},$ when a particle in $\phi_{k_{1}}$ was added to the\\ 
+    ground state at $t_{1},$ is the state with one particle in \\
+    $\phi_{k_{2}}$ added to the ground state at time $t_{2}$
+    \end{varwidth}
+    \end{aligned}
+\end{equation}
+It is a good brain-building exercise to show how (\ref{sandwitch-defi-G}) boils down to the expression for the free propagator (\ref{combined-G0-in-k-t-space}), in the non-interacting case. The non-interacting Hamiltonian and ground state are given by
+\begin{equation}H_{0}=\sum_{p} \epsilon_{p} c_{p}^{\dagger} c_{p}, \quad H_{0}\left|\Phi_{0}\right\rangle=\sum_{p<k_{F}} \epsilon_{p}\left|\Phi_{0}\right\rangle, \quad\left|\Phi_{0}\right\rangle=\left|111 \ldots 1_{F} 000 \ldots\right\rangle\end{equation}
+Let us calculate just $G_0^+$ setting $t_1=0,t_2=t$:
+\begin{equation}G_{0}^{+}(k, t)=-i\left\langle\Phi_{0}\left|e^{+i H_{0}t} c_{k} e^{-iH_{0}t} c_{k}^{\dagger}\right| \Phi_{0}\right\rangle \theta_{t}\end{equation}
+In an obvious notation,
+\begin{equation}c_{k}^{\dagger}\left|\Phi_{0}\right\rangle=(-1)^{N}\left|\Phi_{0}, 1_{k}\right\rangle \theta_{\epsilon_k-\epsilon_F}\end{equation}
+Thus $k$ must be greater than $k_F$. Now
+\begin{equation}H_{0}\left|\Phi_{0}, 1_{k}\right\rangle=\sum_{p} \epsilon_{p} c_{p}^{\dagger} c_{p}\left|\Phi_{0}, 1_{k}\right\rangle=\left[\sum_{p<k_{F}} \epsilon_{p}+\epsilon_{k}\right]\left|\Phi_{0} 1_{k}\right\rangle\end{equation}
+Thus
+\begin{equation}c_{k} e^{-i H_{0} t}\left|\Phi_{0}, 1_{k}\right\rangle=(-1)^{N}\left|\Phi_{0}\right\rangle \exp \left\{-i\left[\sum_{p<k_{F}} \epsilon_{p}+\epsilon_{k}\right] t\right\}\end{equation}
+Finally we have
+\begin{equation}G_{0}^{+}(k, t)=-i \theta_{\epsilon_k-\epsilon_F} \theta_{t} e^{-i \epsilon_k t}\end{equation}
+confirming (\ref{combined-G0-in-k-t-space}). It is now easy to obtain the ground state expectation value of any single-particle operator in terms of the propagator (\ref{one-body-interaction-occ}), thus
+\begin{imp}
+\begin{equation}\left\langle\Psi_{0}\left|\mathcal{O}^{o c c}\right| \Psi_{0}\right\rangle=-i \sum_{k l} \mathcal{O}_{k l} \lim _{t \rightarrow 0^{-}} G(l, k ; t)\end{equation}
+\end{imp}
+\subsection{Spectral density function}
