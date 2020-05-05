@@ -66,3 +66,41 @@ confirming (\ref{combined-G0-in-k-t-space}). It is now easy to obtain the ground
 \begin{equation}\left\langle\Psi_{0}\left|\mathcal{O}^{o c c}\right| \Psi_{0}\right\rangle=-i \sum_{k l} \mathcal{O}_{k l} \lim _{t \rightarrow 0^{-}} G(l, k ; t)\end{equation}
 \end{imp}
 \subsection{Spectral density function}
+The spectral density function is indispensable for analysing the mathematical properties of propagators, especially their \bluep{analytic properties. Secondly, it is extremely convenient to use in many-body calculations which \textbf{involve diagrams containing 'dressed' or 'renormalized' propagators}}. Here we provide a brief introduction to the subject here. More details can be found in Appendix.
+
+The idea is similar to the spectral decomposition of a time-dependent function $f(t)$ into the sum of its components at various frequencies:
+\begin{equation}f(t)=\int_{-\infty}^{+\infty} F(\omega) e^{i \omega t} d \omega\end{equation}
+where $F(\omega)$ gives the spectrum of $f(t)$. The corresponding expression for the propagator is, for a system with no external potential:
+\begin{imp}
+\begin{equation}\begin{aligned}
+G(\mathbf{k}, t) &=-i \int_{0}^{\infty} d \omega A^{+}(\mathbf{k}, \omega) e^{-i(\omega+\mu) t}, \quad t>0 \\
+&=+i \int_{0}^{\infty} d \omega A^{-}(\mathbf{k}, \omega) e^{+i(\omega-\mu) t}, \quad t \leqslant 0
+\end{aligned}
+\label{G-spectral-density}
+\end{equation}
+where $\mu$ is the chemical potential:
+\begin{equation}
+    \mu=\left[\begin{varwidth}[t]{\linewidth}ground state energy\\ of interacting $N$\\ particle system\end{varwidth}\right]-\left[\begin{varwidth}[t]{\linewidth}ground state energy\\ of interacting $N-1$\\ particle system\end{varwidth}\right]=E_0^N-E_0^{N-1}
+\end{equation}
+\end{imp}
+The $\mathbf{A}^{\pm}(\mathbf{k},\omega)$ is the "spectral density function". The Fourier transform of (\ref{G-spectral-density}) yields
+\begin{equation}G(\mathbf{k}, \omega)=\int_{0}^{\infty} d \omega^{\prime}\left\{\frac{A^{+}\left(\mathbf{k}, \omega^{\prime}\right)}{\omega-\omega^{\prime}-\mu+i \delta}+\frac{A^{-}(\mathbf{k}, \omega^{\prime})}{\omega^{\prime}+\omega-\mu-i \delta}\right\}
+\label{fourier-G-spectral}
+\end{equation}
+which is the so-called \redp{'Lehmann representation' of the propagator}, especially useful for discussing analytic properties. The spectral density has the important properties that
+\begin{equation}\begin{array}{c}
+A^{\pm}(\mathbf{k}, \omega) \geqslant 0, \quad \text { real } \\
+\int_{0}^{\infty}\left[A^{+}(\mathbf{k}, \omega)+A^{-}(\mathbf{k}, \omega)\right] d \omega=1 \quad\left(^{*} \text { "sum rule"}\right)
+\end{array}
+\end{equation}
+\bluep{For free particles the spectral density is a $\delta-$function:}
+\begin{equation}A_{0}^{\pm}(\mathbf{k}, \omega)=\delta\left(\pm \omega-\epsilon_{k}+\mu\right)\end{equation}
+For quasi particles, the $\delta-$function gets broadened out and we find the Lorentz form
+\begin{equation}A_{\text {quasi }}^{\pm}(\mathbf{k}, \omega)=\frac{1}{\pi} \frac{\left(1 / \tau_{k}\right) Z_{k}}{\left[\omega \mp\left(\epsilon_{k}^{\prime}-\mu\right)\right]^{2}+\left(1 / \tau_{k}\right)^{2}}+D(\mathbf{k}, \omega)\end{equation}
+where $D(\mathbf{k},\omega)$ is a correction required so that the sum rule is satisfied. Finally, we note that if (\ref{squeezed-Lorentzian-defi}) is applied to (\ref{fourier-G-spectral}) we obtain the following to calculate $\mathbf{A}^{\pm}$:
+\begin{equation}\begin{array}{l}
+A^{+}(\mathbf{k}, \omega-\mu)=-\frac{1}{\pi} \operatorname{Im} G(\mathbf{k}, \omega), \quad \omega>\mu \\
+A^{-}(\mathbf{k}, \mu-\omega)=+\frac{1}{\pi} \operatorname{Im} G(\mathbf{k}, \omega), \quad \omega<\mu
+\end{array}\end{equation}
+
+\subsection{Derivadon of the propagator expansion in the many-body case}
