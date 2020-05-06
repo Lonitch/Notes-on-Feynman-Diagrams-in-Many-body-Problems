@@ -1,0 +1,51 @@
+\newpage
+\section{Spectral Density Function}
+\subsection{Single-particle propagator}
+We shall derive only the expression for $A^{+}(\mathbf{k},\omega)$ in \ref{fourier-G-spectral}. Call $\Psi_n^{N}$, $E_n^{N}$ the exact eigenstates and energies of the Hamiltonian H of the interacting N-particle system. The \bluep{$G^+(\mathbf{k},t)$ may be expressed as a sum over these exact states by inserting the unit operator}:
+$$\sum_{n, N}\left|\Psi_{n}^{N^{\prime}}\right\rangle\left\langle\Psi_{n}^{N^{\prime}}\right|$$
+into (\ref{G+=BA}), letting $t_1=0,t_2=t$, and noting that in the sum over $N^{\prime}$, \redp{all terms are zero except those for which $N^{\prime}=N+1$}:
+\begin{equation}\begin{aligned}
+G^{+}(\mathbf{k}, t) &=-i \theta_{t} \sum_{n}\left\langle\Psi_{0}^{N}\left|e^{i H t} c_{k}\right| \Psi_{n}^{N+1}\right\rangle\left\langle\Psi_{n}^{N+1}\left|e^{-i H t} c_{k}^{\dagger}\right| \Psi_{0}^{N}\right\rangle \\
+&=-i \theta_{t} \sum_{n}\left|\left\langle\Psi_{n}^{N+1}\left|c^{\dagger}_{k}\right| \Psi_{0}^{N}\right\rangle\right|^{2} e^{-i\left(E_{n}^{N+1}-E_{0}^{N}\right) t} \\
+&=-i \theta_{t} \sum_{n}\left|\left(c_{k}^{\dagger}\right)_{n 0}\right|^{2} e^{-l\left(E_{n}^{N+1}-E_{0}^{N}\right) t}
+\end{aligned}\end{equation}
+Taking the Fourier transform of the above yields
+\begin{equation}G^{+}(\mathbf{k}, \omega)=\sum_{n}\left|\left(c_{k}^{\dagger}\right)_{n 0}\right|^{2} \frac{1}{\omega-\left(E_{n}^{N+1}-E_{0}^{N}\right)+i \delta}\end{equation}
+This shows that \redp{the poles of $G^{+}$ occur at the energies of the interacting $N+1$ particle system minus the ground state energy of the interacting $N$ -particle system}.
+The exponentials in the above may be expressed in terms of the chemical potential, thus:
+\begin{equation}E_{n}^{N+1}-E_{0}^{N}=\underbrace{E_{n}^{N+1}-E_{0}^{N+1}}_{w_{n 0}^{N+1}}+\underbrace{E_{0}^{N+1}-E_{0}^{N}}_{\mu^{N+1}}\end{equation}
+For large N we have
+\begin{equation}\begin{aligned}
+&\mu^{N+1} \approx \mu^{N} \equiv \mu\\
+&\omega_{n 0}^{N+1} \approx \omega_{n 0}^{N} \equiv \omega_{n 0}
+\end{aligned}\end{equation}
+Giving
+\begin{equation}G^{+}(\mathbf{k}, t)=-i \theta_{t} \sum_{n}\left|\left(c_{k}^{\dagger}\right)_{n_{0}}\right|^{2} e^{-i\left(\omega_{n 0}+\mu\right) t}
+\label{sum-spectral-G+-time}
+\end{equation}
+\begin{equation}
+    G^{+}(\mathbf{k}, \omega)=\sum_{n}\left|\left(c_{k}^{\dagger}\right)_{n 0}\right|^{2} \frac{1}{\omega-\left(\omega_{n 0}+\mu\right)+i \delta}
+\label{sum-spectral-G+}
+\end{equation}
+In a system with large volume, the energy levels are so closely spaced that we can go from a sum to an integral by introducing the spectral density function:
+\begin{equation}A^{+}(\mathbf{k}, \omega) d \omega=\sum_{\omega<\omega_{n0}<\omega+d \omega}\left|\left(c_{k}^{\dagger}\right)_{n 0}\right|^{2}\end{equation}
+or
+\begin{equation}A^{+}(\mathbf{k}, \omega)=\sum_{n}\left|\left(c_{k}^{\dagger}\right)_{n 0}\right|^{2} \delta\left(\omega-\omega_{n 0}\right)\end{equation}
+This function is defined only for $\omega\geq0$ because $\omega_{n0}\geq0$. It gives \textbf{\redp{the probability that the state $|\Psi_0^N\rangle$ with an added particle in state $\mathbf{k}$ is an exact eigenstate of the $N+1$-particle system with energy between $\omega$ and $\omega+d\omega$}}. Thus
+\begin{equation}
+    G^{+}(\mathbf{k}, t)=-i \theta_{t} \int_{0}^{\infty} A^{+}(\mathbf{k}, \omega) e^{-i(\omega+\mu) t} d \omega
+\label{int-spectral-G+-t}
+\end{equation}
+\begin{equation}
+G^{+}(\mathbf{k}, \omega)=\int_{0}^{\infty} d \omega^{\prime} \frac{A^{+}(\mathbf{k}, \omega^{\prime})}{\omega-\omega^{\prime}-\mu+i \delta}
+\label{int-spectral-G+}
+\end{equation}
+A profound change takes place when we go from the sum (\ref{sum-spectral-G+}) to the integral (\ref{int-spectral-G+}). The sum (\ref{sum-spectral-G+}) has an infinite number of \textbf{\bluep{real poles}}, whereas the integral (\ref{int-spectral-G+}) has a small number of \textbf{\bluep{complex poles}}.
+
+The physical meaning of the appearance of complex poles when we go from a sum to an integral may be seen by looking at the corresponding expressions for G in the time domain,i.e.,(\ref{sum-spectral-G+-time}) and (\ref{int-spectral-G+-t}). Consider the sum(\ref{sum-spectral-G+-time}) first. To analyse its behaviour, we note that there are two characteristic energies involved: First, it there is no interaction, then $(c^{\dagger}_k)_{n0}=\delta_{kn}$. But with interaction, in typical cases $(c^{\dagger}_k)_{n0}$ is spread out over a hand of energy levels from say $n^{\prime}$ to $n^{\prime\prime}$, having width $\Delta E=\omega_{n^{\prime\prime},0}-\omega_{n^{\prime},0}$. Secondly, there is the characteristic spacing between adjacent energy levels, $\Delta \epsilon \sim \omega_{n+1,0}-\omega_{n, 0}$.
+
+Now, at $t=0,$ all the terms in (\ref{sum-spectral-G+-time}) are in phase and $G^{+}(t)$ is maximum. As $t$ increases, the terms in (\ref{sum-spectral-G+-time}) start to get out of phase with each other, and $G^{+}(t)$ decays in a characteristic time given by $\tau \sim \hbar / \Delta E .$ However, if we wait a length of time $T \sim \hbar / \Delta \epsilon,$ then the exponentials will start to get in phase with each other again, and $G^{+}(t)$ builds up again to its value at $t=0 .$ (This is just the 'beat' phenomenon observed when we add two signals $\cos \left(2 \pi \nu_{1} t\right)$ and $\cos \left(2 \pi \nu_{2} t\right):$ the beat frequency is $\nu_{2}-\nu_{1}$ and the corresponding period for build-up of the beat is $\left.T=1 /\left(\nu_{2}-\nu_{1}\right) .\right)$ Thus, the Green's function shows periodic behaviour.
+
+The above holds for a finite system, with corresponding finite distance between energy levels. But if we go to the infinite volume limit, then $\left(\omega_{n+1,0}-\right.$ $\left.\omega_{n, 0}\right) \rightarrow 0,$ and the build-up time $T \rightarrow \infty .$ That is, \redp{$G^{+}(t)$ becomes aperiodic}, decaying to zero in a time of order $\tau,$ and never building up again. This is just the quasi particle behaviour. Thus the discontinuous change from real poles to complex poles in the infinite volume limit, is associated with the discontinuous change of the propagator from a periodic to an aperiodic function.
+
+In practice, it is not necessary to have volume$\rightarrow\infty$ since for a typical large system, we find that T is so large compared with the times invo lved in the experiment that build-up will not be observed. However, \textbf{in small systems, like atoms and light nuclei, The above considerations a re not valid: the energy levels are widely spaced, the propagator poles are real, and the quasi particle picture does not hold.}
