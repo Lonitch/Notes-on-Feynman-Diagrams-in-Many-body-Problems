@@ -105,4 +105,58 @@ A^{+}(\mathbf{k}, \omega-\mu)=-\frac{1}{\pi} \operatorname{Im} G(\mathbf{k}, \om
 A^{-}(\mathbf{k}, \mu-\omega)=+\frac{1}{\pi} \operatorname{Im} G(\mathbf{k}, \omega), \quad \omega<\mu
 \end{array}\end{equation}
 
-\subsection{Derivadon of the propagator expansion in the many-body case}
+\subsection{Topology of diagrams}
+In order to develop general methods for working with diagrams, we need a systematic way of drawing all graphs in nth order. This will be discussed now.
+
+The method of drawing the diagrams may be greatly simplified if we associate the full propagator, $G=G^-+G^+$ with directed lines instead of just $G^+$ or $G^-$. This is called the "\redp{\textbf{Feynman method}}". Then in the integrals over intermediate times we automatically get $G_{0}\left(t^{\prime}-t\right)=G_{0}^{+}$ when $t^{\prime}>t$ and $G_{0}\left(t^{\prime}-t\right)=G_{0}^{-}$ when $t^{\prime} \leqslant t .$ Thus it is no longer
+necessary to draw any hole lines since a directed line is a particle line for $t^{\prime}>t$ and a hole line for $t^{\prime}<t .$ Thus the time order of the dots is no longer important.
+
+Drawing diagrams in the case of mutually interacting fermions with no external potential is considerably more difficult. To get all nth-order Goldstone diagrams, drawn wiggly lines each with vertex dots at both ends, and two fixed points, thus (note that the wiggles may have any vertical position relative to the fixed points). Join all points to each other with directed lines in all linked topologically distinct (in the Goldstone sense) ways such that one line enters and one leaves each vertex point, and a line enters one external point and leaves the other.
+
+To illustrate, a few typical 2nd-order ones are shown in (\ref{typical-2nd-order-diagrams}). Many of the diagrams in (\ref{typical-2nd-order-diagrams}) can be eliminated. First \bluep{because of conservation of momentum, graphs (b),(d),(h),(i),(j),(l) have a particle and a hole both in the same momentum state. But this is impossible in particle-hole formalism}. 
+\begin{mybox}
+Such graphs are called 'anomalous' or 'momentum non-conserving'. They do give a contribution when the system is non-isotropic, e.g. external field present, or at finite temperatures.
+\end{mybox}
+Second, it we agree to use the Feynman convention in which the full $G$ is associated with each line and time order has no significance, then \bluep{$(f)\equiv(e),(g)\equiv(k)$}. Hence the only survivors are (\ref{typical-2nd-order-diagrams-2}) or (\ref{typical-2nd-order-diagrams-3}), where (\ref{typical-2nd-order-diagrams-3}) is another conventional way of drawing the diagrams (\bluep{obtained by making the diagrams out of rubber bands and pulling at top and bottom until the main line is straight}). Equations (\ref{typical-2nd-order-diagrams-2}) and (\ref{typical-2nd-order-diagrams-3}) are topologically equivalent in the Feynman sense.
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/typical-2nd-order-diagrams.PNG}
+    \label{typical-2nd-order-diagrams}
+\end{equation}
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/typical-2nd-order-diagrams-2.PNG}
+    \label{typical-2nd-order-diagrams-2}
+\end{equation}
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/typical-2nd-order-diagrams-3.PNG}
+    \label{typical-2nd-order-diagrams-3}
+\end{equation}
+Let us evaluate a typical second-order diagram using the Feynman method.
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/typical-feynman-diagrams-to-integral.PNG}
+    \label{typical-feynman-diagrams-to-integral}
+\end{equation}
+Note that \redp{the order of the times in G is always: time at end of directed line minus time at beginning.} The Fourier transform of (\ref{typical-feynman-diagrams-to-integral}) is
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/typical-feynman-diagrams-to-integral-fourier.PNG}
+\end{equation}
+It is seen that the frequencies, $\omega, \epsilon, \beta,$ etc., are conserved at the vertices, just like the momentum. This comes about because of the appearance of $\delta$ -functions similar to the $2 \pi \delta\left(\omega^{\prime}-\omega\right)$ when the transform is carried out. \bluep{\textbf{The "$2\pi$" in $\frac{d\epsilon}{2\pi}$ comes from Fourier transformation too.}}
+
+One more thing, We can avoid treating the 'non-propagating' lines as a special case by including a convergence factor $exp(i\omega 0^+)$ when translating these lines into functions, where $0^+$ is a positive infinitesimal such that $0^{+} \times \infty=\infty$, thus
+\begin{imp}
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/non-propagating-treatment.PNG}
+\end{equation}
+Hence the integral over the intermediate frequency $\epsilon$ gives:
+\begin{equation}
+\int_{-\infty}^{+\infty} \frac{d \epsilon}{2 \pi} \frac{i e^{i \epsilon 0^+}}{\epsilon-\epsilon_{l}+i \delta_l}=\begin{aligned}
+-1 & \text { for } \quad l<k_{F} \\
+0 & \text { for } \quad l>k_{F}
+\end{aligned}\end{equation}
+where $\delta_l=-\delta$ when $l<k_F$. The integral is done by contour residues theorem. The contour is closed in the upper half-complex-plane where the convergence factor makes the arc integral vanish.
+\end{imp}
+Thus, for example
+$$
+\includegraphics[width=0.8\textwidth]{screenshots/non-propagating-treatment-example.PNG}
+$$
+
+\subsection{Diagram rules for single-particle propagator}
