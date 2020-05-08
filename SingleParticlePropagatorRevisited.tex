@@ -160,3 +160,78 @@ $$
 $$
 
 \subsection{Diagram rules for single-particle propagator}
+We have now reached the point where we can present in summary form the rules for drawing and evaluating the type of graphs which will be used in the next two chapters. These are the diagrams describing a system of mutually interacting fermions with no external field and they will always be drawn in $(\mathbf{k},\omega)$-space, using the Feynman method. The rules are:
+
+\begin{easylist}
+\NewList
+@ In nth order, drawn wiggly lines with vertex dots and two external points
+
+@ Join all vertex dots and external points to each other with directed lines in all linked topologically distinct (in the Feynman sense) ways, with one line entering and one leaving each vertex dot and a line entering one external point and leaving the other. Two diagrams are topologically distinct if they are visualized as made of rubber bands, and one cannot be deformed into the other.
+
+@ Label each line and wiggle with a momentum, k (short for $\mathbf{k}, \sigma,$ where $\boldsymbol{\sigma}=\operatorname{spin}),$ and frequency $\omega,$ such that the sum of momenta (and frequencies) entering each vertex = sum of those leaving. Eliminate all 'anomalous' or 'momentum-non-conserving' diagrams, i.e., which have a hole and a particle in the same state.
+
+@ Evaluate graphs by means of the dictionary in the following table
+\end{easylist}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{screenshots/table-feynman-diagram-rules.PNG}
+    \caption{Diagram dictionary for interacting many-fermion system with
+no external potential (Feynman method)}
+    \label{tab:feynman-diagram-rules}
+\end{table}
+Some physicists use abbreviated diagram in which the interaction wiggles are compressed to points or little squares. Thus, for example
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/Hugenholtz-diagrams.PNG}
+\end{equation}
+Those drawn with points are called "Hugenholtz diagrams", while those with squares are "Abrikosov diagrams".
+
+\subsection{Modified propagator formallsm using chemical potential,\texorpdfstring{$\mu$}{TEXT}}
+The formalism just described can be somewhat inconvenient in actual calculations because, unless special precautions are taken, it may produce approximations for $G$ which yield the wrong total number of particles for the system.
+
+In order to understand this, let us first derive the relation between the propagator $G$ and the total particle number N. The quantity N is the expectation value of the total number  operator $2\sum_k c^{\dagger}_k c_k$(factor of 2 for spin) in the interacting ground state:
+\begin{equation}N=\left\langle\Psi_{0}\left|2 \sum_{k} c^{\dagger}_{k} c_{k}\right| \Psi_{0}\right\rangle=2 \sum_{k}\left\langle\Psi_{0}\left|c^{\dagger}_{k} c_{k}\right| \Psi_{0}\right\rangle\end{equation}
+The summand is easily expressed in terms of $G(k_2,k_1,t_2-t_1)$ by setting $t_2=t,t_1=0,k_1=k_2=k$, then letting t approach zero from the left. This yields
+\begin{equation}N=2 \sum_{k}(-i) \times \lim _{t \rightarrow 0^{-}} G(k, t)=-2 i \lim _{t \rightarrow 0^{-}} \int \frac{d^{3} \mathbf{k}}{(2 \pi)^{3}} \int \frac{d \omega}{2 \pi} G(\mathbf{k}, \omega) e^{-i \omega t}
+\label{N-G-relation}
+\end{equation}
+which is the desired relation.
+
+Imagine that we calculate an approximate G for the system by a partial summation over some types of diagrams in 
+\begin{equation}
+    \includegraphics[width=0.8\textwidth]{screenshots/single-propagator-feynman-method.PNG}
+    \label{single-propagator-feynman-method}
+\end{equation}
+and then place this G in (\ref{N-G-relation}) to check and see if it yields $N=N_0$. Evidently, $G$ will be a function of $N_0$, because each $G_0$ entering the calculation of $G$(approx.) depends on $k_F$, and $k_F$ is related to $N_0$ by
+\begin{equation}N_{0}=2 \sum_{k<k_{P}} 1=\frac{2}{(2 \pi)^{3}} \int_{k<k=} d^{3} \mathbf{k}=k_{F}^{3} / 3 \pi^{2}, \quad \text { or } \quad k_{F}=\left(3 \pi^{2} N_{0}\right)^{1/3}\end{equation}
+Note that the Fermi energy is
+\begin{equation}c_{F}=k_{F}^{2} / 2 m=\frac{\left(3 \pi^{2} N_{0}\right)^{2/3}}{2 m}\end{equation}
+\bluep{Hence N will be function of $N_0$. But, since $G$ is only approximate, there is no guarantee that $N$ will equal $N_0$}.
+
+It is simple to remove this difficulty by slightly modify the formalism. The method of doing this is to \redp{use the "grand canonical ensemble" at zero temperature. In this method we no longer regard the system as isolated, with definite particle number $N_0$, but instead put it in contact with a particle reservior, so that it can gain or lose particles. Thus, particle number, N is variable throughout the calculation.} The chemical potential of system, $\mu$ is fixed but unknown; its value is determined at the end of the calculation by setting the total particle number equal to $N_0$.
+\begin{imp}
+The modified Hamiltonian for this case is
+\begin{equation}H^{\prime}=H-\mu N=H_{0}^{\prime}+H_{1}\end{equation}
+where
+\begin{equation}\begin{aligned}
+&H_{0}^{\prime}=\sum_{k}\left(\epsilon_{k}-\mu\right) c_{k}^{\dagger} c_{k}\\
+&H_{1}=\frac{1}{2} \sum_{k l m n} V_{k l m n} c_{l}^{\dagger} c_{k}^{\dagger} c_{m} c_{n}
+\end{aligned}\end{equation}
+where N is the total particle number operator.
+\end{imp}
+The ground state of the modified unperturbed Hamiltonian, $H^{\prime}_{0},$ is obtained by selecting that number of particles, and that way of filling the energy levels which minimizes the energy. \textbf{\redp{It is easily seen that this means all levels filled up to $\epsilon_{k}=\mu, \text { i.e., up to } k_{F}^{\mu}=\sqrt{( 2 m \mu)}$}} The corresponding particle number is $N=\left(3 \pi^{2}\right)^{-1} \times(2 m \mu)^{3/2} .$ The free propagator for $H_{0}^{\prime}$ is
+\begin{equation}G_{0}^{\mu}(\mathbf{k}, \omega)=\frac{1}{\omega-\left(\epsilon_{k}-\mu\right)+i \delta_{k}^{\mu}}, \quad \delta_{k}^{\mu}=\left\{\begin{array}{ll}
++\delta & \text { for } \epsilon_{k}>\mu \\
+-\delta & \text { for } \epsilon_{k}<\mu
+\end{array}\right.\end{equation}
+It will be convenient to define a new $\omega$ such that $\omega_{\text {new }} \equiv \omega+\mu .$ In addition, in order to get the correct result when we do self-consistent Hartrec-Fock, it is necessary to re-write the infinitesimal in the form $i \operatorname{sign}(\omega-\mu) \delta$ or $i(\omega-\mu) \delta$ for short, where $\omega \equiv \omega_{\text {new }} .$ These two changes yield $\left(\omega \equiv \omega_{\text {new }}\right)$
+\begin{equation}G_{0}^{\mu}(\mathbf{k}, \omega)=\frac{1}{\omega-\epsilon_{k}+i(\omega-\mu) \delta}
+\label{G-0-mu}
+\end{equation}
+Now $N$ becomes a function of $\mu$. If $\mu$ is now determined by setting
+\begin{equation}
+N(\mu)=N_0
+\label{N=N-0}
+\end{equation}
+we guarantee that $G$(approx.) yields the correct number of particles. Using (\ref{N-G-relation}), (\ref{G-0-mu}), and (\ref{N=N-0}), and ignoring interactions we have:
+\begin{equation}N(\mu)=\frac{\left(k_{P}^{\mu}\right)^{3}}{(3 \pi)^{2}}=\frac{(2 m \mu)^{3/2}}{3 \pi^{2}}=N_{0}\end{equation}
+so that $\mu=\epsilon_F$.
